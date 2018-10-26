@@ -5,5 +5,6 @@ class PainelController < ApplicationController
     @user = current_user
   	@session = user_session
   	@authenticate = user_signed_in?
+  	@messages = @user.message.all
   end
 end
