@@ -1,0 +1,10 @@
+<h1>Home#index</h1>
+<% if @authenticate %>
+<%= link_to "Sair", destroy_user_session_path, method: :delete %>
+<%= link_to "Perfil", edit_user_registration_path %>
+<% else %>
+<%= link_to "Login", new_user_session_path %>
+<%= link_to "Registre-se", new_user_registration_path %>
+<% end %>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
