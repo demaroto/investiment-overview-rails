@@ -7,7 +7,7 @@ class PoloniexChannel < ApplicationCable::Channel
     # Any cleanup needed when channel is unsubscribed
   end
 
-  def ticker (data,id)
-    Message.create! content: data['message'], user_id: id
+  def ticker (data)
+    #Message.create! content: data['message'], user_id: id
   end
 end
