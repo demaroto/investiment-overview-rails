@@ -13,3 +13,95 @@
  *= require_tree .
  *= require_self
  */
+ 
+ @charset "utf-8";
+
+/* ---------------------------------------------- Body ---------------------------------------------- */
+
+body{margin:0; padding:0; overflow-x:hidden; font-family: 'Montserrat', sans-serif;}
+
+h1, h2, h3, h4, h5, h6{margin:0; padding: 0;}
+
+::-webkit-scrollbar-track{background-color:#000000;}
+::-webkit-scrollbar{width:0px;}
+::-webkit-scrollbar-thumb{background:#646464;}
+
+*:focus{outline: 0;}
+*{box-sizing: border-box;}
+
+/*textarea, input[type="text"], input[type="button"], input[type="submit"] { -webkit-appearance: none; border-radius: 0px !important; box-shadow: 0 0 0 0;}*/
+/*textarea, input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {border-radius: 0px !important;}*/
+
+@media only screen and (min-width:1024px){
+	
+#Responsive{display:none !important;}
+	
+/* ---------------------------------------------- Global ---------------------------------------------- */
+
+.content{height:100%; width: 1100px; position:relative; left: 50%; margin-left: -550px;}
+	
+/* ---------------------------------------------- Header ---------------------------------------------- */
+
+header{height:90px; width: 100%; position:fixed; z-index: 9999; border-bottom: 1px solid #FFF; transition: 2s;} /* #1e2f79 */
+
+.header-active{background-color: hsla(229,60%,30%,0.70);}	
+	
+header .logo-header{height: 45px; position: absolute; margin-left: 50px; margin-top: 20px; cursor: pointer;}	
+	
+nav{position:absolute; line-height: 90px; right: 0; margin-right: 360px;}
+
+nav ul{margin:0; padding: 0; display: flex; text-align: center;}
+
+nav li{list-style: none;}
+
+nav a{font-size: 16px; padding: 35px 40px 35px 40px; color:#FFF; cursor:pointer; transition:.5s; text-decoration: none; transition:.5s; border-bottom: 2px solid transparent;}
+
+nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; border-bottom: 1px solid #44e39a; color: #44e39a !important;}
+
+.active{background-color:#FF0076; color: #FFF !important;}
+
+.btn-home-experimentar{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00); color: #FFF; border-radius: 5px; height: 35px; width: 150px; font-size: 14px; position: absolute; right: 0; font-weight: bold; cursor: pointer; transition: .3s; margin-top: 27px; margin-right: 160px;}
+	
+.btn-home-experimentar:hover{background-color: #06c5d5; border:2px solid #06c5d5;}	
+	
+.btn-home-login{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00); color: #FFF; border-radius: 5px; height: 35px; width: 90px; font-size: 14px; position: absolute; right: 0; font-weight: bold; cursor: pointer; transition: .3s; margin-top: 27px; margin-right: 50px;}	
+	
+.btn-home-login:hover{background-color: #18d67f; border:2px solid #18d67f;}	
+	
+/* ---------------------------------------------- Home ---------------------------------------------- */
+
+.home{height: 1400px; width:100%; position:relative; background-image: url("/assets/Home/bloco1.png"); background-size: cover; padding-top: 270px; background-position:bottom; background-repeat: no-repeat;}
+
+.home-content-1{position: relative; width: 590px; z-index: 100;}
+	
+.home-content-1 h1{color: #FFF; font-size: 35px;}	
+.home-content-1 h2{color: #FFF; font-size: 20px; font-weight: normal; line-height: 30px;}	
+	
+.home-img1{height: 500px; right: 0; position: absolute; margin-top: -100px; z-index: 99; margin-right: -50px;}	
+	
+.btn-home-regitrar{border:2px solid #18d67f; background-color: #18d67f; color: #FFF; border-radius: 5px; height: 45px; width: 170px; font-size: 14px; font-weight: bold; cursor: pointer; transition: .3s; text-transform: uppercase;}
+	
+.btn-home-regitrar:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #18d67f; color: #18d67f;}	
+	
+.btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00); color: #FFF; border-radius: 5px; height: 45px; width: 110px; font-size: 14px; font-weight: bold; cursor: pointer; transition: .3s; margin-top: 27px; margin-left: 20px; text-transform: uppercase;}	
+	
+.btn-home-login2:hover{color: #06c5d5; border:2px solid #06c5d5;}	
+
+/* ---------------------------------------------- Home - Vantagens ---------------------------------------------- */
+	
+.home-vantagens{width: 100%; position: relative; margin-top: 200px;}	
+	
+.home-vantagens-box{height: 250px; width: 47%; background-color: #FFF; float: left; margin: 1.5%; box-shadow: 0px 0px 20px 0px rgba(161,161,161,1); border-radius: 10px;}	
+	
+/* ---------------------------------------------- Contato ---------------------------------------------- */	
+	
+.erro{height:50px; width: 100%; position:fixed; background-color: #B90003; text-align: center; top: 100%; margin-top: -50px; z-index: 9999; line-height: 50px; display:none; color:#FFF; font-family: 'Lato', sans-serif; font-size: 18px; font-weight: normal;}
+	
+.success{height:50px; width: 100%; position:fixed; background-color: #2AB900; text-align: center; top: 100%; margin-top: -50px; z-index: 9999; line-height: 50px; display:none; color:#FFF; font-family: 'Lato', sans-serif; font-size: 18px; font-weight: normal;}
+		
+	
+
+}
+
+
+

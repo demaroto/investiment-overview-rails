@@ -1,2 +1,166 @@
-<h1>Home#index</h1>
+<body>
+
+<!-------------------------------------------------------------- Global - Erro Contato ------------------------------------------------------------------>
+
+<article class="erro" id="erro-nome"><%= notice %></article>
+<article class="erro" id="erro-email"><%= alert %></article>
+<article class="erro" id="erro-telefone">Digite o Telefone</article>
+<article class="erro" id="erro-mensagem">Digite a Mensagem</article>
+<article class="success" id="success">Mensagem Enviada com Sucesso</article>
+
+<!-------------------------------------------------------------- End Global ------------------------------------------------------------------>
+
+	
+	
+<!-------------------------------------------------------------- Desktop ------------------------------------------------------------------>
+
+<section id="Desktop">
+
+<!--------------------------------------------------- Header --------------------------------------------------->
+
+<header>
+	<img src="/assets/Home/logo.png" class="logo-header">
+	<nav>
+		<ul>
+			<li><a href="#1" id="sobre">Como Funciona</a></li>
+			<li><a href="#2" id="servicos">Custo</a></li>
+			<li><a href="#3" id="contato">Equipe</a></li>
+		</ul>
+	</nav>
+	
+	<% if @authenticate %>
+	<!-- isso .. a home ta bonitona jaaa-->
+      <%= link_to "Sair", destroy_user_session_path, method: :delete %>
+      <%= link_to "Perfil", edit_user_registration_path %>
+      <%= link_to "Painel", painel_index_path %>
+    <% else %>
+    	<input type="button" value="EXPERIMENTAR" class="btn-home-experimentar">
+		<input type="button" value="LOGIN" class="btn-home-login">
+    <% end %>
+    
+</header>
+
+<!-------------------------------------------------- Home -------------------------------------------------->
+
+<section class="home">
+   
+	<article class="content">
+	
+	<img src="/assets/Home/home-img1.png" class="home-img1">
+		
+	<div class="home-content-1">
+		<h1>Turbine seus investimentos<br>
+			de Criptomoeda com a gente!</h1><br>
+		<h2>Na Investment Overview, você além de investir, contará com o auxílio do nosso sistema no qual te avisa a hora certa de comprar e vender suas ações.</h2>
+		<input type="button" value="Registrar-se" class="btn-home-regitrar">
+		<input type="button" value="Login" class="btn-home-login2">
+	</div>	
+	
+	<div class="home-vantagens">
+		<div class="home-vantagens-box">
+			<img src="">
+			<h3></h3>
+		</div>
+
+		<div class="home-vantagens-box">
+			<img src="">
+			<h3></h3>
+		</div>
+
+		<div class="home-vantagens-box">
+			<img src="">
+			<h3></h3>
+		</div>
+
+		<div class="home-vantagens-box">
+			<img src="">
+			<h3></h3>
+		</div>	
+	</div>	
+		
+	</article>	
+		
+</section>
+
+<!--------------------------------------------------- Footer --------------------------------------------------->
+
+<footer>
+	
+	
+</footer>
+
+	
+	
+	
+	
+</section>
+
+<!---------------------------------------------------------------- Responsive ------------------------------------------------------------------>
+
+<section id="Responsive">
+
+<!-------------------------------------------------- Header -------------------------------------------------->
+
+<div class="header">
+
+	<div class="logo-menu"></div>
+	
+	<div class="icon-menu">
+		<div class="line-icon"></div>
+		<div class="line-icon"></div>
+		<div class="line-icon"></div>		
+	</div>
+
+</div>
+
+<div class="menu-animate">
+
+	<div class="seta"></div>
+    
+    <div class="menu-line"></div>
+    
+    <div class="nav">
+
+        <ul>
+			<li><a href="#r1" id="sobre">Sobre</a></li>
+			<div class="menu-line"></div>
+			<li><a href="#r2" id="servicos">Serviços</a></li>
+			<div class="menu-line"></div>
+			<li><a href="#r3" id="contato">Contato</a></li>
+			<div class="menu-line"></div>
+        </ul>
+    
+    </div>
+
+</div>
+
+<!-------------------------------------------------- Home -------------------------------------------------->
+
+<section class="home">
+
+    <div class="principal">
+    
+        <div class="slide">
+
+            <div class="slide_1"></div>
+            <div class="slide_2"></div>
+            <div class="slide_3"></div>
+        
+        </div>
+        
+    </div>
+   
+</section>
+
+<!--------------------------------------------------- Footer --------------------------------------------------->
+
+<footer>
+	
+</footer>
+
+	
+	
+	
+
+</section>
 

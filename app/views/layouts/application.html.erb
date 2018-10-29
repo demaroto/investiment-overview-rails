@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>InvestimentOverview</title>
+    <title>Investiment Overview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=320">
+    <meta charset="utf-8">
+    <link rel="icon" href="/assets/Home/favicon.png">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
   </head>
 
   <body>
-    <% if @authenticate %>
-      <%= link_to "Sair", destroy_user_session_path, method: :delete %>
-      <%= link_to "Perfil", edit_user_registration_path %>
-      <%= link_to "Painel", painel_index_path %>
-    <% else %>
-      <%= link_to "Login", new_user_session_path %>
-      <%= link_to "Registre-se", new_user_registration_path %>
-    <% end %>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+ 
+ <!-- coloquei la na home -->
+
+<!-- esse yield e javascript_pack devem ficar aqui.. o restante que esta no body pode sair -->
     <%= yield %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track':
 'reload' %>
+
+<!-- nem precisa .. é só editar os teus que já estão feito
+Responde la no chat.. clica em Collaborate ai do lado direito
+-->
   </body>
 </html>
