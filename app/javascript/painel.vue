@@ -44,7 +44,7 @@
 </template>
 
 <script>
-//App.cable 
+
 import Vue from 'vue'
 import VueNativeSock from 'vue-native-websocket'
 Vue.use(VueNativeSock, 'wss://api2.poloniex.com', { 
@@ -54,7 +54,7 @@ Vue.use(VueNativeSock, 'wss://api2.poloniex.com', {
 	 })
 	 
 
-	 	 var poloniex = new Vue()
+	 	  var poloniex = new Vue()
 	 	  var eventHub = new Vue()
 	    var poloniexSocket = ""
 	    
@@ -63,7 +63,6 @@ poloniex.$options.sockets.onopen = (event) => {
   //Inscreve-se no canal 1002 // Ticker Data
   //event.currentTarget.sendObj({'command': 'subscribe', 'channel': 1002});
   poloniexSocket = event.currentTarget
-  //console.log(poloniexSocket)
   
 };
 
@@ -74,10 +73,7 @@ poloniex.$options.sockets.onmessage = (res) => {
 	if (res.data == '[1010]'){ 
 		//Estado ocioso
 	}else{
-
     eventHub.$emit('updatePair', res)
-
-		
 	}
 
 }
@@ -120,10 +116,8 @@ export default {
         let chave = vm.pairs.map((valor) => valor.id ).indexOf(id)
         if(chave > -1)
         {
-          console.log('atribuindo existente')
           vm.pairs[chave] = {'id': id,'ask': ask, 'bid': bid}
         }else{
-          console.log('adicionando pairs')
           vm.pairs.push({'id': id,'ask': ask, 'bid': bid})
           vm.quantidade = vm.quantidade + 1
         }
@@ -143,7 +137,6 @@ export default {
     	  console.log('clicou', command, channel)
     	poloniexWebSocket(command, channel)
     	},
-    	test: (command) => console.log(command),
     	channels:() => showChannels()
   
     	    
