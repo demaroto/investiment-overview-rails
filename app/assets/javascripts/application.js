@@ -83,6 +83,10 @@ $(document).ready(function(e){
 		window.location.href = "/users/sign_up";	
 	});
 	
+	$(".btn-home-login2").click(function(){
+		window.location.href = "/users/sign_in";	
+	});
+	
 	/* ---------- Contato ---------- */	
 	
 	$("#btn-enviar").click(function(e){

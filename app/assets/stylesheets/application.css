@@ -79,9 +79,9 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 	
 .home-img1{height: 500px; right: 0; position: absolute; margin-top: -100px; z-index: 99; margin-right: -50px;}	
 	
-.btn-home-regitrar{border:2px solid #18d67f; background-color: #18d67f; color: #FFF; border-radius: 5px; height: 45px; width: 170px; font-size: 14px; font-weight: bold; cursor: pointer; transition: .3s; text-transform: uppercase;}
+.btn-home-registrar{border:2px solid #18d67f; background-color: #18d67f; color: #FFF; border-radius: 5px; height: 45px; width: 170px; font-size: 14px; font-weight: bold; cursor: pointer; transition: .3s; text-transform: uppercase;}
 	
-.btn-home-regitrar:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #18d67f; color: #18d67f;}	
+.btn-home-registrar:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #18d67f; color: #18d67f;}	
 	
 .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00); color: #FFF; border-radius: 5px; height: 45px; width: 110px; font-size: 14px; font-weight: bold; cursor: pointer; transition: .3s; margin-top: 27px; margin-left: 20px; text-transform: uppercase;}	
 	
