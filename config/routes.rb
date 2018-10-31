@@ -1,9 +1,20 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do
-  get 'painel/index'
-  devise_for :users
-  root to: 'home#index'
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount ActionCable.server => '/cable'
   mount Sidekiq::Web => '/sidekiq'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  #devise_for :users
+   devise_for :users, :controllers => { registrations: 'users/registrations', sessions: "users/sessions", passwords: 'users/passwords' } do
+    get "/", :to => "users/sessions#create"
+  end
+
+  authenticated :user do
+    root to: 'painel#index'
+  end
+
+  unauthenticated :user do
+    devise_scope :user do
+       root to: 'home#index'
+    end
+  end
 end

@@ -1,6 +1,35 @@
-<h1>Painel Investiment</h1>
-<%=@pairs%>
-<div id="vue">
-</div>
+
+<!--------------------------------------------------- Header --------------------------------------------------->
+
+<header class="header-painel">
+	<img src="/assets/Home/logo.png" class="logo-header">
+	<nav>
+		<ul>
+			<% if @authenticate %>
+			<!-- isso .. a home ta bonitona jaaa-->
+				
+		      <%= link_to "Sair", destroy_user_session_path, method: :delete %>
+			    <%= link_to "Perfil", edit_user_registration_path %>
+		     
+		      <!-- Lucas esse link aqui debaixo é caso o usuário seja admin -->
+		      <% if @user.kind == 'admin' %>
+					<%= link_to 'Admin', rails_admin_path %>
+				<% end %>
+		    <% end %>
+		</ul>
+	</nav>
+</header>    
+
+<section class="painel-invest">
+
+	<article class="content">
+
+		<h1>Painel <%= @user.email %></h1>
+		
+		<div id="vue"></div>
+
+	</article>
+
+</section>
 
 

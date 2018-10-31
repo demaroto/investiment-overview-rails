@@ -14,6 +14,7 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require jquery
 
 // JavaScript Document
 
@@ -85,6 +86,18 @@ $(document).ready(function(e){
 	
 	$(".btn-home-login2").click(function(){
 		window.location.href = "/users/sign_in";	
+	});
+	
+	$(".btn-painel-sair").click(function(){
+		window.location.href = "/users/sign_out/";	
+	});
+	
+	$(".btn-painel-perfil").click(function(){
+		window.location.href = "/users/edit/";	
+	});
+	
+	$.ajax(function(){
+	
 	});
 	
 	/* ---------- Contato ---------- */	
