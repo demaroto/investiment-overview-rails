@@ -128,17 +128,32 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 
 .img-cadastro{height: 110%; margin-top: -12%; position: absolute; right: 0; margin-right: 5%;}
 
-.cadastro-content{border:1px solid #FFF; position: relative; height: 400px; width: 600px; top: 50%; margin-top: -200px; margin-left: 5%;}
+.cadastro-content{position: absolute; height: 450px; width: 600px; top: 50%; margin-top: -200px; margin-left: 7%;}
 
 .cadastro h1{text-transform: uppercase; font-size:22px; font-weight: normal; line-height: 50px; text-transform: uppercase;}
 
 .cadastro h2{text-transform: uppercase; font-size:32px; font-weight: bold; text-transform: uppercase; line-height: 50px;}
 
-.cadastro h3{text-transform: uppercase; font-size:22px; font-weight: normal; text-transform: uppercase; color: #08e540; line-height: 50px;}
+.cadastro h3{text-transform: uppercase; font-size:22px; font-weight: normal; text-transform: uppercase; color: #06f03d; line-height: 50px; padding-bottom: 30px;}
+
+.cadastro input[type=email], .cadastro input[type=password]{height: 50px; width: 300px; padding: 0px 20px; border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00);  font-weight: normal; font-size: 14px; border-radius: 30px; margin: 8px 0px; color: #FFF; transition: .3s;}
+
+.cadastro input[type=submit]{height: 50px; width: 300px; background-color: #18d67f; border-radius: 6px; color: #FFF; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: 16px; border:none; cursor: pointer; margin-top: 40px; border:2px solid transparent; transition:.3s;}
+
+.cadastro input[type=submit]:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #18d67f; color: #18d67f;}
+
+::-webkit-input-placeholder{color: #FFF; text-transform: uppercase;}
+
+.cadastro input[type=email]:focus, .cadastro input[type=password]:focus{border:2px solid #18d67f;}
+
+.cadastro .erro-mensagem h2{font-size: 15px; margin-top: 30px;}
+
+.cadastro .erro-mensagem ul{margin:0; padding: 0;}
 
 /* ---------------------------------------------- Contato ---------------------------------------------- */	
 	
-.erro{height:50px; width: 100%; position:fixed; background-color: #B90003; text-align: center; top: 100%; margin-top: -50px; z-index: 9999; line-height: 50px; color:#FFF; font-family: 'Lato', sans-serif; font-size: 18px !important; font-weight: normal;}
+.erro{height:50px; width: 100%; position:fixed; background-color: #B90003; text-align: center; top: 100%; margin-top: -50px; z-index: 9999; line-height: 50px; color:#FFF; font-family: 'Lato', sans-serif; font-size: 18px !important; font-weight: normal; display:none;
+}
 	
 .success{height:50px; width: 100%; position:fixed; background-color: #2AB900; text-align: center; top: 100%; margin-top: -50px; z-index: 9999; line-height: 50px; display:none; color:#FFF; font-family: 'Lato', sans-serif; font-size: 18px; font-weight: normal;}
 		
