@@ -124,11 +124,21 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 
 /* ---------------------------------------------- Cadastro ---------------------------------------------- */
 
-.cadastro{height: 100vh; width: 100%; background-image: url("/assets/Cadastro/cadastro-img.png"); position: relative; background-size: cover; background-position: right top; padding-top: 100px;}
+.cadastro{height: 100vh; width: 100%; background-color:#180d5b; position: relative; padding-top: 100px; color: #FFF;}
+
+.img-cadastro{height: 110%; margin-top: -12%; position: absolute; right: 0; margin-right: 5%;}
+
+.cadastro-content{border:1px solid #FFF; position: relative; height: 400px; width: 600px; top: 50%; margin-top: -200px; margin-left: 5%;}
+
+.cadastro h1{text-transform: uppercase; font-size:22px; font-weight: normal; line-height: 50px; text-transform: uppercase;}
+
+.cadastro h2{text-transform: uppercase; font-size:32px; font-weight: bold; text-transform: uppercase; line-height: 50px;}
+
+.cadastro h3{text-transform: uppercase; font-size:22px; font-weight: normal; text-transform: uppercase; color: #08e540; line-height: 50px;}
 
 /* ---------------------------------------------- Contato ---------------------------------------------- */	
 	
-.erro{height:50px; width: 100%; position:fixed; background-color: #B90003; text-align: center; top: 100%; margin-top: -50px; z-index: 9999; line-height: 50px; display:none; color:#FFF; font-family: 'Lato', sans-serif; font-size: 18px; font-weight: normal;}
+.erro{height:50px; width: 100%; position:fixed; background-color: #B90003; text-align: center; top: 100%; margin-top: -50px; z-index: 9999; line-height: 50px; color:#FFF; font-family: 'Lato', sans-serif; font-size: 18px !important; font-weight: normal;}
 	
 .success{height:50px; width: 100%; position:fixed; background-color: #2AB900; text-align: center; top: 100%; margin-top: -50px; z-index: 9999; line-height: 50px; display:none; color:#FFF; font-family: 'Lato', sans-serif; font-size: 18px; font-weight: normal;}
 		
