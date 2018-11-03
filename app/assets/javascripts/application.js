@@ -96,86 +96,6 @@ $(document).ready(function(e){
 		window.location.href = "/users/edit/";	
 	});
 	
-	$.ajax(function(){
-	
-	});
-	
-	/* ---------- Contato ---------- */	
-	
-	$("#btn-enviar").click(function(e){
-
-        var dados = $("#form").serialize();
-        
-		if($("#nome").val() == "")
-		{
-			$("#erro-nome").fadeIn(300);
-			$("#erro-nome").delay(2000).fadeOut(1000);
-		}
-		
-		else
-		{
-			$("#erro-nome").fadeOut(300);
-			
-			if($("#email").val() == "")
-			{
-				$("#erro-email").delay(300).fadeIn(300);
-				$("#erro-email").delay(2000).fadeOut(1000);
-				
-			}
-			
-			else
-			{
-				$("#erro-email").fadeOut(300);
-					
-				if($("#tel").val() == "")
-				{
-					$("#erro-telefone").delay(300).fadeIn(300);
-					$("#erro-telefone").delay(2000).fadeOut(1000);
-				}	
-				
-				else
-				{
-					$("#erro-telefone").fadeOut(300);
-					
-					if($("#mensagem").val() == "")
-					{
-						$("#erro-mensagem").delay(300).fadeIn(300);
-						$("#erro-mensagem").delay(2000).fadeOut(1000);
-					}
-
-					else
-					{
-						$("#erro-mensagem").fadeOut(300)
-						$("#success").delay(300).fadeIn(300);
-						$("#success").delay(3000).fadeOut(1000);
-
-						$.ajax({
-
-							type: "POST", 
-							url: "JavaScript/Form.php", 
-							dataType:"html", 
-							data:dados, 
-							success:function(e){                              
-
-								$("#nome").val("");
-								$("#email").val("");
-								$("#tel").val("");
-								$("#mensagem").val("");
-
-							}
-
-						});
-
-					}
-					
-				}
-				
-			}
-			
-		}
-		
-	});	
-	
 /* ------------------------------------------------------------ Responsive --------------------------------------------------------- */
 	
 	
@@ -183,11 +103,17 @@ $(document).ready(function(e){
 /* -------------------- Menu - Icon-------------------- */
 		
 	$(".icon-menu").click(function(e) {
-		$(".menu-animate").animate({"margin-left" : "-70%"}, 300);
+		$(".mask-window").fadeIn(400);
+		$(".menu-animate").animate({"margin-left" : "-400px"}, 400);
+	});
+	
+	$(".mask-window").click(function(e) {
+		$(this).fadeOut(400);
+		$(".menu-animate").animate({"margin-left" : "0px"}, 100);
 	});
 	
 	$(".seta").click(function(e) {
-		$(".menu-animate").animate({"margin-left" : "0px"}, 300);
+		$(".menu-animate").animate({"margin-left" : "0px"}, 100);
     });
 	
 /*  ------------------------------ Menu  ------------------------------ */	

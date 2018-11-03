@@ -9,6 +9,4 @@ class PainelController < ApplicationController
   	@pairs = []
   end
   
- 
- 
 end
