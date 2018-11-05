@@ -11,7 +11,6 @@
     <h2>Cadastro</h2>
     <h3>Informe seus Dados</h3>
     
-    
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <div class="field">
         <%= f.email_field :email, autofocus: true, autocomplete: "off", placeholder: "Email" %>

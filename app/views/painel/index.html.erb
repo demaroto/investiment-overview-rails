@@ -12,21 +12,25 @@
 	</div>
 </header>    
 
+<!--------------------------------------------------- Menu --------------------------------------------------->
+
 <div class="menu-animate">
 	<div class="menu-box-user">
-		<div class="img-user-menu"></div>
-		<h3>
-			<strong><%= @user.email %></strong><br>
-			<%= @user.email %>
-		</h3>
+		<div class="menu-box-user-mask">
+			<div class="img-user-menu"></div>
+			<h3>
+				<strong><%= @user.email %></strong><br>
+				<%= @user.email %>
+			</h3>
+		</div>
 	</div>
-    <div class="menu-line"></div>
+	<div class="menu-line"></div>
     <div class="nav">
         <ul>
 			<% if @authenticate %>
 				<% if @user.kind == 'admin' %>
 					<img src="/assets/Painel/admin.png" class="icons-nav">
-					<%= link_to 'Admin', rails_admin_path, method: :get %>
+					<%= link_to 'Administrador', rails_admin_path, method: :get %>
 					<div class="menu-line"></div>
 				<% end %>
 				<img src="/assets/Painel/perfil.png" class="icons-nav">
@@ -39,6 +43,8 @@
         </ul>
     </div>
 </div>
+
+<!--------------------------------------------------- Painel --------------------------------------------------->
 
 <section class="painel-invest">
 
