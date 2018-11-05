@@ -13,19 +13,27 @@
 </header>    
 
 <div class="menu-animate">
-	<h3>Bem Vindo, <%= @user.email %></h3>
+	<div class="menu-box-user">
+		<div class="img-user-menu"></div>
+		<h3>
+			<strong><%= @user.email %></strong><br>
+			<%= @user.email %>
+		</h3>
+	</div>
     <div class="menu-line"></div>
     <div class="nav">
         <ul>
 			<% if @authenticate %>
 				<% if @user.kind == 'admin' %>
+					<img src="/assets/Painel/admin.png" class="icons-nav">
 					<%= link_to 'Admin', rails_admin_path, method: :get %>
 					<div class="menu-line"></div>
 				<% end %>
+				<img src="/assets/Painel/perfil.png" class="icons-nav">
 			 	<%= link_to "Perfil", edit_user_registration_path %>
 		     	<div class="menu-line"></div>
+		     	<img src="/assets/Painel/sair.png" class="icons-nav">
 		     	<%= link_to "Sair", destroy_user_session_path, method: :delete %>
-		     	<div class="menu-line"></div>
 		    <% end %>
 			<div class="menu-line"></div>
         </ul>
@@ -36,8 +44,6 @@
 
 	<article class="content">
 
-		
-		
 		<div id="vue"></div>
 
 	</article>

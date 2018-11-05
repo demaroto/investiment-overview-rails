@@ -103,8 +103,8 @@ $(document).ready(function(e){
 /* -------------------- Menu - Icon-------------------- */
 		
 	$(".icon-menu").click(function(e) {
-		$(".mask-window").fadeIn(400);
-		$(".menu-animate").animate({"margin-left" : "-400px"}, 400);
+		$(".mask-window").fadeIn(300);
+		$(".menu-animate").animate({"margin-left" : "-400px"}, 300);
 	});
 	
 	$(".mask-window").click(function(e) {
