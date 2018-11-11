@@ -20,8 +20,14 @@
         <td style="width:auto;text-align:center;color:#157887;font-weight:bold">{{currentValues.buy}}</td>
         <td style="width:auto;text-align:center;color:#157887;font-weight:bold">{{currentValues.sell}}</td>
       </tr>
+      <tr v-if="currentValues.pair">
+        <td style="width:auto;text-align:center;color:#157887;font-weight:bold">Acompanhar</td>
+        <td style="width:auto;text-align:center;color:#157887;font-weight:bold"><input type="text" v-model="percentWish.buy" /></td>
+        <td style="width:auto;text-align:center;color:#157887;font-weight:bold"><input type="text" v-model="percentWish.sell" /></td>
+      </tr>
       </tbody>
     </table>
+    {{valuesWish.buy}} / {{currentValues.buy}}
   </div>
 </template>
 
@@ -59,14 +65,16 @@ export default{
     return {
       viewPair: {},
       pair: '',
-      currentValues: {}
+      currentValues: {},
+      valuesWish: {'buy':'','sell':''},
+      percentWish: {'buy':'','sell':''}
     }
   },
   props:{
     pairCurrent:String
   },
   computed:{
-    
+  
   },
   mounted:function(){
     
@@ -85,7 +93,7 @@ export default{
               }
               vm.currentValues.pair = vm.pairCurrent
               vm.viewPair = {'id': id,'price': price, 'type': typeTrade}
-              
+              vm.calcWish()
               vm.$forceUpdate()
             
         }
@@ -103,6 +111,9 @@ export default{
       poloniexSocket.sendObj({'command': 'subscribe', 'channel': this.pairCurrent})
 
     },
+    calcWish:function(){
+      this.valuesWish.buy = this.currentValues.buy - (this.percentWish.buy * 100)
+    }
   }
 }
 

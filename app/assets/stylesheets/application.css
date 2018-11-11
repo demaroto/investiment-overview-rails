@@ -150,7 +150,7 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 
 /* ---------------------------------------------- Home - Custos ---------------------------------------------- */
 
-.home-custos{height: 700px; width: 100%; position: relative;}
+.home-custos{height: 500px; width: 100%; position: relative;}
 
 .home-custos-line{height: 200px; width: 120%; background-color: #eeeded; position: absolute; transform: rotate(-20deg); z-index: -999; margin-left: -10%; margin-top: -100px;}
 
@@ -160,8 +160,25 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 
 .home-custos h1{font-weight: bold; font-size: 35px; line-height: 45px; padding-bottom: 30px;}
 .home-custos h3{font-weight: normal; font-size: 18px; line-height: 27px;}
-.home-custos h3 a{color: #1d99c7; font-weight: bold;
-}
+.home-custos h3 a{color: #1d99c7; font-weight: bold;}
+
+/* ---------------------------------------------- Home - Objetivos ---------------------------------------------- */
+
+.home-objetivos{width: 100%; position: relative; color: #FFF;}
+
+.home-objetivos-content{margin-left:-480px !important;}
+
+.home-objetivos-back{width: 100%; position: absolute;}
+
+.home-objetivos-box{text-align: center; height: 600px; width: 50%; float: left;  position: relative; margin-top:250px;}
+
+.home-objetivos-box img{height: 300px; margin-left:-150px;}
+
+.home-objetivos-box2 img{margin-left:-200px !important;}
+
+.home-objetivos-box h1{font-size: 22px; font-weight: bold; text-align:left; line-height: 30px; padding-bottom: 30px; padding-top: 30px;}
+
+.home-objetivos h3{font-size: 18px; font-weight: normal; text-align: left;}
 
 /* ---------------------------------------------- Cadastro ---------------------------------------------- */
 

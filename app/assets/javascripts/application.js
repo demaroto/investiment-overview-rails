@@ -126,7 +126,10 @@ $(document).ready(function(e){
 		$(".menu-animate").animate({"margin-left" : "0px"}, 300); 
     });
 	
+/*  ------------------------------ Section Objetivos  ------------------------------ */	
 	
+	var imgObj = $(".home-objetivos img").innerHeight();
+	$(".home-objetivos").css({"height":imgObj});
 	
 	
 	
