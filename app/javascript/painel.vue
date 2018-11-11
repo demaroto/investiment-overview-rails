@@ -1,48 +1,28 @@
 <template>
   <div id="app" >
+
     <div class="col-lg-12">
       <div class="col-lg-6">
-        <input type="text" v-model="channel" placeholder="Canal" class="form-control" />    
-        
+        <select v-model="channel" class="form-control">
+          <option disabled value="">Escolha uma criptomoeda</option>
+          <option v-for="(item, index) in poloniex_info" :value="index" :key="item.id">{{ index }}</option>
+        </select>    
       </div>
       <div class="col-lg-6">
-        <select v-model="command" class="form-control">
-          <option value="subscribe">Subscribe</option>
-          <option value="unsubscribe">Unsubscribe</option>
-        </select>
         <p>{{message}}</p>
       </div>
-      <div class="col-lg-3">
-        <button v-on:click.stop.prevent="action(command, channel)" class="btn btn-primary">Iniciar</button>
-    <button v-on:click.stop.prevent="channels()" class="btn btn-success">Canais</button>
-      </div>
     </div>
-    
-    
-    <table class="table">
-		<caption>Acompanhando: {{quantidade}}</caption>
-		<thead>
-			<tr>
-				<th>ID</th>
-				<th>NAME</th>
-				<th>PRICE</th>
-				<th>TYPE</th>
-			</tr>
-		</thead>
-		<tbody id="pairs" >
-		  <tr v-for="pair in pairs">
-		    <td>{{pair.id}}</td>
-		    <td></td>
-		    <td>{{pair.price}}</td>
-		    <td>
-		      <span v-if="pair.type == 0">Buy</span>
-          <span v-else-if="pair.type == 1">Sell</span>	
-          <span v-else></span>	
-		    </td>
-		  </tr>
-		</tbody>
-	</table>
-  
+    <div class="section">
+      <!-- Component da Paridade Selecionada -->
+    <div class="componentPair">
+      <pair-component :pairCurrent="channel"></pair-component>
+    </div>
+    <!-- Tabela de acompanhamento -->
+    <div class="tabela">
+      
+
+	  </div>
+  </div>
   </div>
   
 
@@ -52,6 +32,9 @@
 
 import Vue from 'vue'
 import VueNativeSock from 'vue-native-websocket'
+import axios from 'axios'
+import PairComponent from './pair_selected'
+
 Vue.use(VueNativeSock, 'wss://api2.poloniex.com', { 
 	'Sec-WebSocket-Protocol': true,
 	reconnection: true,
@@ -65,8 +48,6 @@ Vue.use(VueNativeSock, 'wss://api2.poloniex.com', {
 	    
 //Recupera o alvo atual
 poloniex.$options.sockets.onopen = (event) => {
-  //Inscreve-se no canal 1002 // Ticker Data
-  //event.currentTarget.sendObj({'command': 'subscribe', 'channel': 1002});
   poloniexSocket = event.currentTarget
   
 };
@@ -91,14 +72,20 @@ poloniex.$options.sockets.onmessage = (res) => {
 	 }
 	 
 export default {
-  data: function () {
+  name: 'PainelComponent',
+  components:{
+    PairComponent
+  },
+   data: function () {
     return {
       message: '',
       channel: '',
       command: '',
       pairs: [],
       subscriptions:[],
-      quantidade: 0
+      quantidade: 0,
+      poloniex_info: '',
+      poloniex_erro: false
     }
   },
   created:function() {
@@ -106,30 +93,40 @@ export default {
     
   },
   mounted: function(){
-   var vm = this;
+     var vm = this;
       eventHub.$on('updatePair', function (res) {
-      if(JSON.parse(res.data).length > 2){
-        if(JSON.parse(res.data)[2][0][0] == 'o'){
-          let typeTrade = JSON.parse(res.data)[2][0][1] // 1 for buy or 0 for sell
-          let price = JSON.parse(res.data)[2][0][2] // Price
-          let id = JSON.parse(res.data)[0] // id pair
-           let chave = vm.pairs.map((valor) => valor.id ).indexOf(id)
-            if(chave > -1)
-            {
-              vm.pairs[chave] = {'id': id,'price': price, 'type': typeTrade}
-            }else{
-              vm.pairs.push({'id': id, 'price': price, 'type': typeTrade})
+      // if(JSON.parse(res.data).length > 2){
+      //   if(JSON.parse(res.data)[2][0][0] == 'o'){
+      //     let typeTrade = JSON.parse(res.data)[2][0][1] // 1 for buy or 0 for sell
+      //     let price = JSON.parse(res.data)[2][0][2] // Price
+      //     let id = JSON.parse(res.data)[0] // id pair
+      //     let chave = vm.pairs.map((valor) => valor.id ).indexOf(id)
+      //       if(chave > -1)
+      //       {
+      //         vm.pairs[chave] = {'id': id,'price': price, 'type': typeTrade}
+      //       }else{
+      //         vm.pairs.push({'id': id, 'price': price, 'type': typeTrade})
               
-              vm.message = ''
-            }
-            console.log(vm.pairs)
-            vm.$forceUpdate();
-        }
-      }
-
-     App.poloniex.ticker(eventHub.pairs)
+      //         vm.message = ''
+      //       }
+      //       vm.$forceUpdate();
+      //   }
+      // }
+      //Envia para o ActionCable
+     //App.poloniex.ticker(eventHub.pairs)
 
   })
+  //Get pairs from poloniex
+  axios
+      .get('https://poloniex.com/public?command=returnTicker')
+      .then(response => {
+        this.poloniex_erro = false
+        this.poloniex_info = response.data
+
+      }).catch(erro => {
+        this.poloniex_erro = true
+      })
+  
   },
   updated:function() {
     
@@ -151,17 +148,13 @@ export default {
     	      let chave = this.pairs.map((valor) => parseInt(valor.id)).indexOf(parseInt(channel))
     	      if(chave > -1){
     	        this.pairs[chave] = []
-    	        this.$forceUpdate()
     	      }
     	    }
     	  }
     	poloniexSocket.sendObj({'command': command, 'channel': channel});
     	},
     	channels:function() {showChannels()}
-  
-    	    
-    	
-    	
+
     }
 }
 

@@ -18,7 +18,7 @@
 
 /* ---------------------------------------------- Body ---------------------------------------------- */
 
-body{margin:0; padding:0; overflow-x:hidden; font-family: 'Montserrat', sans-serif;}
+body{margin:0; padding:0; overflow-x:hidden; font-family: 'Montserrat', sans-serif; background-color: #f7f7ff;}
 
 h1, h2, h3, h4, h5, h6{margin:0; padding: 0;}
 
@@ -147,6 +147,21 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 .home-vantagens-icon-2{margin-top: 60px;}	
 .home-vantagens-icon-3{margin-top: 35px;}	
 .home-vantagens-icon-4{margin-top: 40px;}	
+
+/* ---------------------------------------------- Home - Custos ---------------------------------------------- */
+
+.home-custos{height: 700px; width: 100%; position: relative;}
+
+.home-custos-line{height: 200px; width: 120%; background-color: #eeeded; position: absolute; transform: rotate(-20deg); z-index: -999; margin-left: -10%; margin-top: -100px;}
+
+.home-custos-img{height: 400px; position: absolute; margin-top: 100px;}
+
+.home-custos-box{height: 400px; width: 500px; position: absolute; right: 0; margin-top: 140px;}
+
+.home-custos h1{font-weight: bold; font-size: 35px; line-height: 45px; padding-bottom: 30px;}
+.home-custos h3{font-weight: normal; font-size: 18px; line-height: 27px;}
+.home-custos h3 a{color: #1d99c7; font-weight: bold;
+}
 
 /* ---------------------------------------------- Cadastro ---------------------------------------------- */
 

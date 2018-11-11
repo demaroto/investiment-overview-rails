@@ -5,6 +5,7 @@ document.addEventListener('turbolinks:load', () => {
   const app = new Vue({
     el: "#vue",
     render: h => h(Painel)
+
     
   })
 

@@ -29,7 +29,7 @@
 	</nav>
 	
 	<% if @authenticate %>
-	<!-- isso .. a home ta bonitona jaaa-->
+
       <%= link_to "Sair", destroy_user_session_path, method: :delete %>
       <%= link_to "Perfil", edit_user_registration_path %>
      
@@ -68,11 +68,11 @@
 
 		<div class="home-vantagens-box">
 			<div class="home-vantagens-img-box">
-				<img src="/assets/Home/vantagens-icon-1.png" class="home-vantagens-icon-2">
+				<img src="/assets/Home/vantagens-icon-2.png" class="home-vantagens-icon-2">
 			</div>
-			<h3><strong>Excelente<br>
-				Área de trabalho</strong><br><br>
-			Nada melhor do que um ambiente adequado para os seus negócios, não?</h3>
+			<h3><strong>Aumente<br>
+			seu patrimônio</strong></strong><br><br>
+			Dê um UP em seus investimentos e aumente seu patrimônio</h3>
 		</div>
 
 		<div class="home-vantagens-box">
@@ -96,6 +96,44 @@
 		
 	</article>	
 		
+</section>
+
+<!-------------------------------------------------- Home - Custos -------------------------------------------------->
+
+<section class="home-custos">
+	
+	<div class="home-custos-line"></div>
+	
+	<article class="content">
+		
+		<img src="/assets/Home/custos-img.png" class="home-custos-img">
+		
+		<aside class="home-custos-box">
+			<h1>Sem custos para utilizar<br>
+			a nossa plataforma</h1>
+			<h3>
+				<a>Sem cadastro de cartão de crédito</a><br><br>
+				
+				Não é pegadinha! A Investment Overview lhe<br>
+				oferece uma ótima plataforma para te auxiliar<br>
+				em seus investimentos e ainda não cobra nada<br>
+				
+				Existe algo melhor do que essa notícia?<br>
+				Então está esperando o que pra começar para 
+				se cadastrar? 
+			</h3>
+		</aside>
+		
+	</article>
+	
+</section>
+
+<!--------------------------------------------------- Home - Objetivos --------------------------------------------------->
+
+<section class="home-objetivos">
+	
+	
+	
 </section>
 
 <!--------------------------------------------------- Footer --------------------------------------------------->
@@ -174,9 +212,7 @@
 	
 </footer>
 
-	
-	
-	
-
 </section>
+
+</body>
 
