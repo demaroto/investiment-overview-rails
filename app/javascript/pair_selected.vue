@@ -112,7 +112,7 @@ export default{
 
     },
     calcWish:function(){
-      this.valuesWish.buy = this.currentValues.buy - (this.percentWish.buy * 100)
+      this.valuesWish.buy = (this.currentValues.buy - (this.percentWish.buy * this.currentValues.buy / 100)).toFixed(8)
     }
   }
 }
