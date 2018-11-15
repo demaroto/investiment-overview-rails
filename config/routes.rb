@@ -1,7 +1,8 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do
   namespace :api do
-    get 'v1/index'
+    get 'v1/pairs' => 'v1#pairs', as: 'api_v1_pairs'
+    get 'v1/pairs/:id' => 'v1#show', as: 'api_v1_show'
   end
   get '/config/pair', :to => 'pair#index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

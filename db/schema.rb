@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_15_040842) do
+ActiveRecord::Schema.define(version: 2018_11_15_044140) do
 
   create_table "messages", force: :cascade do |t|
     t.text "content"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2018_11_15_040842) do
     t.integer "pair_id"
     t.string "type_trade"
     t.string "price"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_pairs_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,7 +39,9 @@ ActiveRecord::Schema.define(version: 2018_11_15_040842) do
     t.datetime "updated_at", null: false
     t.string "kind", default: "common"
     t.string "nome"
+    t.integer "pair_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["pair_id"], name: "index_users_on_pair_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
