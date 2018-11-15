@@ -16,18 +16,22 @@
       </thead>
       <tbody>
         <tr>
-        <td style="width:auto;text-align:center;color:#157887;font-weight:bold">{{pairCurrent}}</td>
+        <td style="width:auto;text-align:center;color:#157887;font-weight:bold">{{pairCurrent.name}}</td>
         <td style="width:auto;text-align:center;color:#157887;font-weight:bold">{{currentValues.buy}}</td>
         <td style="width:auto;text-align:center;color:#157887;font-weight:bold">{{currentValues.sell}}</td>
       </tr>
-      <tr v-if="currentValues.pair">
+      <tr v-if="currentValues.buy && currentValues.sell">
         <td style="width:auto;text-align:center;color:#157887;font-weight:bold">Acompanhar</td>
         <td style="width:auto;text-align:center;color:#157887;font-weight:bold"><input type="text" v-model="percentWish.buy" /></td>
         <td style="width:auto;text-align:center;color:#157887;font-weight:bold"><input type="text" v-model="percentWish.sell" /></td>
       </tr>
+      <tr v-if="currentValues.buy && currentValues.sell">
+        <td style="width:auto;text-align:center;color:#157887;font-weight:bold">Desejado</td>
+        <td style="width:auto;text-align:center;color:#157887;font-weight:bold">{{valuesWish.buy}}</td>
+        <td style="width:auto;text-align:center;color:#157887;font-weight:bold">{{valuesWish.sell}}</td>
+      </tr>
       </tbody>
     </table>
-    {{valuesWish.buy}} / {{currentValues.buy}}
   </div>
 </template>
 
@@ -67,11 +71,11 @@ export default{
       pair: '',
       currentValues: {},
       valuesWish: {'buy':'','sell':''},
-      percentWish: {'buy':'','sell':''}
+      percentWish: {'buy':0,'sell':0}
     }
   },
   props:{
-    pairCurrent:String
+    pairCurrent:{}
   },
   computed:{
   
@@ -86,15 +90,21 @@ export default{
           let typeTrade = JSON.parse(res.data)[2][0][1] // 1 for buy or 0 for sell
           let price = JSON.parse(res.data)[2][0][2] // Price
           let id = JSON.parse(res.data)[0] // id pair
+          
+          if(vm.pairCurrent.id == id){
+           // if(vm.viewPair.id == id){
               if(typeTrade == 1){
                 vm.currentValues.buy = price
               }else{
                 vm.currentValues.sell = price
               }
-              vm.currentValues.pair = vm.pairCurrent
+           // }
+          
+              vm.currentValues.pair = vm.pairCurrent.name
               vm.viewPair = {'id': id,'price': price, 'type': typeTrade}
               vm.calcWish()
               vm.$forceUpdate()
+          }
             
         }
       }
@@ -108,11 +118,14 @@ export default{
   methods:{
     
     getDataWebSocket:function(){
-      poloniexSocket.sendObj({'command': 'subscribe', 'channel': this.pairCurrent})
+      poloniexSocket.sendObj({'command': 'subscribe', 'channel': this.pairCurrent.name})
 
     },
     calcWish:function(){
+      this.percentWish.sell == '' ? this.percentWish.sell = 0 : this.percentWish.sell 
+      this.percentWish.buy == '' ? this.percentWish.buy = 0 : this.percentWish.buy 
       this.valuesWish.buy = (this.currentValues.buy - (this.percentWish.buy * this.currentValues.buy / 100)).toFixed(8)
+      this.valuesWish.sell = (parseFloat(this.currentValues.sell) + (parseFloat(this.currentValues.sell) * parseFloat(this.percentWish.sell) / 100)).toFixed(8)
     }
   }
 }

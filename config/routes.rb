@@ -1,5 +1,8 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do
+  namespace :api do
+    get 'v1/index'
+  end
   get '/config/pair', :to => 'pair#index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount ActionCable.server => '/cable'

@@ -1,2 +1,2 @@
-web: rails s -b 0.0.0.0 -p $PORT
+web: bundle exec rails server -p $PORT -b 0.0.0.0
 webpack: bin/webpack-dev-server

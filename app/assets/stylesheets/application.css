@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6{margin:0; padding: 0;}
 
 header{height:90px; width: 100%; position:fixed; z-index: 9997; border-bottom: 1px solid #FFF; transition: 2s;} /* #1e2f79 */
 
-.header-active{background-color: hsla(229,60%,30%,0.70);}	
+.header-active{background-color: hsla(229,60%,30%,0.80);}	
 	
 header .logo-header{height: 45px; position: absolute; margin-left: 50px; margin-top: 20px; cursor: pointer;}	
 	
@@ -202,7 +202,7 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 
 ::-webkit-input-placeholder{color: #FFF; text-transform: uppercase;}
 
-.cadastro input[type=email]:focus, .cadastro input[type=password]:focus{border:2px solid #18d67f;}
+.cadastro input[type=email]:focus, .cadastro input[type=password]:focus, .cadastro input[type=text]:focus{border:2px solid #18d67f;}
 
 .cadastro .erro-mensagem h2{font-size: 15px; margin-top: 30px;}
 
