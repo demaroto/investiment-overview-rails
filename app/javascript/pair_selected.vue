@@ -21,23 +21,34 @@
         <td style="width:auto;text-align:center;color:#157887;font-weight:bold">{{currentValues.sell}}</td>
       </tr>
       <tr v-if="currentValues.buy && currentValues.sell">
-        <td style="width:auto;text-align:center;color:#157887;font-weight:bold">Acompanhar</td>
-        <td style="width:auto;text-align:center;color:#157887;font-weight:bold"><input type="text" v-model="percentWish.buy" /></td>
-        <td style="width:auto;text-align:center;color:#157887;font-weight:bold"><input type="text" v-model="percentWish.sell" /></td>
+        <td style="width:auto;text-align:center;color:#157887;font-weight:bold">Porcentagem (%)</td>
+        <td style="width:auto;text-align:center;color:#157887;font-weight:bold"><input type="number" v-model="percentWish.buy" /></td>
+        <td style="width:auto;text-align:center;color:#157887;font-weight:bold"><input type="number" v-model="percentWish.sell" /></td>
       </tr>
       <tr v-if="currentValues.buy && currentValues.sell">
         <td style="width:auto;text-align:center;color:#157887;font-weight:bold">Desejado</td>
         <td style="width:auto;text-align:center;color:#157887;font-weight:bold">{{valuesWish.buy}}</td>
         <td style="width:auto;text-align:center;color:#157887;font-weight:bold">{{valuesWish.sell}}</td>
       </tr>
+      <tr v-if="currentValues.buy && currentValues.sell">
+        <td style="width:auto;text-align:center;color:#157887;font-weight:bold"></td>
+        <td style="width:auto;text-align:center;color:#157887;font-weight:bold"><button @click="addPairToOverview(pairCurrent.name, 'buy', valuesWish.buy)">Sinalizar Compra</button></td>
+        <td style="width:auto;text-align:center;color:#157887;font-weight:bold"><button @click="addPairToOverview(pairCurrent.name, 'sell', valuesWish.sell)">Sinalizar Venda</button></td>
+      </tr>
       </tbody>
     </table>
+    <div>
+      <overview-component></overview-component>
+    </div>
   </div>
+  
 </template>
 
 <script>
 import Vue from 'vue'
 import VueNativeSock from 'vue-native-websocket'
+import axios from 'axios'
+import OverviewComponent from './overview'
 Vue.use(VueNativeSock, 'wss://api2.poloniex.com', { 
 	'Sec-WebSocket-Protocol': true,
 	reconnection: true,
@@ -65,6 +76,9 @@ poloniex.$options.sockets.onmessage = (res) => {
 }
 
 export default{
+  components:{
+    OverviewComponent
+  },
   data:function(){
     return {
       viewPair: {},
@@ -126,6 +140,30 @@ export default{
       this.percentWish.buy == '' ? this.percentWish.buy = 0 : this.percentWish.buy 
       this.valuesWish.buy = (this.currentValues.buy - (this.percentWish.buy * this.currentValues.buy / 100)).toFixed(8)
       this.valuesWish.sell = (parseFloat(this.currentValues.sell) + (parseFloat(this.currentValues.sell) * parseFloat(this.percentWish.sell) / 100)).toFixed(8)
+    },
+    addPairToOverview:function(pairValue, typeValue, priceValue){
+      axios.post('/api/v1/pairs', {
+        "pair": pairValue,
+        "type_trade": typeValue,
+        "price": priceValue
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    },
+    getPairsToOverview:function(){
+      axios.get('/api/v1/pairs')
+      .then(function (response) {
+        // handle success
+        console.log(response);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
     }
   }
 }

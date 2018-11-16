@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6{margin:0; padding: 0;}
 	
 /* ---------------------------------------------- Global ---------------------------------------------- */
 
-.content{height:100%; width: 1100px; position:relative; left: 50%; margin-left: -550px;}
+.content{width: 1100px; position:relative; left: 50%; margin-left: -550px;}
 	
 .mask-window{background-color: hsla(0,0%,0%,0.50); height: 100vh; width: 100%; z-index: 9998; position: fixed; display: none;}	
 	
@@ -164,13 +164,13 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 
 /* ---------------------------------------------- Home - Objetivos ---------------------------------------------- */
 
-.home-objetivos{width: 100%; position: relative; color: #FFF;}
+.home-objetivos{width: 100%; position: relative; color: #FFF; z-index:20;}
 
-.home-objetivos-content{margin-left:-480px !important;}
+.home-objetivos-content{margin-left:-480px !important; position:absolute; z-index:999;}
 
-.home-objetivos-back{width: 100%; position: absolute;}
+.home-objetivos-back{width: 100%; position: relative;}
 
-.home-objetivos-box{text-align: center; height: 600px; width: 50%; float: left;  position: relative; margin-top:250px;}
+.home-objetivos-box{text-align: center; height: 600px; width: 50%; float: left; position: relative; margin-top:250px;}
 
 .home-objetivos-box img{height: 300px; margin-left:-150px;}
 
@@ -178,7 +178,22 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 
 .home-objetivos-box h1{font-size: 22px; font-weight: bold; text-align:left; line-height: 30px; padding-bottom: 30px; padding-top: 30px;}
 
-.home-objetivos h3{font-size: 18px; font-weight: normal; text-align: left;}
+.home-objetivos h3{font-size: 18px; font-weight: normal; text-align: left; line-height:25px;}
+
+/* ---------------------------------------------- Home - Companhia ---------------------------------------------- */
+
+.home-companhia{height:550px; width:100%; background-color:#FFF; clear:both; padding-top:100px;}
+
+.home-companhia img{height:450px; position:absolute; left:0; z-index:20;}
+
+.home-companhia-line{height: 300px; width: 120%; background-color: #eeeded; position: absolute; transform: rotate(-20deg); margin-left: -10%; margin-top: -240px; z-index:19;}
+
+.home-companhia-box{width:400px; position:absolute; right:0; z-index:20; padding-top:40px;}
+
+.home-companhia h1{font-size: 22px; font-weight: bold; text-align:left; line-height: 30px; padding-bottom: 30px; padding-top: 30px;}
+
+.home-companhia h3{font-size: 18px; font-weight: normal; text-align: left; line-height:25px;}
+
 
 /* ---------------------------------------------- Cadastro ---------------------------------------------- */
 

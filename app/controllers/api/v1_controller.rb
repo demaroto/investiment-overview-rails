@@ -20,7 +20,11 @@ class Api::V1Controller < ApplicationController
   end
   
   def create
-    @pair = Pair.new(pair_params)
+    @pair = Pair.new
+    @pair.pair = params[:pair]
+    @pair.type_trade = params[:type_trade]
+    @pair.price = params[:price]
+    @pair.user_id = @user.id
     if @pair.save
       render json: {data: 'Adicionado com sucesso!'}, status: 201
     else
@@ -44,7 +48,7 @@ class Api::V1Controller < ApplicationController
   
   private
   def pair_params
-    params.require(:pair).permit(:pair, :type_trade, :price, :user_id)
+    params.require(:pair).permit(:pair, :type_trade, :price)
   end
   
   def set_user

@@ -22,11 +22,6 @@ $(document).ready(function(e){
 
 /* ---------- Window Scroll ---------- */	
 	
-	var home = $(window).innerHeight() - 1;
-	var sobre = home + $(".sobre").innerHeight();
-	var servicos = sobre + $(".servicos").innerHeight();
-	var contato = servicos + $(".contato").innerHeight();
-	
 	$(window).scroll(function(){
 		
 		if($(this).scrollTop() > 0){
@@ -37,32 +32,8 @@ $(document).ready(function(e){
 			$("header").removeClass("header-active");
 		}
 		
-		if($(this).scrollTop() < home)
-		{
-			$("#sobre").removeClass("active");
-		}
-		
-		if(($(this).scrollTop() > home) && ($(this).scrollTop() < sobre))
-		{
-			$("#sobre").addClass("active");	
-			$("#servicos").removeClass("active");
-		}
-		
-		else if(($(this).scrollTop() > sobre) && ($(this).scrollTop() < servicos))
-		{
-			$("#servicos").addClass("active");
-			$("#sobre").removeClass("active");
-			$("#contato").removeClass("active");
-		}
-		
-		else if(($(this).scrollTop() > servicos) && ($(this).scrollTop() < contato))
-		{
-			$("#contato").addClass("active");
-			$("#servicos").removeClass("active");
-		}
-
 	});
-	
+
 /* ---------- Menu ---------- */	
 
 	$("nav a").click(function(e){		
@@ -128,8 +99,8 @@ $(document).ready(function(e){
 	
 /*  ------------------------------ Section Objetivos  ------------------------------ */	
 	
-	var imgObj = $(".home-objetivos img").innerHeight();
-	$(".home-objetivos").css({"height":imgObj});
+	/*var imgObj = $(".home-objetivos img").innerHeight();
+	$(".home-objetivos").css({"height":imgObj});*/
 	
 	
 	
