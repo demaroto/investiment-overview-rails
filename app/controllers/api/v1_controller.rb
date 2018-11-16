@@ -1,5 +1,6 @@
 class Api::V1Controller < ApplicationController
   before_action :set_user
+  skip_before_action :verify_authenticity_token
   
   def pairs
     @pairs = @user.pairs
@@ -20,10 +21,7 @@ class Api::V1Controller < ApplicationController
   end
   
   def create
-    @pair = Pair.new
-    @pair.pair = params[:pair]
-    @pair.type_trade = params[:type_trade]
-    @pair.price = params[:price]
+    @pair = Pair.new(pair_params)
     @pair.user_id = @user.id
     if @pair.save
       render json: {data: 'Adicionado com sucesso!'}, status: 201
@@ -35,20 +33,20 @@ class Api::V1Controller < ApplicationController
   def destroy
     if Pair.find(params[:id]).user_id == @user.id
       @pair = Pair.find(params[:id])
-      pair_name = @pair.pair
+      pair_name = @pair.pair_name
         if @pair.destroy
           render json: {data: "Item #{pair_name} removido com sucesso!"}, status: 200
         else
           render json: {data: 'Não foi possível remover este item'}, status: 400
         end
     else
-      render json: [], status: 404
+      render json: {data: 'Oops não foi possível remover'}, status: 404
     end
   end
   
   private
   def pair_params
-    params.require(:pair).permit(:pair, :type_trade, :price)
+    params.permit(:pair_id, :type_trade, :price, :pair_name)
   end
   
   def set_user

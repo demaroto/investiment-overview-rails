@@ -16,29 +16,29 @@
       </thead>
       <tbody>
         <tr>
-        <td style="width:auto;text-align:center;color:#157887;font-weight:bold">{{pairCurrent.name}}</td>
-        <td style="width:auto;text-align:center;color:#157887;font-weight:bold">{{currentValues.buy}}</td>
-        <td style="width:auto;text-align:center;color:#157887;font-weight:bold">{{currentValues.sell}}</td>
+        <td>{{pairCurrent.name}}</td>
+        <td>{{currentValues.buy}}</td>
+        <td>{{currentValues.sell}}</td>
       </tr>
       <tr v-if="currentValues.buy && currentValues.sell">
-        <td style="width:auto;text-align:center;color:#157887;font-weight:bold">Porcentagem (%)</td>
-        <td style="width:auto;text-align:center;color:#157887;font-weight:bold"><input type="number" v-model="percentWish.buy" /></td>
-        <td style="width:auto;text-align:center;color:#157887;font-weight:bold"><input type="number" v-model="percentWish.sell" /></td>
+        <td>Porcentagem (%)</td>
+        <td><input type="number" v-model="percentWish.buy" /></td>
+        <td><input type="number" v-model="percentWish.sell" /></td>
       </tr>
       <tr v-if="currentValues.buy && currentValues.sell">
-        <td style="width:auto;text-align:center;color:#157887;font-weight:bold">Desejado</td>
-        <td style="width:auto;text-align:center;color:#157887;font-weight:bold">{{valuesWish.buy}}</td>
-        <td style="width:auto;text-align:center;color:#157887;font-weight:bold">{{valuesWish.sell}}</td>
+        <td>Desejado</td>
+        <td>{{valuesWish.buy}}</td>
+        <td>{{valuesWish.sell}}</td>
       </tr>
       <tr v-if="currentValues.buy && currentValues.sell">
-        <td style="width:auto;text-align:center;color:#157887;font-weight:bold"></td>
-        <td style="width:auto;text-align:center;color:#157887;font-weight:bold"><button @click="addPairToOverview(pairCurrent.name, 'buy', valuesWish.buy)">Sinalizar Compra</button></td>
-        <td style="width:auto;text-align:center;color:#157887;font-weight:bold"><button @click="addPairToOverview(pairCurrent.name, 'sell', valuesWish.sell)">Sinalizar Venda</button></td>
+        <td></td>
+        <td><button @click="addPairToOverview(pairCurrent.id, 'buy', valuesWish.buy, pairCurrent.name)" class="btn-sinalizar-compra">Sinalizar Compra</button></td>
+        <td><button @click="addPairToOverview(pairCurrent.id, 'sell', valuesWish.sell, pairCurrent.name)" class="btn-sinalizar-venda">Sinalizar Venda</button></td>
       </tr>
       </tbody>
     </table>
     <div>
-      <overview-component></overview-component>
+      <overview-component ref="overviewComponent"></overview-component>
     </div>
   </div>
   
@@ -54,9 +54,9 @@ Vue.use(VueNativeSock, 'wss://api2.poloniex.com', {
 	reconnection: true,
 	format: 'json'
 	 })
-let poloniex = new Vue()
-let poloniexSocket = ""
-let eventHub = new Vue()
+var poloniex = new Vue()
+var poloniexSocket = ""
+var eventHub = new Vue()
 
 //Recupera o alvo atual
 poloniex.$options.sockets.onopen = (event) => {
@@ -69,7 +69,6 @@ poloniex.$options.sockets.onmessage = (res) => {
 	if (res.data == '[1010]'){ 
 		//Estado ocioso
 	}else{
-
     eventHub.$emit('onViewPair', res)
 	}
 
@@ -92,12 +91,12 @@ export default{
     pairCurrent:{}
   },
   computed:{
-  
+    
   },
   mounted:function(){
     
      var vm = this
-     
+
       eventHub.$on('onViewPair', function (res) {
       if(JSON.parse(res.data).length > 2){
         if(JSON.parse(res.data)[2][0][0] == 'o'){
@@ -106,14 +105,12 @@ export default{
           let id = JSON.parse(res.data)[0] // id pair
           
           if(vm.pairCurrent.id == id){
-           // if(vm.viewPair.id == id){
               if(typeTrade == 1){
                 vm.currentValues.buy = price
               }else{
                 vm.currentValues.sell = price
               }
-           // }
-          
+           
               vm.currentValues.pair = vm.pairCurrent.name
               vm.viewPair = {'id': id,'price': price, 'type': typeTrade}
               vm.calcWish()
@@ -123,17 +120,23 @@ export default{
         }
       }
    
-}) 
+    }) 
+     vm.$forceUpdate()
   },
   updated:function(){
     this.getDataWebSocket()
-    
   },
   methods:{
     
     getDataWebSocket:function(){
+      if(this.pairCurrent.name){
       poloniexSocket.sendObj({'command': 'subscribe', 'channel': this.pairCurrent.name})
-
+      
+      }// poloniex.$options.sockets.onopen = (event) => {
+      //   poloniexSocket = event.currentTarget
+      //   poloniexSocket.sendObj({'command': 'subscribe', 'channel': this.pairCurrent.name})
+         
+      // };
     },
     calcWish:function(){
       this.percentWish.sell == '' ? this.percentWish.sell = 0 : this.percentWish.sell 
@@ -141,29 +144,25 @@ export default{
       this.valuesWish.buy = (this.currentValues.buy - (this.percentWish.buy * this.currentValues.buy / 100)).toFixed(8)
       this.valuesWish.sell = (parseFloat(this.currentValues.sell) + (parseFloat(this.currentValues.sell) * parseFloat(this.percentWish.sell) / 100)).toFixed(8)
     },
-    addPairToOverview:function(pairValue, typeValue, priceValue){
+    addPairToOverview:function(pairValue, typeValue, priceValue, pairNameValue){
+      let vm = this
       axios.post('/api/v1/pairs', {
-        "pair": pairValue,
-        "type_trade": typeValue,
-        "price": priceValue
+        pair_id: pairValue,
+        type_trade: typeValue,
+        price: priceValue,
+        pair_name: pairNameValue
       })
       .then(function (response) {
-        console.log(response);
+        //Adicionado com sucesso
+        vm.$refs.overviewComponent.getPairsToOverview()
+       
       })
       .catch(function (error) {
         console.log(error);
+      })
+      .then(function(){
+       
       });
-    },
-    getPairsToOverview:function(){
-      axios.get('/api/v1/pairs')
-      .then(function (response) {
-        // handle success
-        console.log(response);
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
     }
   }
 }

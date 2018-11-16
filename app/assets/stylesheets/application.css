@@ -1,21 +1,3 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
- 
- @charset "utf-8";
-
 /* ---------------------------------------------- Body ---------------------------------------------- */
 
 body{margin:0; padding:0; overflow-x:hidden; font-family: 'Montserrat', sans-serif; background-color: #f7f7ff;}
@@ -28,9 +10,6 @@ h1, h2, h3, h4, h5, h6{margin:0; padding: 0;}
 
 *:focus{outline: 0;}
 *{box-sizing: border-box;}
-
-/*textarea, input[type="text"], input[type="button"], input[type="submit"] { -webkit-appearance: none; border-radius: 0px !important; box-shadow: 0 0 0 0;}*/
-/*textarea, input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {border-radius: 0px !important;}*/
 
 @media only screen and (min-width:1024px){
 	
@@ -109,7 +88,142 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 .menu-box-user-mask{width: 100%; background-color:hsla(0,0%,0%,0.20); padding-top: 50px;}	
 	
 .nav .icons-nav{position: absolute; height:  20px; margin-top: 17px; margin-left: 40px;}	
+
+.painel-invest{padding-bottom:100px;}
+
+.painel-invest h3{text-align:center; font-weight:normal; font-size:30px; padding:50px 0px;}
+
+.painel-invest table{border-collapse:collapse; font-weight:normal !important; border:0px !important;}
+
+.painel-invest table th{height:80px; color:#18d67f; font-weight:bold; font-size:18px; border-bottom:3px solid #18d67f;}
 	
+.painel-invest table td{color:#4f4f4f; text-align:center; width:20%;}
+
+.painel-invest tr{height:80px; font-weight:bold; font-size:16px;}
+.painel-invest tr:nth-child(2n+2){background-color:#e7e7e7;}
+
+.painel-invest .btn-sinalizar-compra{height:40px; width:200px; background-color:#18d67f; color:#FFF; border:2px solid #18d67f; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:16px;}
+
+.painel-invest .btn-sinalizar-compra:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #18d67f; color:#18d67f;}
+
+.painel-invest .btn-sinalizar-venda{height:40px; width:180px; background-color:#ec0042; color:#FFF; border:2px solid #ec0042; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:16px;}
+
+.painel-invest .btn-sinalizar-venda:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #ec0042; color:#ec0042;}
+
+.painel-invest .btn-remover{height:30px; width:100px; background-color:#ec0042; color:#FFF; border:2px solid #ec0042; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:14px;}
+
+.painel-invest .btn-remover:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #ec0042; color:#ec0042;}
+
+/** Custom Select **/
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+}
+  .custom-select-wrapper select {
+    display: none;
+  }
+  .custom-select {
+    position: relative;
+    display: inline-block;
+  }
+    .custom-select-trigger {
+      position: relative;
+      display: block;
+      width: 130px;
+      padding: 0 84px 0 22px;
+      font-size: 22px;
+      font-weight: 300;
+      color: #fff;
+      line-height: 60px;
+      background: #5c9cd8;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+      .custom-select-trigger:after {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 10px; height: 10px;
+        top: 50%; right: 25px;
+        margin-top: -3px;
+        border-bottom: 1px solid #fff;
+        border-right: 1px solid #fff;
+        transform: rotate(45deg) translateY(-50%);
+        transition: all .4s ease-in-out;
+        transform-origin: 50% 0;
+      }
+      .custom-select.opened .custom-select-trigger:after {
+        margin-top: 3px;
+        transform: rotate(-135deg) translateY(-50%);
+      }
+  .custom-options {
+    position: absolute;
+    display: block;
+    top: 100%; left: 0; right: 0;
+    min-width: 100%;
+    margin: 15px 0;
+    border: 1px solid #b5b5b5;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 1px rgba(0,0,0,.07);
+    background: #fff;
+    transition: all .4s ease-in-out;
+    
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-15px);
+  }
+  .custom-select.opened .custom-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+    .custom-options:before {
+      position: absolute;
+      display: block;
+      content: '';
+      bottom: 100%; right: 25px;
+      width: 7px; height: 7px;
+      margin-bottom: -4px;
+      border-top: 1px solid #b5b5b5;
+      border-left: 1px solid #b5b5b5;
+      background: #fff;
+      transform: rotate(45deg);
+      transition: all .4s ease-in-out;
+    }
+    .option-hover:before {
+      background: #f9f9f9;
+    }
+    .custom-option {
+      position: relative;
+      display: block;
+      padding: 0 22px;
+      border-bottom: 1px solid #b5b5b5;
+      font-size: 18px;
+      font-weight: 600;
+      color: #b5b5b5;
+      line-height: 47px;
+      cursor: pointer;
+      transition: all .4s ease-in-out;
+    }
+    .custom-option:first-of-type {
+      border-radius: 4px 4px 0 0;
+    }
+    .custom-option:last-of-type {
+      border-bottom: 0;
+      border-radius: 0 0 4px 4px;
+    }
+    .custom-option:hover,
+    .custom-option.selection {
+      background: #f9f9f9;
+    }
+
+
+    .custom-select{height:100px;}
+    
 /* ---------------------------------------------- Home ---------------------------------------------- */
 
 .home{height: 1400px; width:100%; position:relative; background-image: url("/assets/Home/bloco1.png"); background-size: cover; padding-top: 270px; background-position:bottom; background-repeat: no-repeat;}
@@ -193,7 +307,6 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 .home-companhia h1{font-size: 22px; font-weight: bold; text-align:left; line-height: 30px; padding-bottom: 30px; padding-top: 30px;}
 
 .home-companhia h3{font-size: 18px; font-weight: normal; text-align: left; line-height:25px;}
-
 
 /* ---------------------------------------------- Cadastro ---------------------------------------------- */
 

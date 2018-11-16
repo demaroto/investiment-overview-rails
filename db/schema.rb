@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_15_044140) do
+ActiveRecord::Schema.define(version: 2018_11_16_061332) do
 
   create_table "messages", force: :cascade do |t|
     t.text "content"
@@ -22,10 +22,11 @@ ActiveRecord::Schema.define(version: 2018_11_15_044140) do
   end
 
   create_table "pairs", force: :cascade do |t|
-    t.integer "pair_id"
+    t.string "pair_id"
     t.string "type_trade"
     t.string "price"
     t.integer "user_id"
+    t.string "pair_name"
     t.index ["user_id"], name: "index_pairs_on_user_id"
   end
 

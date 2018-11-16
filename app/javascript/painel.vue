@@ -1,31 +1,30 @@
 <template>
-  <div id="app" >
 
-    <div class="col-lg-12">
-      <div class="col-lg-6">
-        <select v-model="channel" class="form-control">
-          <option disabled value="">Escolha uma criptomoeda</option>
+  <div id="app">
+    
+      
+        <select v-model="channel" name="sources" id="sources" class="custom-select sources" placeholder="Selecionar Criptomoeda">
+          <option disabled selected>Escolha uma criptomoeda</option>
           <option v-for="(item, index) in poloniex_info" :value="{name: index, id: item.id}" :key="item.id">{{ index }}</option>
         </select>    
-      </div>
+      
+      
       <div class="col-lg-6">
         <p>{{message}}</p>
       </div>
-    </div>
-    <div class="section">
-      <!-- Component da Paridade Selecionada -->
-    <div class="componentPair">
-      <pair-component :pairCurrent="channel"></pair-component>
-    </div>
-    <!-- Tabela de acompanhamento -->
-    <div class="tabela">
-      
-
-	  </div>
-  </div>
+    
+      <div class="section">
+        <!-- Component da Paridade Selecionada -->
+        <div class="componentPair">
+          <pair-component :pairCurrent="channel"></pair-component>
+        </div>
+        <!-- Tabela de acompanhamento -->
+        <div class="tabela">
+        
+        </div>
+      </div>
   </div>
   
-
 </template>
 
 <script>
@@ -41,18 +40,14 @@ Vue.use(VueNativeSock, 'wss://api2.poloniex.com', {
 	format: 'json'
 	 })
 	 
-
-	 	  var poloniex = new Vue()
-	 	  var eventHub = new Vue()
-	    var poloniexSocket = ""
+  var poloniex = new Vue()
+  var eventHub = new Vue()
+  var poloniexSocket = ""
 	    
 //Recupera o alvo atual
 poloniex.$options.sockets.onopen = (event) => {
   poloniexSocket = event.currentTarget
-  
 };
-
-
 
 //Escuta dados da poloniex
 poloniex.$options.sockets.onmessage = (res) => {
@@ -61,15 +56,11 @@ poloniex.$options.sockets.onmessage = (res) => {
 	}else{
     eventHub.$emit('updatePair', res)
 	}
-
 }
-   
-
   
-	 
-	 function showChannels(){
-	   console.log(poloniexSocket);
-	 }
+function showChannels(){
+ console.log(poloniexSocket);
+}
 	 
 export default {
   name: 'PainelComponent',
@@ -85,18 +76,21 @@ export default {
       subscriptions:[],
       quantidade: 0,
       poloniex_info: '',
-      poloniex_erro: false
-    }
+      poloniex_erro: false,
+      myCurrentPairs:[]
+      }
+  },
+  computed:{
+    
   },
   created:function() {
-    
     
   },
   mounted: function(){
      var vm = this;
-    
-      //Envia para o ActionCable
-     //App.poloniex.ticker(eventHub.pairs)
+     
+  //Envia para o ActionCable
+  //App.poloniex.ticker(eventHub.pairs)
 
   //Get pairs from poloniex
   axios
@@ -107,10 +101,9 @@ export default {
           }).catch(erro => {
         this.poloniex_erro = true
       })
-  
   },
   updated:function() {
-
+   
   },
   methods:{
     	action: function(command, channel)  {
@@ -134,9 +127,7 @@ export default {
     	  }
     	poloniexSocket.sendObj({'command': command, 'channel': channel});
     	},
-    	channels:function() {showChannels()},
-    	key:function(id){alert(id)}
-
+    	channels:function() {showChannels()}
     }
 }
 
