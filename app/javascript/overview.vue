@@ -1,8 +1,8 @@
 
 <template>
   <div class="overview">
-    <h3>Overview</h3>
-    <table style="width:100%;border:1px solid #000" v-if="myPairs">
+    <h3>SUAS CRIPTOMOEDAS</h3>
+    <table style="width:100%;" v-if="myPairs">
       <thead>
         <tr>
           <th>

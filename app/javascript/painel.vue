@@ -1,13 +1,11 @@
 <template>
 
   <div id="app">
-    
-      
-        <select v-model="channel" name="sources" id="sources" class="custom-select sources" placeholder="Selecionar Criptomoeda">
-          <option disabled selected>Escolha uma criptomoeda</option>
+        
+        <select v-model="channel">
+          <option value="" disabled selected>Escolha uma Criptomoeda</option>
           <option v-for="(item, index) in poloniex_info" :value="{name: index, id: item.id}" :key="item.id">{{ index }}</option>
-        </select>    
-      
+        </select>
       
       <div class="col-lg-6">
         <p>{{message}}</p>
@@ -22,7 +20,7 @@
         <div class="tabela">
         
         </div>
-      </div>
+    </div>
   </div>
   
 </template>
