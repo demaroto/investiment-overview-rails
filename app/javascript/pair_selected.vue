@@ -1,5 +1,6 @@
 <template>
   <div class="current">
+     <div class="section-select-table" v-if="pairCurrent.name">
     <table style="width:100%;border:1px solid #000">
       <thead>
         <tr>
@@ -31,12 +32,13 @@
         <td>{{valuesWish.sell}}</td>
       </tr>
       <tr v-if="currentValues.buy && currentValues.sell">
-        <td></td>
+        <td>Sinalizar</td>
         <td><button @click="addPairToOverview(pairCurrent.id, 'buy', valuesWish.buy, pairCurrent.name)" class="btn-sinalizar-compra">Sinalizar Compra</button></td>
         <td><button @click="addPairToOverview(pairCurrent.id, 'sell', valuesWish.sell, pairCurrent.name)" class="btn-sinalizar-venda">Sinalizar Venda</button></td>
       </tr>
       </tbody>
     </table>
+    </div>
     <div>
       <overview-component ref="overviewComponent"></overview-component>
     </div>
@@ -139,8 +141,8 @@ export default{
       // };
     },
     calcWish:function(){
-      this.percentWish.sell == '' ? this.percentWish.sell = 0 : this.percentWish.sell 
-      this.percentWish.buy == '' ? this.percentWish.buy = 0 : this.percentWish.buy 
+      this.percentWish.sell == 0 ? this.percentWish.sell = 0 : this.percentWish.sell 
+      this.percentWish.buy == 0 ? this.percentWish.buy = 0 : this.percentWish.buy 
       this.valuesWish.buy = (this.currentValues.buy - (this.percentWish.buy * this.currentValues.buy / 100)).toFixed(8)
       this.valuesWish.sell = (parseFloat(this.currentValues.sell) + (parseFloat(this.currentValues.sell) * parseFloat(this.percentWish.sell) / 100)).toFixed(8)
     },

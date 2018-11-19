@@ -1,35 +1,51 @@
 <template>
 
   <div id="app">
+        <h1>Painel Investment Overview</h1>
+        <!-- Implementação do novo SELECT -->
         
-        <select v-model="channel">
-          <option value="" disabled selected>Escolha uma Criptomoeda</option>
-          <option v-for="(item, index) in poloniex_info" :value="{name: index, id: item.id}" :key="item.id">{{ index }}</option>
-        </select>
-      
-      <div class="col-lg-6">
-        <p>{{message}}</p>
-      </div>
+        <div class="btn-group">
+            <li @click="toggleMenu()" class="dropdown-toggle" v-if="channel.name !== undefined">
+              {{ channel.name }}
+              <span class="caret"></span>
+            </li>
     
-      <div class="section">
+            <li @click="toggleMenu()" class="dropdown-toggle" v-if="channel.name === undefined">
+              {{placeholderText}}
+              <span class="caret"></span>
+            </li>
+    
+            <ul class="dropdown-menu" v-if="showMenu">
+                <li v-for="(option, index) in poloniex_info">
+                    <a href="javascript:void(0)" @click="updateOption(option, index)">
+                        {{ index }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Fim da implementação-->
+      
         <!-- Component da Paridade Selecionada -->
         <div class="componentPair">
           <pair-component :pairCurrent="channel"></pair-component>
         </div>
+        
+       
         <!-- Tabela de acompanhamento -->
         <div class="tabela">
         
         </div>
-    </div>
+            
   </div>
   
 </template>
 
 <script>
-
+import _ from 'lodash';
 import Vue from 'vue'
 import VueNativeSock from 'vue-native-websocket'
 import axios from 'axios'
+import dropdown from 'vue-dropdowns';
 import PairComponent from './pair_selected'
 
 Vue.use(VueNativeSock, 'wss://api2.poloniex.com', { 
@@ -63,30 +79,32 @@ function showChannels(){
 export default {
   name: 'PainelComponent',
   components:{
-    PairComponent
-  },
+    PairComponent,
+  'dropdown': dropdown
+     },
    data: function () {
     return {
-      message: '',
       channel: '',
-      command: '',
-      pairs: [],
-      subscriptions:[],
-      quantidade: 0,
       poloniex_info: '',
       poloniex_erro: false,
-      myCurrentPairs:[]
+      showMenu: false,
+      placeholderText: 'Selecione uma Criptomoeda'
       }
   },
   computed:{
-    
+  
   },
   created:function() {
     
   },
   mounted: function(){
+    
      var vm = this;
-     
+     this.channel = this.channel;
+            if (this.placeholder)
+            {
+                this.placeholderText = this.placeholder;
+            }
   //Envia para o ActionCable
   //App.poloniex.ticker(eventHub.pairs)
 
@@ -94,37 +112,33 @@ export default {
   axios
       .get('https://poloniex.com/public?command=returnTicker')
       .then(response => {
-        this.poloniex_erro = false
-        this.poloniex_info = response.data
-          }).catch(erro => {
-        this.poloniex_erro = true
+        vm.poloniex_erro = false
+        vm.poloniex_info = response.data
+         }).catch(erro => {
+        vm.poloniex_erro = true
       })
+      .then(function(){
+       //Complete
+     
+      })
+      
   },
   updated:function() {
    
   },
   methods:{
-    	action: function(command, channel)  {
-    	  //this.subscriptions.indexOf(channel)
-    	  if(command == 'subscribe'){
-    	    if(this.subscriptions.indexOf(channel) == -1){
-    	    this.subscriptions.push(channel)
-    	    this.message = 'New channel has added: '+channel+'.Waiting for data...'
-    	    this.quantidade = this.quantidade + 1
-    	    }
-    	  }else if(command == 'unsubscribe'){
-    	    if(this.subscriptions.indexOf(channel) > -1){
-    	      this.subscriptions.splice(this.subscriptions.indexOf(channel), 1)
-    	      this.message = 'Channel has removed: '+channel
-    	      this.quantidade = this.quantidade - 1
-    	      let chave = this.pairs.map((valor) => parseInt(valor.id)).indexOf(parseInt(channel))
-    	      if(chave > -1){
-    	        this.pairs[chave] = []
-    	      }
-    	    }
-    	  }
-    	poloniexSocket.sendObj({'command': command, 'channel': channel});
-    	},
+     	//Atualiza o objeto
+    	updateOption(option, index) {
+              this.channel = {
+                name: index, id: option.id
+              };
+              this.showMenu = false;
+              this.$emit('updateOption', this.channel);
+              
+            },
+      toggleMenu() {
+          this.showMenu = !this.showMenu;
+      },
     	channels:function() {showChannels()}
     }
 }

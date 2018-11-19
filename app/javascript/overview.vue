@@ -1,25 +1,15 @@
 
 <template>
   <div class="overview">
-    <h3>SUAS CRIPTOMOEDAS</h3>
+    <h3>Suas Criptomoedas</h3>
     <table style="width:100%;" v-if="myPairs">
       <thead>
         <tr>
-          <th>
-            Paridade
-          </th>
-          <th>
-            Tipo
-          </th>
-          <th>
-            Valor Esperado
-          </th>
-          <th>
-            Valor Atual
-          </th>
-          <th>
-            Remover
-          </th>
+          <th>Paridade</th>
+          <th>Tipo</th>
+          <th>Valor Desejado</th>
+          <th>Valor Atual</th>
+          <th>Remover</th>
         </tr>
       </thead>
       <tbody>
@@ -30,7 +20,6 @@
            <td>{{pair.currentValue}}</td>
            <td><input type="button" value="Remover" class="btn-remover" @click.prevent="destroyPair(pair.id, $event)"/></td>
         </tr>
-   
       </tbody>
     </table>
   </div>
@@ -86,7 +75,8 @@ export default {
   mounted: function(){
      var vm = this;
       vm.getPairsToOverview()
-      
+      //Permissão de notificação
+      Notification.requestPermission()
       eventHub.$on('onViewPair', function (res) {
         if(JSON.parse(res.data).length > 2){
         if(JSON.parse(res.data)[2][0][0] == 'o'){
@@ -99,6 +89,42 @@ export default {
                 vm.myPairs.forEach(function(current, index){
                   if(current.pair_id == id && current.type_trade == formatType){
                     vm.myPairs[index].currentValue = price
+                    //Validação de Valores e Notificação
+                    
+                      if(vm.myPairs[index].type_trade == 'buy'){
+                            if(vm.myPairs[index].currentValue <= vm.myPairs[index].price){
+                              let myPar = vm.myPairs[index].pair_name
+                              let typePar = vm.myPairs[index].type_trade
+                              let myValue = vm.myPairs[index].price
+                              let poloniexValue = vm.myPairs[index].currentValue
+                              if(((myValue-poloniexValue) * 100 / myValue) < 95){
+                                vm.$vnode.elm.getElementsByTagName('tbody')[0].children[index].classList.add('active-tr-table')
+                                vm.notificationShow("Investiment Overview: Compra", myPar, typePar, myValue, poloniexValue)
+                              }
+                            }else{
+                              
+                                vm.$vnode.elm.getElementsByTagName('tbody')[0].children[index].classList.remove('active-tr-table')
+                             
+                            }
+                      }else{
+                          if(vm.myPairs[index].currentValue >= vm.myPairs[index].price){
+                               let myPar = vm.myPairs[index].pair_name
+                              let typePar = vm.myPairs[index].type_trade
+                              let myValue = vm.myPairs[index].price
+                              let poloniexValue = vm.myPairs[index].currentValue
+                              if(((myValue-poloniexValue) * 100 / myValue) < 95){
+                                //Add class Notification
+                               vm.$vnode.elm.getElementsByTagName('tbody')[0].children[index].classList.add('active-tr-table')
+                                vm.notificationShow("Investiment Overview: Venda", myPar, typePar, myValue, poloniexValue)
+                              }
+                            }
+                            
+                          else{
+                           
+                              vm.$vnode.elm.getElementsByTagName('tbody')[0].children[index].classList.remove('active-tr-table')  
+                          
+                          }
+                      }
                   }
                 })
                 }
@@ -129,11 +155,11 @@ export default {
       .catch(function (error) {
         // handle error
         console.log(error);
-      }).then(function(){
+      }).then(function(data){
         if(vm.myPairs){
        vm.myPairs.forEach(function(current, index){
         vm.getDataWebSocket(current.pair_name)
-           
+         
        })
         }
       })
@@ -157,6 +183,36 @@ export default {
         poloniexSocket.sendObj({'command': 'subscribe', 'channel': channel})
          
       };
+    },
+    displaySelect:function(){
+      console.log('Display Select')
+      
+    },
+    notificationShow:function(titulo, moeda, tipo, myValue, currentValue){
+       if (Notification.permission === "granted") {
+     var notification = new Notification(titulo, {
+            icon: '/assets/Home/iconNotifications.png',
+          body: "Paridade: " + moeda + "\nTipo: " + tipo + "\nValor Desejado: " + myValue + "\nValor Atual: " + currentValue
+        });
+        notification.onclick = function(event){
+          event.preventDefault();
+          window.location.href = window.location.href
+          
+        }
+      } else if (Notification.permission !== 'denied') {
+        Notification.requestPermission(function (permission) {
+      // If the user accepts, let's create a notification
+      if (permission === "granted") {
+        var notification = new Notification(titulo, {
+            icon: '/assets/Home/iconNotifications.png',
+           body: "Paridade: " + moeda + "Tipo: " + tipo + "\nValor Desejado: " + myValue + "\nValor Atual: " + currentValue
+        });
+      }
+    });
+      }
+    },
+    noticationPage:function(){
+      
     }
 
     }

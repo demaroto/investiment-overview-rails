@@ -4,9 +4,11 @@ body{margin:0; padding:0; overflow-x:hidden; font-family: 'Montserrat', sans-ser
 
 h1, h2, h3, h4, h5, h6{margin:0; padding: 0;}
 
-::-webkit-scrollbar-track{background-color:#000000;}
+::-webkit-scrollbar-track{background-color:#dedede;}
 ::-webkit-scrollbar{width:0px;}
-::-webkit-scrollbar-thumb{background:#646464;}
+::-webkit-scrollbar-thumb{background:#646464; border-radius:25%;}
+
+.dropdown-menu::-webkit-scrollbar{width:6px;}
 
 *:focus{outline: 0;}
 *{box-sizing: border-box;}
@@ -53,7 +55,7 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 
 /* ---------------------------------------------- Painel ---------------------------------------------- */
 
-.header-painel{background-color:#000;}	
+.header-painel{background-color:#180d5b;}
 	
 .icon-menu{height:36px; width:46px; position:absolute; left:100%; margin-left:-71px; margin-top:29px; cursor: pointer;}
 
@@ -77,7 +79,7 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 
 .active{background-color:#F1F1F1; color: #000 !important;}
 	
-.img-user-menu{height: 100px; width: 100px; background-color:#FFF; background-size: cover; background-position: center; margin-bottom: 30px; position: relative; left: 50%; margin-left: -50px; border-radius: 100%;}
+.img-user-menu{height: 150px; width: 150px; background-color:#FFF; background-size: cover; background-position: center; margin-bottom: 30px; position: relative; left: 50%; margin-left: -75px; border-radius: 100%;}
 	
 .menu-animate h3{padding-left: 10%; font-size: 15px; padding-bottom: 50px; font-weight: normal; line-height: 25px; color: #FFF;}	
 	
@@ -87,35 +89,150 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 	
 .nav .icons-nav{position: absolute; height:  20px; margin-top: 17px; margin-left: 40px;}	
 
-.painel-invest{padding-top: 150px; min-height:100vh; width:100%; padding-bottom:200px; background-image:url("/assets/Painel/back-painel2.png"); background-size: cover; background-repeat: no-repeat;}
+.painel-invest{padding-top: 200px; min-height:100vh; width:100%; padding-bottom:200px; /*background-image:url("/assets/Painel/back-painel.png");*/ background-color:#180d5b; background-size: cover; background-repeat: no-repeat; background-position: center;}
 
-.painel-invest h3{font-weight:normal; font-size:40px; padding:80px 0px 30px 0px; color:#000;}
+.painel-invest input[type=number]{height:40px; width:80px; border:none; border-radius:4px; text-align: center; font-size: 16px; padding-left: 15px;}
 
-.painel-invest table{font-weight:normal !important; border:0px !important; border-collapse: collapse;}
+.painel-invest h3{font-weight:normal; font-size:40px; padding:30px 0px 30px 0px; color:#FFF; font-weight: 500;}
 
-.painel-invest table th{color:#FFF; font-weight:bold; font-size:18px; border-bottom:3px solid #18d67f; background-color:#146695;}
-	
+.painel-invest h1{font-weight:normal; font-size:50px; padding:0px 0px 30px 0px; color:#FFF; font-weight: 500; border-bottom: 2px solid #18d67f; margin-bottom: 80px;}
+
+.painel-invest table{font-weight:normal !important; border:0px !important; border-collapse: collapse; margin-bottom:50px;}
+.painel-invest table th{color:#FFF; font-size:18px; border-bottom:3px solid #18d67f; background-color:#146695; font-weight: 500;}
 .painel-invest thead tr{height:60px;}	
-	
-.painel-invest table td{color:#FFF; text-align:center; width:20%;}
-
-.painel-invest tr:hover{background-color:#1e3686 !important;}
-
+.painel-invest tbody{border-collapse: collapse;} 
 .painel-invest tbody tr{height:80px; font-weight:normal; font-size:16px; transition:.3s;}
 .painel-invest tr:nth-child(2n+2){background-color:#0f0633;}
 .painel-invest tr:nth-child(2n+1){background-color:#132150;}
+.painel-invest tr:hover{background-color:#213B8F;}
+.painel-invest table td{color:#FFF; text-align:center; width:20%; transition:.3s;}
+.painel-invest td:hover{background-color:#3358CF;}
+
+.active-tr-table{background-color:#18d67f !important;}
 
 .painel-invest .btn-sinalizar-compra{height:40px; width:200px; background-color:#18d67f; color:#FFF; border:2px solid #18d67f; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:16px;}
 
-.painel-invest .btn-sinalizar-compra:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #18d67f; color:#18d67f;}
+.painel-invest .btn-sinalizar-compra:hover{background-color: #12A15F; border:2px solid #12A15F; color:#FFF;}
 
 .painel-invest .btn-sinalizar-venda{height:40px; width:180px; background-color:#ec0042; color:#FFF; border:2px solid #ec0042; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:16px;}
 
-.painel-invest .btn-sinalizar-venda:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #ec0042; color:#ec0042;}
+.painel-invest .btn-sinalizar-venda:hover{background-color: #B10031; border:2px solid #B10031; color:#FFF;}
 
 .painel-invest .btn-remover{height:30px; width:100px; background-color:#ec0042; color:#FFF; border:2px solid #ec0042; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:14px;}
 
-.painel-invest .btn-remover:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #ec0042; color:#ec0042;}
+.painel-invest .btn-remover:hover{background-color: #B10031; border:2px solid #B10031; color:#FFF;}
+
+.painel-invest select{height:60px; width:300px; background-color:#18d67f; color:#FFF; border:2px solid #18d67f; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:18px; padding-left: 20px; margin-bottom: 30px;}
+
+.painel-invest option{background-color:#FFF; color: #404040; font-weight: bold; cursor: pointer; font-size: 15px;}
+
+.btn-nova-moeda{position:absolute; height:40px; width:250px; background-color:#18d67f; color:#FFF; border:2px solid #18d67f; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:16px; margin-top:-80px; right:0; }
+
+.painel-invest .btn-nova-moeda:hover{background-color: #12A15F; border:2px solid #12A15F; color:#FFF;}
+
+/*Select Painel*/
+.btn-group {
+  width: 335px;
+  height: 60px;
+  position: relative;
+  background-color:#18d67f;
+  padding-top:10px;
+  transition:.3s;
+  padding-left:20px;
+  padding-right:15px;
+  border-radius:4px;
+  margin-bottom:50px;
+  color:#FFF;
+  background-image:url("/assets/Painel/imgArrow.png");
+  background-repeat:no-repeat;
+  background-size:20px;
+  background-position:280px 20px;
+}
+
+.dropdown-toggle:after {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+.dropdown-toggle {
+  color: #FFF;
+  width: 290px;
+  height: 60px;
+  padding: 10px;
+  text-transform: none;
+  font-weight: 500;
+  margin-bottom: 7px;
+  transition: background 0s ease-out;
+  
+}
+.btn-group:hover {
+  background-color: #12A15F;
+  cursor: pointer;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  height: 300px;
+  width: 335px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 14px;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+  overflow:auto;
+  margin-top:10px;
+}
+.dropdown-menu > li > a {
+  padding: 15px 30px;
+  display: block;
+  clear: both;
+  font-weight: 500;
+  color: #333333;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: .3s;
+}
+.dropdown-menu > li > a:hover {
+  background: #efefef;
+  color: #409FCB;
+}
+.dropdown-menu > li {
+  width: 100%;
+  position: relative;
+  margin: 0;
+}
+.caret {
+  display: inline-block;
+  width: 0;
+  position: relative;
+  top: 10px;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid #999;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  float: right;
+  display:none;
+}
+li {
+    list-style: none;
+}
+/*Fim do select painel*/
 
 /* ---------------------------------------------- Home ---------------------------------------------- */
 
