@@ -23,8 +23,8 @@
       </tr>
       <tr v-if="currentValues.buy && currentValues.sell">
         <td>Porcentagem (%)</td>
-        <td><input type="number" v-model="percentWish.buy" /></td>
-        <td><input type="number" v-model="percentWish.sell" /></td>
+        <td><input type="number" v-model="percentWish.buy" step="0.5"/></td>
+        <td><input type="number" v-model="percentWish.sell" step="0.5"/></td>
       </tr>
       <tr v-if="currentValues.buy && currentValues.sell">
         <td>Desejado</td>
@@ -157,7 +157,6 @@ export default{
       .then(function (response) {
         //Adicionado com sucesso
         vm.$refs.overviewComponent.getPairsToOverview()
-       
       })
       .catch(function (error) {
         console.log(error);

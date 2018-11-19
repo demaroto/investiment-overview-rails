@@ -119,6 +119,7 @@ export default {
       })
       .then(function(){
        //Complete
+       vm.poloniex_info = vm.ObjectSorted(vm.poloniex_info)
      
       })
       
@@ -139,7 +140,14 @@ export default {
       toggleMenu() {
           this.showMenu = !this.showMenu;
       },
-    	channels:function() {showChannels()}
+    	channels:function() {showChannels()},
+     ObjectSorted:function(object) {
+        let result = {};
+        _.forEach(Object.keys(object).sort(), function(key) {
+          result[key] = object[key];
+        });
+        return result;
+      }
     }
 }
 
