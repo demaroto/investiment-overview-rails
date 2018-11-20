@@ -61,6 +61,7 @@ Vue.use(VueNativeSock, 'wss://api2.poloniex.com', {
 //Recupera o alvo atual
 poloniex.$options.sockets.onopen = (event) => {
   poloniexSocket = event.currentTarget
+
 };
 
 //Escuta dados da poloniex
@@ -129,25 +130,25 @@ export default {
   },
   methods:{
      	//Atualiza o objeto
-    	updateOption(option, index) {
-              this.channel = {
-                name: index, id: option.id
-              };
-              this.showMenu = false;
-              this.$emit('updateOption', this.channel);
-              
-            },
-      toggleMenu() {
+    	updateOption:function(option, index) {
+        this.channel = {
+        name: index, id: option.id
+      };
+     
+        this.showMenu = false;
+        this.$emit('updateOption', this.channel);
+      },
+      toggleMenu:function() {
           this.showMenu = !this.showMenu;
       },
-    	channels:function() {showChannels()},
      ObjectSorted:function(object) {
         let result = {};
         _.forEach(Object.keys(object).sort(), function(key) {
           result[key] = object[key];
         });
         return result;
-      }
+      },
+          
     }
 }
 

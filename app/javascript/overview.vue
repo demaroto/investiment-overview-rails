@@ -46,7 +46,7 @@ Vue.use(VueNativeSock, 'wss://api2.poloniex.com', {
 //Recupera o alvo atual
 poloniex.$options.sockets.onopen = (event) => {
   poloniexSocket = event.currentTarget
-  //poloniexSocket.sendObj({'command': 'subscribe', 'channel': 'BTC_LTC'})
+  //poloniexSocket.sendObj({'command': 'subscribe', 'channel': 1002})
    
 };
 
@@ -68,6 +68,7 @@ export default {
       poloniex:{}
     }
   },
+
   created:function() {
     
     
@@ -75,15 +76,18 @@ export default {
   mounted: function(){
      var vm = this;
       vm.getPairsToOverview()
+      
       //Permissão de notificação
       Notification.requestPermission()
       eventHub.$on('onViewPair', function (res) {
+        
         if(JSON.parse(res.data).length > 2){
         if(JSON.parse(res.data)[2][0][0] == 'o'){
           let typeTrade = JSON.parse(res.data)[2][0][1] // 1 for buy or 0 for sell
           let price = JSON.parse(res.data)[2][0][2] // Price
           let id = JSON.parse(res.data)[0] // id pair
                 //vm.getPairsToOverview()
+                console.log(res)
                 let formatType = typeTrade == 1 ? 'buy' : 'sell'
                 if(vm.myPairs){
                 vm.myPairs.forEach(function(current, index){
@@ -141,6 +145,7 @@ export default {
   },
   updated:function() {
 
+      
   },
   methods:{
     getPairsToOverview:function(){
@@ -159,9 +164,12 @@ export default {
         if(vm.myPairs){
        vm.myPairs.forEach(function(current, index){
         vm.getDataWebSocket(current.pair_name)
+       
          
        })
         }
+      }).then(function(){
+         
       })
   
     },
@@ -181,7 +189,7 @@ export default {
       poloniex.$options.sockets.onopen = (event) => {
         poloniexSocket = event.currentTarget
         poloniexSocket.sendObj({'command': 'subscribe', 'channel': channel})
-         
+         console.log('Tentando se inscrever no canal' + channel)
       };
     },
     displaySelect:function(){
@@ -210,9 +218,6 @@ export default {
       }
     });
       }
-    },
-    noticationPage:function(){
-      
     }
 
     }

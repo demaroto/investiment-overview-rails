@@ -63,7 +63,7 @@ var eventHub = new Vue()
 //Recupera o alvo atual
 poloniex.$options.sockets.onopen = (event) => {
   poloniexSocket = event.currentTarget
-  
+  poloniexSocket.sendObj({'command': 'subscribe', 'channel': 1002})
 };
 
 //Escuta dados da poloniex
@@ -93,7 +93,7 @@ export default{
     pairCurrent:{}
   },
   computed:{
-    
+   
   },
   mounted:function(){
     
@@ -127,6 +127,7 @@ export default{
   },
   updated:function(){
     this.getDataWebSocket()
+  
   },
   methods:{
     
@@ -140,6 +141,7 @@ export default{
          
       // };
     },
+    
     calcWish:function(){
       this.percentWish.sell == 0 ? this.percentWish.sell = 0 : this.percentWish.sell 
       this.percentWish.buy == 0 ? this.percentWish.buy = 0 : this.percentWish.buy 

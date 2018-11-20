@@ -18,17 +18,41 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
     
   end
+  
+    #PUT /resource
+    def update
+      @user = User.find(current_user.id)
+      
+      if user_params[:password].length == 0
+        @user.image = params[:image]
+        if @user.update({nome: user_params[:nome], email: user_params[:email], image: user_params[:image]})
+          flash[:notice] = 'Dados atualizados com sucesso!'
+          redirect_to root_path
+          
+          
+        else
+          flash[:notice] = 'Erro ao atualizar os dados'
+          redirect_to edit_user_registration_path
+          
+        end
+      else
+        if @user.update(user_params)
+          flash[:notice] = 'Dados atualizados com sucesso!'
+          redirect_to new_user_session_path
+        else
+          flash[:notice] = 'Erro ao atualizar os dados'
+          redirect_to edit_user_registration_path
+        end
+      end
+      
+    end
 
- 
   # GET /resource/edit
   # def edit
   #   super
   # end
 
-  # PUT /resource
-  # def update
-  #   super
-  # end
+ 
 
   # DELETE /resource
   # def destroy
@@ -65,8 +89,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+  def edit_params
+    
+  end
   
   def user_params
-    params.require(:user).permit(:nome, :email, :password)
+    params.require(:user).permit(:nome, :email, :password, :image)
   end
 end

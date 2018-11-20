@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_16_061332) do
+ActiveRecord::Schema.define(version: 2018_11_19_051414) do
 
   create_table "messages", force: :cascade do |t|
     t.text "content"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2018_11_16_061332) do
     t.string "kind", default: "common"
     t.string "nome"
     t.integer "pair_id"
+    t.string "image"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["pair_id"], name: "index_users_on_pair_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
