@@ -9,7 +9,8 @@
     "vue-dropdowns": "^1.0.6",
     "vue-loader": "14.2.2",
     "vue-native-websocket": "^2.0.12",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.17",
+    "webpack-dev-server": "2.11.2"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"
