@@ -1,9 +1,10 @@
 # frozen_string_literal: true
-
+require 'bcrypt'
 class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
-  # before_action :configure_account_update_params, only: [:update]
-
+  before_action :password_is, only: [:update]
+  
+  include BCrypt
   # GET /resource/sign_up
   # def new
   #   super
@@ -22,36 +23,50 @@ class Users::RegistrationsController < Devise::RegistrationsController
     #PUT /resource
     def update
       @user = User.find(current_user.id)
-      
-      if user_params[:password].length == 0
-        @user.image = params[:image]
-        if @user.update({nome: user_params[:nome], email: user_params[:email], image: user_params[:image]})
-          flash[:notice] = 'Dados atualizados com sucesso!'
-          redirect_to root_path
-          
-          
+        if user_params[:password].length == 0
+          @user.image = params[:image]
+          if @user.update({nome: user_params[:nome], email: user_params[:email], image: user_params[:image]})
+            flash[:notice] = 'Dados atualizados com sucesso!'
+            redirect_to root_path
+            
+            
+          else
+            flash[:notice] = 'Erro ao atualizar os dados'
+            redirect_to edit_user_registration_path
+            
+          end
         else
-          flash[:notice] = 'Erro ao atualizar os dados'
-          redirect_to edit_user_registration_path
-          
+          if @user.update(user_params)
+            flash[:notice] = 'Dados atualizados com sucesso!'
+            redirect_to new_user_session_path
+          else
+            flash[:notice] = 'Erro ao atualizar os dados'
+            redirect_to edit_user_registration_path
+          end
         end
-      else
-        if @user.update(user_params)
-          flash[:notice] = 'Dados atualizados com sucesso!'
-          redirect_to new_user_session_path
-        else
-          flash[:notice] = 'Erro ao atualizar os dados'
-          redirect_to edit_user_registration_path
-        end
-      end
+    
       
     end
 
   # GET /resource/edit
-  # def edit
-  #   super
-  # end
+  def edit
+    
+    @authenticate = user_signed_in?
+  end
 
+  def password_is
+    @password = params[:user][:current_password]
+    mypass = Password.new(@user.encrypted_password)
+    
+      if mypass == @password
+          
+      else
+        flash[:notice] = 'Digite sua senha atual'
+        redirect_to edit_user_registration_path
+      end
+      
+  end
+    
  
 
   # DELETE /resource

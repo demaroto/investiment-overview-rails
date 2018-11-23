@@ -17,10 +17,7 @@
 <div class="menu-animate">
 	<div class="menu-box-user">
 		<div class="menu-box-user-mask">
-			<!--div class="img-user-menu" -->
-			
-				<%= image_tag(@user.image_url(:thumb).to_s, class: 'img-user-menu') %>
-			<!--/div -->
+			<%= image_tag(@user.image_url(:thumb).to_s, class: 'img-user-menu') %>
 			<h3>
 				<strong><%= @user.nome %></strong><br>
 				<%= @user.email %>
@@ -36,6 +33,7 @@
 					<%= link_to 'Administrador', rails_admin_path, method: :get %>
 					<div class="menu-line"></div>
 				<% end %>
+		     
 				<img src="/assets/Painel/perfil.png" class="icons-nav">
 			 	<%= link_to "Perfil", edit_user_registration_path, method: :get %>
 		     	<div class="menu-line"></div>
