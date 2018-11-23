@@ -8,8 +8,7 @@ Rails.application.routes.draw do
   end
   get '/config/pair', :to => 'pair#index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  mount ActionCable.server => '/cable'
-  mount Sidekiq::Web => '/sidekiq'
+
   #devise_for :users
    devise_for :users, :controllers => { registrations: 'users/registrations', sessions: "users/sessions", passwords: 'users/passwords' } do
     get "/", :to => "users/sessions#create"
