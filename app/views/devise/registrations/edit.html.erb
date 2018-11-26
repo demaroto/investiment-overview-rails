@@ -38,10 +38,11 @@
 					<%= link_to 'Administrador', rails_admin_path, method: :get %>
 					<div class="menu-line"></div>
 				<% end %>
-				<img src="/assets/Painel/perfil.png" class="icons-nav">
+				<%= image_tag('Painel/perfil.png', class: 'icons-nav')%>
 			 	<%= link_to "Painel", root_path, method: :get %>
 		     	<div class="menu-line"></div>
-		     	<img src="/assets/Painel/sair.png" class="icons-nav">
+		  
+		     	<%= image_tag('Painel/sair.png', class: 'icons-nav')%>
 		     	<%= link_to "Sair", destroy_user_session_path, method: :delete %>
 		    <% end %>
 			<div class="menu-line"></div>
