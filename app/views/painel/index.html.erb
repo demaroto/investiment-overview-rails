@@ -4,7 +4,8 @@
 <!--------------------------------------------------- Header --------------------------------------------------->
 
 <header class="header-painel">
-	<img src="/assets/Home/logo.png" class="logo-header">
+	
+	<%= image_tag('Home/logo.png', class: 'logo-header')%>
 	<div class="icon-menu">
 		<div class="line-icon"></div>
 		<div class="line-icon"></div>
@@ -29,15 +30,15 @@
         <ul>
 			<% if @authenticate %>
 				<% if @user.kind == 'admin' %>
-					<img src="/assets/Painel/admin.png" class="icons-nav">
+					
+					<%= image_tag('Painel/admin.png', class: 'icons-nav')%>
 					<%= link_to 'Administrador', rails_admin_path, method: :get %>
 					<div class="menu-line"></div>
 				<% end %>
-		     
-				<img src="/assets/Painel/perfil.png" class="icons-nav">
+				<%= image_tag('Painel/perfil.png', class: 'icons-nav')%>
 			 	<%= link_to "Perfil", edit_user_registration_path, method: :get %>
 		     	<div class="menu-line"></div>
-		     	<img src="/assets/Painel/sair.png" class="icons-nav">
+		     	<%= image_tag('Painel/sair.png', class: 'icons-nav')%>
 		     	<%= link_to "Sair", destroy_user_session_path, method: :delete %>
 		    <% end %>
 			<div class="menu-line"></div>
