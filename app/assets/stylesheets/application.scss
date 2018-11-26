@@ -13,6 +13,19 @@ h1, h2, h3, h4, h5, h6{margin:0; padding: 0;}
 *:focus{outline: 0;}
 *{box-sizing: border-box;}
 
+canvas{
+  display:block;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  width: 100%;
+  height: 1000px;
+  background-color: #180d5b;
+  position:absolute;
+}
+
 @media only screen and (min-width:1024px){
 	
 #Responsive{display:none !important;}
@@ -71,7 +84,7 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 
 .nav a{display:flex; font-size:16px; color:#303030; font-family: 'Montserrat', sans-serif; transition-duration:.3s; text-decoration:none; font-weight:normal; line-height:55px; padding-left:100px; font-weight: 500;}
 
-.nav a:hover{background-color:#e3e3e3;}
+.nav a:hover{background-color:#e3e3e3; color:#409FCB;}
 
 .nav ul, li{list-style:none; margin:0; padding:0;}
 
@@ -89,17 +102,13 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 	
 .nav .icons-nav{position: absolute; height:  20px; margin-top: 17px; margin-left: 40px;}	
 
-.painel-invest{padding-top: 200px; min-height:100vh; width:100%; padding-bottom:200px; background-color:#180d5b; background-size: cover; background-repeat: no-repeat; background-position: center; }
-
-/* 
-#180d5b
-#052e7d - #009cae */
+.painel-invest{min-height:100vh; width:100%; padding-bottom:50px; background-color:#180d5b; background-size: cover; background-repeat: no-repeat; background-position: center; }
 
 .painel-invest input[type=number]{height:40px; width:80px; border:none; border-radius:4px; text-align: center; font-size: 16px; padding-left: 15px;}
 
 .painel-invest h3{font-weight:normal; font-size:40px; padding:30px 0px 30px 0px; color:#FFF; font-weight: 500;}
 
-.painel-invest h1{font-weight:normal; font-size:50px; padding:0px 0px 30px 0px; color:#FFF; font-weight: 500; border-bottom: 2px solid #18d67f; margin-bottom: 80px;}
+.painel-invest h1{font-weight:normal; font-size:50px; padding:200px 0px 30px 0px; color:#FFF; font-weight: 500; border-bottom: 2px solid #18d67f; margin-bottom: 80px;}
 
 /* ----- Tabela Modelo 1 ----- */
 
@@ -107,37 +116,12 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 .painel-invest table th{color:#18d67f; font-size:18px; border-bottom:3px solid #18d67f; background-color:hsla(0,0%,0%,0.00) !important; font-weight: 500;}
 .painel-invest thead tr{height:60px;}	
 .painel-invest tbody{border-collapse: collapse;} 
-.painel-invest tbody tr{height:80px; font-weight:normal; font-size:16px; transition:.3s;}
+.painel-invest tbody tr{height:80px; font-weight:normal; font-size:16px; transition:.3s; border-bottom:1px solid #FFF;}
 .painel-invest tbody tr:nth-child(2n+2){background-color:#251589;}
 .painel-invest tbody tr:nth-child(2n+1){}
-.painel-invest tr:hover{background-color:#213B8F;}
+.painel-invest tbody tr:hover{background-color:#213B8F !important;}
 .painel-invest table td{color:#FFF; text-align:center; width:20%; transition:.3s;}
-.painel-invest td:hover{background-color:#3358CF;}
-
-/* ----- Tabela Modelo 2 ----- 
-
-.painel-invest table{font-weight:normal !important; border:0px !important; border-collapse: collapse; margin-bottom:50px;}
-.painel-invest table th{color:#FFF; font-size:18px; border-bottom:3px solid #017972; background-color:#00C1B5; font-weight: 500;}
-.painel-invest thead tr{height:60px;}	
-.painel-invest tbody{border-collapse: collapse;} 
-.painel-invest tbody tr{height:80px; font-weight:normal; font-size:16px; transition:.3s;}
-.painel-invest tr:nth-child(2n+1){background-color:#FFFFFF;}
-.painel-invest tr:nth-child(2n+2){background-color:#EAEAEA;}
-.painel-invest tr:hover{background-color:#C7FFFB;}
-.painel-invest table td{color:#000; text-align:center; width:20%; transition:.3s; font-weight:500;}
-.painel-invest td:hover{background-color:#9FFEF8;}
-
-/* ----- Tabela Modelo 3 ----- */
-/*
-.painel-invest table{font-weight:normal !important; border:0px !important; border-collapse: collapse; margin-bottom:50px;}
-.painel-invest table th{color:#18d67f; font-size:18px; border-bottom:3px solid #18d67f; background-color:hsla(0,0%,0%,0.00) !important; font-weight: 500;}
-.painel-invest thead tr{height:60px;}	
-.painel-invest tbody{border-collapse: collapse;} 
-.painel-invest tbody tr{height:80px; font-weight:normal; font-size:16px; transition:.3s; border-bottom:1px solid #FFF;}
-.painel-invest tbody tr:hover{background-color:#211378;}
-.painel-invest table td{color:#FFF; text-align:center; width:20%; transition:.3s; font-weight:500;}
-.painel-invest tbody td:hover{background-color:#311DAD;}
-*/
+.painel-invest tbody td:hover{background-color:#3358CF;}
 
 .active-tr-table{background-color:#18d67f !important;}
 

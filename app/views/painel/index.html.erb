@@ -30,12 +30,14 @@
         <ul>
 			<% if @authenticate %>
 				<% if @user.kind == 'admin' %>
-					
 					<%= image_tag('Painel/admin.png', class: 'icons-nav')%>
 					<%= link_to 'Administrador', rails_admin_path, method: :get %>
 					<div class="menu-line"></div>
 				<% end %>
-				<%= image_tag('Painel/perfil.png', class: 'icons-nav')%>
+				<%= image_tag('Painel/painel.png', class: 'icons-nav')%>
+			 	<%= link_to "Painel", root_path, method: :get %>
+		     	<div class="menu-line"></div>
+		     	<%= image_tag('Painel/perfil.png', class: 'icons-nav')%>
 			 	<%= link_to "Perfil", edit_user_registration_path, method: :get %>
 		     	<div class="menu-line"></div>
 		     	<%= image_tag('Painel/sair.png', class: 'icons-nav')%>
@@ -49,7 +51,17 @@
 <!--------------------------------------------------- Painel --------------------------------------------------->
 
 <section class="painel-invest">
+	
+<!-- particles.js container -->
+<div id="particles-js"></div>
+
 	<article class="content">
 		<div id="vue"></div>
 	</article>
+
+	
+<!-- scripts -->
+<%= javascript_include_tag('particles.js') %>
+<%= javascript_include_tag('app.js') %>	
+	
 </section>
