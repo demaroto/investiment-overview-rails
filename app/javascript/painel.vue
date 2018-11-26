@@ -73,10 +73,6 @@ poloniex.$options.sockets.onmessage = (res) => {
 	}
 }
   
-function showChannels(){
- console.log(poloniexSocket);
-}
-	 
 export default {
   name: 'PainelComponent',
   components:{

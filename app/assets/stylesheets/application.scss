@@ -83,13 +83,17 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 	
 .menu-animate h3{padding-left: 10%; font-size: 15px; padding-bottom: 50px; font-weight: normal; line-height: 25px; color: #FFF;}	
 	
-.menu-box-user{width: 100%; position: relative; background-color: #313131; background-size: cover; background-position: center; background: image-url("Painel/img-menu-user.png");}	
+.menu-box-user{width: 100%; position: relative; background-color: #313131; background-size: cover; background-position: center; background-image: url("Painel/img-menu-user.png");}	
 	
 .menu-box-user-mask{width: 100%; background-color:hsla(0,0%,0%,0.20); padding-top: 50px;}	
 	
 .nav .icons-nav{position: absolute; height:  20px; margin-top: 17px; margin-left: 40px;}	
 
-.painel-invest{padding-top: 200px; min-height:100vh; width:100%; padding-bottom:200px; background-color:#180d5b; background-size: cover; background-repeat: no-repeat; background-position: center;}
+.painel-invest{padding-top: 200px; min-height:100vh; width:100%; padding-bottom:200px; background-color:#180d5b; background-size: cover; background-repeat: no-repeat; background-position: center; }
+
+/* 
+#180d5b
+#052e7d - #009cae */
 
 .painel-invest input[type=number]{height:40px; width:80px; border:none; border-radius:4px; text-align: center; font-size: 16px; padding-left: 15px;}
 
@@ -158,11 +162,11 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 .painel-invest .btn-nova-moeda:hover{background-color: #12A15F; border:2px solid #12A15F; color:#FFF;}
 
 /*Select Painel*/
-.btn-group {width: 335px; height: 60px; position: relative; background-color:#18d67f; padding-top:10px; transition:.3s; padding-left:20px;padding-right:15px; border-radius:4px;
+.btn-group {width: 335px; height: 60px; position: relative; background-color:#18d67f !important; padding-top:10px; transition:.3s; padding-left:20px;padding-right:15px; border-radius:4px;
   margin-bottom:50px; color:#FFF; background: image-url("Painel/imgArrow.png");background-repeat:no-repeat;background-size:20px; background-position:280px 20px;}
 .dropdown-toggle:after {position: absolute; top: 14px; right: 10px; width: 0;  height: 0; border: 10px solid transparent; border-color: #fff transparent transparent transparent;}
 .dropdown-toggle {color: #FFF; width: 290px; height: 60px; padding: 10px;  text-transform: none; font-weight: 500; margin-bottom: 7px; transition: background 0s ease-out;}
-.btn-group:hover {background-color: #12A15F; cursor: pointer;}
+.btn-group:hover {background-color: #12A15F !important; cursor: pointer;}
 .dropdown-menu {position: absolute; top: 100%;left: 0;z-index: 1000;float: left;height: 300px;width: 335px; padding: 5px 0; margin: 2px 0 0;list-style: none; font-size: 14px;  text-align: left;
   background-color: #fff; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);background-clip: padding-box; overflow:auto; margin-top:10px;}
 .dropdown-menu > li > a {padding: 15px 30px; display: block; clear: both; font-weight: 500; color: #333333; white-space: nowrap;text-decoration: none;transition: .3s;}

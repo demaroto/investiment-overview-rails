@@ -165,7 +165,7 @@ export default {
       })
       .catch(function (error) {
         // handle error
-        console.log(error);
+      
       }).then(function(data){
         if(vm.myPairs){
        vm.myPairs.forEach(function(current, index){
@@ -184,10 +184,8 @@ export default {
       axios.delete('/api/v1/pairs/'+id, {
         id: id 
       }).then(function(response){
-        console.log(response.data.data)
         vm.getPairsToOverview()
       }).catch(function(error){
-        console.log(error)
       })
     },
     getDataWebSocket:function(channel){
@@ -199,7 +197,7 @@ export default {
       };
     },
     displaySelect:function(){
-      console.log('Display Select')
+      
       
     },
     notificationShow:function(titulo, moeda, tipo, myValue, currentValue){
