@@ -19,6 +19,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
           @user.image = params[:image]
           if @user.update({nome: user_params[:nome], email: user_params[:email], image: user_params[:image]})
             self.messase 'Dados atualizados com sucesso!'
+            redirect_to edit_user_registration_path
           end
         else
           case self.password_is
