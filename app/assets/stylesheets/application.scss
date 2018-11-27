@@ -19,12 +19,9 @@ canvas{
 
 /* ---- particles.js container ---- */
 
-#particles-js{
-  width: 100%;
-  height: 1000px;
-  background-color: #180d5b;
-  position:absolute;
-}
+#particles-js{width: 100%; height: 120vh; background-color: #180d5b; position:absolute;}
+
+.painel-perfil #particles-js{width: 100%; height: 1600px; background-color: #180d5b; position:absolute;}
 
 @media only screen and (min-width:1024px){
 	
@@ -50,20 +47,20 @@ nav ul{margin:0; padding: 0; display: flex; text-align: center;}
 
 nav li{list-style: none;}
 
-nav a{font-size: 16px; padding: 35px 40px 35px 40px; color:#FFF; cursor:pointer; transition:.5s; text-decoration: none; transition:.5s; border-bottom: 2px solid transparent;}
-
-nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; border-bottom: 1px solid #44e39a; color: #44e39a !important;}
+nav a{font-size: 16px; padding: 35px 40px 35px 40px; color:#FFF; cursor:pointer; transition:.5s; text-decoration: none; transition:.5s;}
+// hsla(0,0%,100%,0.20) #44e39a
+nav a:hover{background-color:hsla(152,74%,58%,0.80); color: #FFF !important;}
 
 .active{background-color:#FF0076; color: #FFF !important;}
 
 .btn-home-experimentar{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00); color: #FFF; border-radius: 5px; height: 35px; width: 150px; font-size: 14px; position: absolute; right: 0; font-weight: bold; cursor: pointer; transition: .3s; margin-top: 27px; margin-right: 160px;}
 	
-.btn-home-experimentar:hover{background-color: #06c5d5; border:2px solid #06c5d5;}	
-	
+.btn-home-experimentar:hover{background-color: #18d67f; border:2px solid #18d67f;}	
+		
 .btn-home-login{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00); color: #FFF; border-radius: 5px; height: 35px; width: 90px; font-size: 14px; position: absolute; right: 0; font-weight: bold; cursor: pointer; transition: .3s; margin-top: 27px; margin-right: 50px;}	
 
-.btn-home-login:hover{background-color: #18d67f; border:2px solid #18d67f;}	
-	
+.btn-home-login:hover{background-color: #06c5d5; border:2px solid #06c5d5;}	
+
 .logo-header{height: 45px; position: absolute; margin-left: 50px; margin-top: 20px; cursor: pointer; z-index: 999;}	
 
 /* ---------------------------------------------- Painel ---------------------------------------------- */
@@ -114,14 +111,14 @@ nav a:hover{background-color:hsla(0,0%,100%,0.20); color: #FFF !important; borde
 
 .painel-invest table{font-weight:normal !important; border:0px !important; border-collapse: collapse; margin-bottom:50px;}
 .painel-invest table th{color:#18d67f; font-size:18px; border-bottom:3px solid #18d67f; background-color:hsla(0,0%,0%,0.00) !important; font-weight: 500;}
-.painel-invest thead tr{height:60px;}	
+.painel-invest thead tr{height:60px; background-color:#180d5b;}	
 .painel-invest tbody{border-collapse: collapse;} 
 .painel-invest tbody tr{height:80px; font-weight:normal; font-size:16px; transition:.3s; border-bottom:1px solid #FFF;}
 .painel-invest tbody tr:nth-child(2n+2){background-color:#251589;}
-.painel-invest tbody tr:nth-child(2n+1){}
-.painel-invest tbody tr:hover{background-color:#213B8F !important;}
+.painel-invest tbody tr:nth-child(2n+1){background-color:#180d5b;}
+.painel-invest tbody tr:hover{background-color:hsla(0,0%,100%,0.50) !important;}
 .painel-invest table td{color:#FFF; text-align:center; width:20%; transition:.3s;}
-.painel-invest tbody td:hover{background-color:#3358CF;}
+.painel-invest tbody td:hover{background-color:hsla(153,80%,47%,0.50);}
 
 .active-tr-table{background-color:#18d67f !important;}
 
@@ -163,7 +160,7 @@ li {list-style: none;}
 
 /* ---------------------------------------------- Painel - Perfil ---------------------------------------------- */
 
-.painel-perfil{padding-top: 200px; min-height:100vh; width:100%; padding-bottom:100px; background-color:#180d5b; text-align:center; color:#FFF;}
+.painel-perfil{min-height:100vh; width:100%; padding-bottom:100px; background-color:#180d5b; text-align:center; color:#FFF;}
 
 .painel-perfil-content{width: 900px; position:relative; left: 50%; margin-left: -450px;}
 
@@ -193,7 +190,7 @@ li {list-style: none;}
 
 .painel-perfil input[type=email]:focus, .painel-perfil input[type=password]:focus, .painel-perfil input[type=text]:focus{border:2px solid #18d67f;}
 
-.painel-perfil h1{font-weight:normal; font-size:50px; padding:0px 0px 30px 0px; color:#FFF; font-weight: 500; border-bottom: 2px solid #18d67f; margin-bottom: 60px;}
+.painel-perfil h1{font-weight:normal; font-size:50px; padding:200px 0px 30px 0px; color:#FFF; font-weight: 500; border-bottom: 2px solid #18d67f; margin-bottom: 60px;}
 
 .painel-perfil h2{font-size: 30px; font-weight: normal; padding-top: 60px;}
 
@@ -345,6 +342,15 @@ li {list-style: none;}
 
 /* ---------------------------------------------- Contato ---------------------------------------------- */	
 	
+.contato{height:220px; width:100%; background-image: linear-gradient(to right, #fca10f , #e8275b); color:#FFF;}	
+	
+.contato h1{font-size:28px; padding-top:50px;}	
+.contato h2{font-size:20px; padding-top:15px; font-weight:normal; line-height:30px;}		
+	
+.contato .btn-contato-sb{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00); color: #FFF; border-radius: 45px; height: 45px; width: 160px; font-size: 14px; font-weight: bold; cursor: pointer; transition: .3s; margin-top: 27px; margin-left: 20px; position:absolute; margin-top:-55px; right:0; }	
+	
+.contato .btn-contato-sb:hover{background-color:#FFF; color:#e8275b;}	
+	
 .erro{height:50px; width: 100%; position:fixed; background-color: #B90003; text-align: center; top: 100%; margin-top: -50px; z-index: 9999; line-height: 50px; color:#FFF; font-family: 'Lato', sans-serif; font-size: 18px !important; font-weight: normal; display:none;
 }
 	
@@ -352,18 +358,29 @@ li {list-style: none;}
 		
 /* ---------------------------------------------- Footer ---------------------------------------------- */	
 		
-footer{height:500px; width:100%; position:relative; background-image: linear-gradient(to right, #1d3e80 , #1895a9); color:#FFF;}		
+footer{height:570px; width:100%; position:relative; background-image: linear-gradient(to right, #1d3e80 , #1895a9); color:#FFF; padding-top:50px;}		
 
-footer .logo-footer{height: 45px; position: absolute; margin-left: 50px; margin-top: 20px; cursor: pointer; z-index: 999;}
+footer .logo-footer{height: 60px; position: absolute; margin-top: 140px; cursor: pointer; z-index: 999;}
 
 .footer-content{width: 1100px; position:relative; left: 50%; margin-left: -550px; padding:40px 0px;}
 	
-.footer-redes{}	
+.footer-redes{position:absolute; right:0; margin-top:60px;}	
 
-footer h2{}
-footer h3{}
-footer h4{}
-footer h5{}
+footer h2{font-size:28px;}
+footer h3{font-weight:normal; font-size:22px; padding-top:15px;}
+footer h4{font-size:20px; padding-bottom:15px; line-height:30px;}
+footer h5{font-size:16px; font-weight:normal; line-height:50px; margin-left:40px;}
+
+footer h5 a{color:#FFF; text-decoration:none; transition:.3s;}
+footer h5 a:hover{color:#18d67f;}
+
+footer .btn-home-registrar{border:2px solid #18d67f; background-color: #18d67f; color: #FFF; border-radius: 5px; height: 45px; width: 170px; font-size: 14px; font-weight: bold; cursor: pointer; transition: .3s; text-transform: uppercase; position:absolute; margin-top:-55px; right:0; margin-right:130px;}
+	
+footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00); color: #FFF; border-radius: 5px; height: 45px; width: 110px; font-size: 14px; font-weight: bold; cursor: pointer; transition: .3s; margin-top: 27px; margin-left: 20px; text-transform: uppercase; position:absolute; margin-top:-55px; right:0;}	
+
+.footer-line{height:1px; width:100%; position:absolute; background-color:#FFF; margin-top:200px;}
+
+.lkd-icon-footer{height:30px; position:absolute; margin-top:8px;}
 
 }
 

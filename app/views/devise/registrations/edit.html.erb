@@ -55,6 +55,14 @@
 
 <section class="painel-perfil">
   
+  <!-- particles.js container -->
+
+    <div id="particles-js"></div>
+
+  <!-- scripts -->
+  <%= javascript_include_tag('particles.js') %>
+  <%= javascript_include_tag('app.js') %>	  
+  
 	<article class="painel-perfil-content">
 
     <h1>Editar <%= @user.nome %></h1>
