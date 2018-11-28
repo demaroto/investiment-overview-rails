@@ -8,14 +8,14 @@ h1, h2, h3, h4, h5, h6{margin:0; padding: 0;}
 ::-webkit-scrollbar{width:0px;}
 ::-webkit-scrollbar-thumb{background:#646464; border-radius:25%;}
 
+input[type=text], input[type=email], input[type=password], input[type=number], input[type=button], select, option, textarea{font-family: 'Montserrat', sans-serif !important;}
+
 .dropdown-menu::-webkit-scrollbar{width:6px;}
 
 *:focus{outline: 0;}
 *{box-sizing: border-box;}
 
-canvas{
-  display:block;
-}
+canvas{display:block;}
 
 /* ---- particles.js container ---- */
 
@@ -347,14 +347,43 @@ li {list-style: none;}
 .contato h1{font-size:28px; padding-top:50px;}	
 .contato h2{font-size:20px; padding-top:15px; font-weight:normal; line-height:30px;}		
 	
-.contato .btn-contato-sb{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00); color: #FFF; border-radius: 45px; height: 45px; width: 160px; font-size: 14px; font-weight: bold; cursor: pointer; transition: .3s; margin-top: 27px; margin-left: 20px; position:absolute; margin-top:-55px; right:0; }	
+.contato .btn-contato-sb{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00); color: #FFF; border-radius: 45px; height: 45px; width: 160px; font-size: 14px; font-weight: bold; cursor: pointer; transition: .3s; margin-top: 27px; margin-left: 20px; position:absolute; margin-top:-70px; right:0; }	
 	
 .contato .btn-contato-sb:hover{background-color:#FFF; color:#e8275b;}	
 	
+.content-contato2{width: 800px; position:relative; left: 50%; margin-left: -400px;}	
+	
+.contato2{padding:100px 0px; background-color:#f2f2f2;}	
+	
+.contato2 input[type=text], .contato2 input[type=email]{height: 50px; width: 350px; padding: 0px 20px; border:2px solid #FFF; background-color: #FFF;  font-weight: normal; font-size: 14px; border-radius: 4px; margin: 0px 0px; transition: .3s; box-shadow: 0px 0px 10px 1px rgba(191,191,191,1);}	
+
+.contato2 textarea{height: 200px; width: 100%; padding: 20px 20px; border:2px solid #FFF; background-color: #FFF;  font-weight: normal; font-size: 14px; border-radius: 4px; margin: 0px 0px; transition: .3s; box-shadow: 0px 0px 10px 1px rgba(191,191,191,1); resize: none;}
+
+.contato2 .box-email-contato{position:absolute; right:0;}
+
+.contato2 h3{font-size:22px;}
+
+.contato2 h5{text-align:center; font-size:24px; color:#e8275b;}
+
 .erro{height:50px; width: 100%; position:fixed; background-color: #B90003; text-align: center; top: 100%; margin-top: -50px; z-index: 9999; line-height: 50px; color:#FFF; font-family: 'Lato', sans-serif; font-size: 18px !important; font-weight: normal; display:none;
 }
 	
 .success{height:50px; width: 100%; position:fixed; background-color: #2AB900; text-align: center; top: 100%; margin-top: -50px; z-index: 9999; line-height: 50px; display:none; color:#FFF; font-family: 'Lato', sans-serif; font-size: 18px; font-weight: normal;}
+		
+input[type=range] {margin: auto; outline: none; padding: 0; width: 100%; height: 6px; background-color: #f2f2f2; background-image: linear-gradient(to right, #fca10f , #e8275b); background-size: 50% 100%; background-repeat: no-repeat; border-radius: 10px; cursor: pointer; -webkit-appearance: none; box-shadow: 0px 0px 10px 1px rgba(191,191,191,1);}
+	
+input[type=range]::-webkit-slider-runnable-track {box-shadow: none; border: none; background: transparent; -webkit-appearance: none;}
+	
+input[type=range]::-moz-range-track {box-shadow: none; border: none; background: transparent;}
+
+input[type=range]::-moz-focus-outer {border: 0;}
+
+input[type=range]::-webkit-slider-thumb {width: 20px; height: 20px; border: 0; background: #FFF; border-radius: 100%; box-shadow: 0px 0px 10px 1px rgba(191,191,191,1); -webkit-appearance: none;}
+
+.btn-contato-enviar{border:2px solid #e8275b; background-color: #e8275b; color: #FFF; border-radius: 5px; height: 45px; width: 170px; font-size: 14px; font-weight: bold; cursor: pointer; transition: .3s; text-transform: uppercase; position:relative; left:50%; margin-left:-85px;}
+	
+.btn-contato-enviar:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #e8275b; color: #e8275b;}	
+		
 		
 /* ---------------------------------------------- Footer ---------------------------------------------- */	
 		
