@@ -1,0 +1,1516 @@
+/* ---------------------------------------------- Body ---------------------------------------------- */
+/* line 4, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f7f7ff;
+}
+
+/* line 6, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+::-webkit-scrollbar-track {
+  background-color: #dedede;
+}
+
+/* line 9, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* line 10, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+::-webkit-scrollbar-thumb {
+  background: #646464;
+  border-radius: 25%;
+}
+
+/* line 12, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+.dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* line 14, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+*:focus {
+  outline: 0;
+}
+
+/* line 15, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+* {
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 1024px) {
+  /* line 19, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  #Responsive {
+    display: none !important;
+  }
+
+  /* ---------------------------------------------- Global ---------------------------------------------- */
+  /* line 23, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .content {
+    width: 1100px;
+    position: relative;
+    left: 50%;
+    margin-left: -550px;
+  }
+
+  /* line 25, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .mask-window {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100%;
+    z-index: 9998;
+    position: fixed;
+    display: none;
+  }
+
+  /* ---------------------------------------------- Header ---------------------------------------------- */
+  /* line 29, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  header {
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    z-index: 9997;
+    border-bottom: 1px solid #FFF;
+    transition: 2s;
+  }
+
+  /* #1e2f79 */
+  /* line 31, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .header-active {
+    background-color: rgba(31, 47, 122, 0.8);
+  }
+
+  /* line 33, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  header .logo-header {
+    height: 45px;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  /* line 35, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  nav {
+    position: absolute;
+    line-height: 90px;
+    right: 0;
+    margin-right: 360px;
+  }
+
+  /* line 37, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-align: center;
+  }
+
+  /* line 39, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  nav li {
+    list-style: none;
+  }
+
+  /* line 41, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  nav a {
+    font-size: 16px;
+    padding: 35px 40px 35px 40px;
+    color: #FFF;
+    cursor: pointer;
+    transition: .5s;
+    text-decoration: none;
+    transition: .5s;
+    border-bottom: 2px solid transparent;
+  }
+
+  /* line 43, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #FFF !important;
+    border-bottom: 1px solid #44e39a;
+    color: #44e39a !important;
+  }
+
+  /* line 45, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .active {
+    background-color: #FF0076;
+    color: #FFF !important;
+  }
+
+  /* line 47, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .btn-home-experimentar {
+    border: 2px solid #FFF;
+    background-color: rgba(0, 0, 0, 0);
+    color: #FFF;
+    border-radius: 5px;
+    height: 35px;
+    width: 150px;
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 27px;
+    margin-right: 160px;
+  }
+
+  /* line 49, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .btn-home-experimentar:hover {
+    background-color: #06c5d5;
+    border: 2px solid #06c5d5;
+  }
+
+  /* line 51, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .btn-home-login {
+    border: 2px solid #FFF;
+    background-color: rgba(0, 0, 0, 0);
+    color: #FFF;
+    border-radius: 5px;
+    height: 35px;
+    width: 90px;
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 27px;
+    margin-right: 50px;
+  }
+
+  /* line 53, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .btn-home-login:hover {
+    background-color: #18d67f;
+    border: 2px solid #18d67f;
+  }
+
+  /* line 55, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .logo-header {
+    height: 45px;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  /* ---------------------------------------------- Painel ---------------------------------------------- */
+  /* line 59, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .header-painel {
+    background-color: #180d5b;
+  }
+
+  /* line 61, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .icon-menu {
+    height: 36px;
+    width: 46px;
+    position: absolute;
+    left: 100%;
+    margin-left: -71px;
+    margin-top: 29px;
+    cursor: pointer;
+  }
+
+  /* line 63, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .icon-menu:hover .line-icon {
+    background-color: #18d67f !important;
+  }
+
+  /* line 65, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .line-icon {
+    height: 5px;
+    width: 35px;
+    background-color: #FFF;
+    margin: 5px;
+    transition: .3s;
+  }
+
+  /* line 67, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .menu-animate {
+    height: 100%;
+    width: 400px;
+    background-color: #FFF;
+    margin-top: 0px;
+    left: 100%;
+    z-index: 9999;
+    position: fixed;
+    overflow: auto;
+    transition: .3s;
+    border-bottom: 5px solid #18d67f;
+  }
+
+  /* line 69, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .seta {
+    background-image: url("/assets/Painel/Seta.png");
+    height: 30px;
+    width: 30px;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  /* line 71, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .nav {
+    position: relative;
+  }
+
+  /* line 73, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .nav a {
+    display: flex;
+    font-size: 16px;
+    color: #303030;
+    font-family: 'Montserrat', sans-serif;
+    transition-duration: .3s;
+    text-decoration: none;
+    font-weight: normal;
+    line-height: 55px;
+    padding-left: 100px;
+    font-weight: 500;
+  }
+
+  /* line 75, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .nav a:hover {
+    background-color: #e3e3e3;
+  }
+
+  /* line 77, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .nav ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 79, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .menu-line {
+    height: 1px;
+    width: 100%;
+    background-color: #d0d0d0;
+    position: relative;
+  }
+
+  /* line 81, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .active {
+    background-color: #F1F1F1;
+    color: #000 !important;
+  }
+
+  /* line 83, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .img-user-menu {
+    height: 150px;
+    width: 150px;
+    background-color: #FFF;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 30px;
+    position: relative;
+    left: 50%;
+    margin-left: -75px;
+    border-radius: 100%;
+  }
+
+  /* line 85, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .menu-animate h3 {
+    padding-left: 10%;
+    font-size: 15px;
+    padding-bottom: 50px;
+    font-weight: normal;
+    line-height: 25px;
+    color: #FFF;
+  }
+
+  /* line 87, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .menu-box-user {
+    width: 100%;
+    position: relative;
+    background-color: #313131;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/assets/Painel/img-menu-user.png");
+  }
+
+  /* line 89, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .menu-box-user-mask {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-top: 50px;
+  }
+
+  /* line 91, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .nav .icons-nav {
+    position: absolute;
+    height: 20px;
+    margin-top: 17px;
+    margin-left: 40px;
+  }
+
+  /* line 93, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest {
+    padding-top: 200px;
+    min-height: 100vh;
+    width: 100%;
+    padding-bottom: 200px;
+    background-color: #180d5b;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /* line 95, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest input[type=number] {
+    height: 40px;
+    width: 80px;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    padding-left: 15px;
+  }
+
+  /* line 97, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest h3 {
+    font-weight: normal;
+    font-size: 40px;
+    padding: 30px 0px 30px 0px;
+    color: #FFF;
+    font-weight: 500;
+  }
+
+  /* line 99, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest h1 {
+    font-weight: normal;
+    font-size: 50px;
+    padding: 0px 0px 30px 0px;
+    color: #FFF;
+    font-weight: 500;
+    border-bottom: 2px solid #18d67f;
+    margin-bottom: 80px;
+  }
+
+  /* ----- Tabela Modelo 1 ----- */
+  /* line 103, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest table {
+    font-weight: normal !important;
+    border: 0px !important;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+  }
+
+  /* line 104, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest table th {
+    color: #18d67f;
+    font-size: 18px;
+    border-bottom: 3px solid #18d67f;
+    background-color: rgba(0, 0, 0, 0) !important;
+    font-weight: 500;
+  }
+
+  /* line 105, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest thead tr {
+    height: 60px;
+  }
+
+  /* line 106, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest tbody {
+    border-collapse: collapse;
+  }
+
+  /* line 107, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest tbody tr {
+    height: 80px;
+    font-weight: normal;
+    font-size: 16px;
+    transition: .3s;
+  }
+
+  /* line 108, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest tbody tr:nth-child(2n+2) {
+    background-color: #251589;
+  }
+
+  /* line 110, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest tr:hover {
+    background-color: #213B8F;
+  }
+
+  /* line 111, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest table td {
+    color: #FFF;
+    text-align: center;
+    width: 20%;
+    transition: .3s;
+  }
+
+  /* line 112, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest td:hover {
+    background-color: #3358CF;
+  }
+
+  /* ----- Tabela Modelo 2 ----- 
+  
+  .painel-invest table{font-weight:normal !important; border:0px !important; border-collapse: collapse; margin-bottom:50px;}
+  .painel-invest table th{color:#FFF; font-size:18px; border-bottom:3px solid #017972; background-color:#00C1B5; font-weight: 500;}
+  .painel-invest thead tr{height:60px;}	
+  .painel-invest tbody{border-collapse: collapse;} 
+  .painel-invest tbody tr{height:80px; font-weight:normal; font-size:16px; transition:.3s;}
+  .painel-invest tr:nth-child(2n+1){background-color:#FFFFFF;}
+  .painel-invest tr:nth-child(2n+2){background-color:#EAEAEA;}
+  .painel-invest tr:hover{background-color:#C7FFFB;}
+  .painel-invest table td{color:#000; text-align:center; width:20%; transition:.3s; font-weight:500;}
+  .painel-invest td:hover{background-color:#9FFEF8;}
+  
+  /* ----- Tabela Modelo 3 ----- */
+  /*
+  .painel-invest table{font-weight:normal !important; border:0px !important; border-collapse: collapse; margin-bottom:50px;}
+  .painel-invest table th{color:#18d67f; font-size:18px; border-bottom:3px solid #18d67f; background-color:hsla(0,0%,0%,0.00) !important; font-weight: 500;}
+  .painel-invest thead tr{height:60px;}	
+  .painel-invest tbody{border-collapse: collapse;} 
+  .painel-invest tbody tr{height:80px; font-weight:normal; font-size:16px; transition:.3s; border-bottom:1px solid #FFF;}
+  .painel-invest tbody tr:hover{background-color:#211378;}
+  .painel-invest table td{color:#FFF; text-align:center; width:20%; transition:.3s; font-weight:500;}
+  .painel-invest tbody td:hover{background-color:#311DAD;}
+  */
+  /* line 139, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .active-tr-table {
+    background-color: #18d67f !important;
+  }
+
+  /* line 141, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest .btn-sinalizar-compra {
+    height: 40px;
+    width: 200px;
+    background-color: #18d67f;
+    color: #FFF;
+    border: 2px solid #18d67f;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  /* line 143, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest .btn-sinalizar-compra:hover {
+    background-color: #12A15F;
+    border: 2px solid #12A15F;
+    color: #FFF;
+  }
+
+  /* line 145, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest .btn-sinalizar-venda {
+    height: 40px;
+    width: 180px;
+    background-color: #ec0042;
+    color: #FFF;
+    border: 2px solid #ec0042;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  /* line 147, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest .btn-sinalizar-venda:hover {
+    background-color: #B10031;
+    border: 2px solid #B10031;
+    color: #FFF;
+  }
+
+  /* line 149, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest .btn-remover {
+    height: 30px;
+    width: 100px;
+    background-color: #ec0042;
+    color: #FFF;
+    border: 2px solid #ec0042;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  /* line 151, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest .btn-remover:hover {
+    background-color: #B10031;
+    border: 2px solid #B10031;
+    color: #FFF;
+  }
+
+  /* line 153, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest select {
+    height: 60px;
+    width: 300px;
+    background-color: #18d67f;
+    color: #FFF;
+    border: 2px solid #18d67f;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 18px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+  }
+
+  /* line 155, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest option {
+    background-color: #FFF;
+    color: #404040;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  /* line 157, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .btn-nova-moeda {
+    position: absolute;
+    height: 40px;
+    width: 250px;
+    background-color: #18d67f;
+    color: #FFF;
+    border: 2px solid #18d67f;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: -80px;
+    right: 0;
+  }
+
+  /* line 159, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-invest .btn-nova-moeda:hover {
+    background-color: #12A15F;
+    border: 2px solid #12A15F;
+    color: #FFF;
+  }
+
+  /*Select Painel*/
+  /* line 162, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .btn-group {
+    width: 335px;
+    height: 60px;
+    position: relative;
+    background-color: #18d67f;
+    padding-top: 10px;
+    transition: .3s;
+    padding-left: 20px;
+    padding-right: 15px;
+    border-radius: 4px;
+    margin-bottom: 50px;
+    color: #FFF;
+    background-image: url("/assets/Painel/imgArrow.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 280px 20px;
+  }
+
+  /* line 164, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .dropdown-toggle:after {
+    position: absolute;
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+
+  /* line 165, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .dropdown-toggle {
+    color: #FFF;
+    width: 290px;
+    height: 60px;
+    padding: 10px;
+    text-transform: none;
+    font-weight: 500;
+    margin-bottom: 7px;
+    transition: background 0s ease-out;
+  }
+
+  /* line 166, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .btn-group:hover {
+    background-color: #12A15F;
+    cursor: pointer;
+  }
+
+  /* line 167, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    height: 300px;
+    width: 335px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+    overflow: auto;
+    margin-top: 10px;
+  }
+
+  /* line 169, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .dropdown-menu > li > a {
+    padding: 15px 30px;
+    display: block;
+    clear: both;
+    font-weight: 500;
+    color: #333333;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: .3s;
+  }
+
+  /* line 170, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .dropdown-menu > li > a:hover {
+    background: #efefef;
+    color: #409FCB;
+  }
+
+  /* line 171, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .dropdown-menu > li {
+    width: 100%;
+    position: relative;
+    margin: 0;
+  }
+
+  /* line 172, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .caret {
+    display: inline-block;
+    width: 0;
+    position: relative;
+    top: 10px;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid #999;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    float: right;
+    display: none;
+  }
+
+  /* line 174, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  li {
+    list-style: none;
+  }
+
+  /*Fim do select painel*/
+  /* ---------------------------------------------- Painel - Perfil ---------------------------------------------- */
+  /* line 179, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-perfil {
+    padding-top: 200px;
+    min-height: 100vh;
+    width: 100%;
+    padding-bottom: 100px;
+    background-color: #180d5b;
+    text-align: center;
+    color: #FFF;
+  }
+
+  /* line 181, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-perfil-content {
+    width: 900px;
+    position: relative;
+    left: 50%;
+    margin-left: -450px;
+  }
+
+  /* line 183, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  #dropzone {
+    position: relative;
+    border: 2px solid #FFF;
+    color: white;
+    height: 300px;
+    margin: 50px auto;
+    text-align: center;
+    width: 300px;
+    transition: .3s;
+  }
+
+  /* line 185, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  #dropzone:hover {
+    border: 2px solid #18d67f;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* line 187, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  #dropzone:hover div {
+    color: #18d67f;
+  }
+
+  /* line 189, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  #dropzone div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    line-height: 300px;
+    font-size: 20px;
+  }
+
+  /* line 191, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  #dropzone img {
+    max-width: 95%;
+    max-height: 95%;
+    margin-top: 2.5%;
+  }
+
+  /* line 193, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  #dropzone [type="file"] {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  /* line 195, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-perfil input[type=email], .painel-perfil input[type=password], .painel-perfil input[type=text] {
+    height: 50px;
+    width: 500px;
+    padding: 0px 20px;
+    border: 2px solid #FFF;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: normal;
+    font-size: 14px;
+    border-radius: 30px;
+    margin: 8px 0px;
+    color: #FFF;
+    transition: .3s;
+  }
+
+  /* line 197, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-perfil .btn-atualizar-dados {
+    height: 50px;
+    width: 250px;
+    background-color: #18d67f;
+    border-radius: 6px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border: 2px solid transparent;
+    transition: .3s;
+  }
+
+  /* line 199, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-perfil .btn-atualizar-dados:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #18d67f;
+    color: #18d67f;
+  }
+
+  /* line 201, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-perfil .btn-cancelar-conta {
+    height: 50px;
+    width: 250px;
+    background-color: #dc1053;
+    border-radius: 6px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border: 2px solid transparent;
+    transition: .3s;
+  }
+
+  /* line 203, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-perfil .btn-cancelar-conta:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #dc1053;
+    color: #dc1053;
+  }
+
+  /* line 205, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-perfil ::-webkit-input-placeholder {
+    color: #FFF;
+    text-transform: uppercase;
+  }
+
+  /* line 207, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-perfil input[type=email]:focus, .painel-perfil input[type=password]:focus, .painel-perfil input[type=text]:focus {
+    border: 2px solid #18d67f;
+  }
+
+  /* line 209, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-perfil h1 {
+    font-weight: normal;
+    font-size: 50px;
+    padding: 0px 0px 30px 0px;
+    color: #FFF;
+    font-weight: 500;
+    border-bottom: 2px solid #18d67f;
+    margin-bottom: 60px;
+  }
+
+  /* line 211, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-perfil h2 {
+    font-size: 30px;
+    font-weight: normal;
+    padding-top: 60px;
+  }
+
+  /* line 213, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .painel-perfil h4 {
+    font-size: 20px;
+    font-weight: normal;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    text-align: left;
+    margin-left: 220px;
+  }
+
+  /* ---------------------------------------------- Home ---------------------------------------------- */
+  /* line 217, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home {
+    height: 1400px;
+    width: 100%;
+    position: relative;
+    background-image: url("/assets/Home/bloco1.png");
+    background-size: cover;
+    padding-top: 270px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+
+  /* line 219, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-content-1 {
+    position: relative;
+    width: 590px;
+    z-index: 100;
+  }
+
+  /* line 221, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-content-1 h1 {
+    color: #FFF;
+    font-size: 35px;
+  }
+
+  /* line 222, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-content-1 h2 {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 30px;
+  }
+
+  /* line 224, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-img1 {
+    height: 500px;
+    right: 0;
+    position: absolute;
+    margin-top: -100px;
+    z-index: 99;
+    margin-right: -50px;
+  }
+
+  /* line 226, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .btn-home-registrar {
+    border: 2px solid #18d67f;
+    background-color: #18d67f;
+    color: #FFF;
+    border-radius: 5px;
+    height: 45px;
+    width: 170px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    text-transform: uppercase;
+  }
+
+  /* line 228, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .btn-home-registrar:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #18d67f;
+    color: #18d67f;
+  }
+
+  /* line 230, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .btn-home-login2 {
+    border: 2px solid #FFF;
+    background-color: rgba(0, 0, 0, 0);
+    color: #FFF;
+    border-radius: 5px;
+    height: 45px;
+    width: 110px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 27px;
+    margin-left: 20px;
+    text-transform: uppercase;
+  }
+
+  /* line 232, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .btn-home-login2:hover {
+    color: #06c5d5;
+    border: 2px solid #06c5d5;
+  }
+
+  /* ---------------------------------------------- Home - Vantagens ---------------------------------------------- */
+  /* line 236, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-vantagens {
+    width: 100%;
+    position: relative;
+    margin-top: 200px;
+  }
+
+  /* line 238, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-vantagens-box {
+    height: 250px;
+    width: 47%;
+    background-color: #FFF;
+    float: left;
+    margin: 1.5%;
+    box-shadow: 0px 0px 20px 0px #a1a1a1;
+    border-radius: 10px;
+  }
+
+  /* line 240, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-vantagens img {
+    width: 160px;
+    position: relative;
+    margin-left: 35px;
+  }
+
+  /* line 242, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-vantagens-img-box {
+    height: 100%;
+    position: relative;
+    float: left;
+    margin-right: 30px;
+  }
+
+  /* line 244, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-vantagens h3 {
+    padding: 20px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    padding-top: 50px;
+  }
+
+  /* line 246, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-vantagens h3 strong {
+    font-size: 22px;
+  }
+
+  /* line 248, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-vantagens-icon-1 {
+    margin-top: 60px;
+  }
+
+  /* line 249, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-vantagens-icon-2 {
+    margin-top: 60px;
+  }
+
+  /* line 250, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-vantagens-icon-3 {
+    margin-top: 35px;
+  }
+
+  /* line 251, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-vantagens-icon-4 {
+    margin-top: 40px;
+  }
+
+  /* ---------------------------------------------- Home - Custos ---------------------------------------------- */
+  /* line 255, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-custos {
+    height: 500px;
+    width: 100%;
+    position: relative;
+  }
+
+  /* line 257, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-custos-line {
+    height: 200px;
+    width: 120%;
+    background-color: #eeeded;
+    position: absolute;
+    transform: rotate(-20deg);
+    z-index: -999;
+    margin-left: -10%;
+    margin-top: -100px;
+  }
+
+  /* line 259, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-custos-img {
+    height: 400px;
+    position: absolute;
+    margin-top: 100px;
+  }
+
+  /* line 261, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-custos-box {
+    height: 400px;
+    width: 500px;
+    position: absolute;
+    right: 0;
+    margin-top: 140px;
+  }
+
+  /* line 263, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-custos h1 {
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 45px;
+    padding-bottom: 30px;
+  }
+
+  /* line 264, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-custos h3 {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  /* line 265, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-custos h3 a {
+    color: #1d99c7;
+    font-weight: bold;
+  }
+
+  /* ---------------------------------------------- Home - Objetivos ---------------------------------------------- */
+  /* line 269, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-objetivos {
+    width: 100%;
+    position: relative;
+    color: #FFF;
+    z-index: 20;
+  }
+
+  /* line 271, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-objetivos-content {
+    margin-left: -480px !important;
+    position: absolute;
+    z-index: 999;
+  }
+
+  /* line 273, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-objetivos-back {
+    width: 100%;
+    position: relative;
+  }
+
+  /* line 275, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-objetivos-box {
+    text-align: center;
+    height: 600px;
+    width: 50%;
+    float: left;
+    position: relative;
+    margin-top: 250px;
+  }
+
+  /* line 277, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-objetivos-box img {
+    height: 300px;
+    margin-left: -150px;
+  }
+
+  /* line 279, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-objetivos-box2 img {
+    margin-left: -200px !important;
+  }
+
+  /* line 281, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-objetivos-box h1 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+
+  /* line 283, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-objetivos h3 {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: left;
+    line-height: 25px;
+  }
+
+  /* ---------------------------------------------- Home - Companhia ---------------------------------------------- */
+  /* line 287, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-companhia {
+    height: 550px;
+    width: 100%;
+    background-color: #FFF;
+    clear: both;
+    padding-top: 100px;
+  }
+
+  /* line 289, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-companhia img {
+    height: 450px;
+    position: absolute;
+    left: 0;
+    z-index: 20;
+  }
+
+  /* line 291, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-companhia-line {
+    height: 300px;
+    width: 120%;
+    background-color: #eeeded;
+    position: absolute;
+    transform: rotate(-20deg);
+    margin-left: -10%;
+    margin-top: -240px;
+    z-index: 19;
+  }
+
+  /* line 293, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-companhia-box {
+    width: 400px;
+    position: absolute;
+    right: 0;
+    z-index: 20;
+    padding-top: 40px;
+  }
+
+  /* line 295, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-companhia h1 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+
+  /* line 297, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .home-companhia h3 {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: left;
+    line-height: 25px;
+  }
+
+  /* ---------------------------------------------- Cadastro ---------------------------------------------- */
+  /* line 301, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .cadastro {
+    height: 100vh;
+    width: 100%;
+    background-color: #180d5b;
+    position: relative;
+    padding-top: 100px;
+    color: #FFF;
+  }
+
+  /* line 303, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .img-cadastro {
+    height: 110%;
+    margin-top: -14%;
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
+  }
+
+  /* line 305, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .cadastro-content {
+    position: absolute;
+    height: 450px;
+    width: 600px;
+    top: 50%;
+    margin-top: -200px;
+    margin-left: 7%;
+  }
+
+  /* line 307, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .cadastro h1 {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 50px;
+    text-transform: uppercase;
+  }
+
+  /* line 309, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .cadastro h2 {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 50px;
+  }
+
+  /* line 311, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .cadastro h3 {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #06f03d;
+    line-height: 50px;
+    padding-bottom: 30px;
+  }
+
+  /* line 313, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .cadastro input[type=email], .cadastro input[type=password], .cadastro input[type=text] {
+    height: 50px;
+    width: 300px;
+    padding: 0px 20px;
+    border: 2px solid #FFF;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: normal;
+    font-size: 14px;
+    border-radius: 30px;
+    margin: 8px 0px;
+    color: #FFF;
+    transition: .3s;
+  }
+
+  /* line 315, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .cadastro input[type=submit] {
+    height: 50px;
+    width: 300px;
+    background-color: #18d67f;
+    border-radius: 6px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 40px;
+    border: 2px solid transparent;
+    transition: .3s;
+  }
+
+  /* line 317, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .cadastro input[type=submit]:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #18d67f;
+    color: #18d67f;
+  }
+
+  /* line 319, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .cadastro ::-webkit-input-placeholder {
+    color: #FFF;
+    text-transform: uppercase;
+  }
+
+  /* line 321, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .cadastro input[type=email]:focus, .cadastro input[type=password]:focus, .cadastro input[type=text]:focus {
+    border: 2px solid #18d67f;
+  }
+
+  /* line 323, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .cadastro .erro-mensagem h2 {
+    font-size: 15px;
+    margin-top: 30px;
+  }
+
+  /* line 325, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .cadastro .erro-mensagem ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ---------------------------------------------- Login ---------------------------------------------- */
+  /* line 329, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .login {
+    height: 100vh;
+    width: 100%;
+    background-color: #180d5b;
+    position: relative;
+    padding-top: 100px;
+    color: #FFF;
+  }
+
+  /* line 331, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .img-login {
+    height: 80%;
+    margin-top: 2%;
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
+  }
+
+  /* line 333, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .login-content {
+    position: absolute;
+    height: 450px;
+    width: 700px;
+    top: 50%;
+    margin-top: -180px;
+    margin-left: 7%;
+  }
+
+  /* line 335, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .login h1 {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 50px;
+    text-transform: uppercase;
+  }
+
+  /* line 337, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .login h2 {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 50px;
+  }
+
+  /* line 339, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .login h3 {
+    font-size: 14px;
+    font-weight: normal;
+    padding-top: 30px;
+  }
+
+  /* line 341, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .login h3 a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+    transition: .3s;
+  }
+
+  /* line 343, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .login h3 a:hover {
+    color: #06c5d5;
+  }
+
+  /* line 345, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .login input[type=email], .login input[type=password] {
+    height: 50px;
+    width: 300px;
+    padding: 0px 20px;
+    border: 2px solid #FFF;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: normal;
+    font-size: 14px;
+    border-radius: 30px;
+    margin: 8px 0px;
+    color: #FFF;
+    transition: .3s;
+  }
+
+  /* line 347, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .login input[type=submit] {
+    height: 50px;
+    width: 200px;
+    background-color: #18d67f;
+    border-radius: 6px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 40px;
+    border: 2px solid transparent;
+    transition: .3s;
+  }
+
+  /* line 349, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .login input[type=submit]:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #18d67f;
+    color: #18d67f;
+  }
+
+  /* line 351, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .login ::-webkit-input-placeholder {
+    color: #FFF;
+    text-transform: uppercase;
+  }
+
+  /* line 353, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .login input[type=email]:focus, .login input[type=password]:focus {
+    border: 2px solid #18d67f;
+  }
+
+  /* line 355, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .login .erro-mensagem h2 {
+    font-size: 15px;
+    margin-top: 30px;
+  }
+
+  /* line 357, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .login .erro-mensagem ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ---------------------------------------------- Contato ---------------------------------------------- */
+  /* line 361, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .erro {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    background-color: #B90003;
+    text-align: center;
+    top: 100%;
+    margin-top: -50px;
+    z-index: 9999;
+    line-height: 50px;
+    color: #FFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px !important;
+    font-weight: normal;
+    display: none;
+  }
+
+  /* line 364, /home/ubuntu/workspace/apps/investiment-overview-rails/app/assets/stylesheets/application.scss */
+  .success {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    background-color: #2AB900;
+    text-align: center;
+    top: 100%;
+    margin-top: -50px;
+    z-index: 9999;
+    line-height: 50px;
+    display: none;
+    color: #FFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
