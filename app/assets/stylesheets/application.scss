@@ -250,13 +250,11 @@ li {list-style: none;}
 
 /* ---------------------------------------------- Home - Objetivos ---------------------------------------------- */
 
-.home-objetivos{width: 100%; position: relative; color: #FFF; z-index:20;}
+.home-objetivos{height:700px; width: 100%; position: relative; color: #FFF; z-index:20; margin-top:-5px;}
 
 .home-objetivos-content{margin-left:-480px !important; position:absolute; z-index:999;}
 
-.home-objetivos-back{width: 100%; position: relative;}
-
-.home-objetivos-box{text-align: center; height: 600px; width: 50%; float: left; position: relative; margin-top:250px;}
+.home-objetivos-box{text-align: center; height: 600px; width: 50%; float: left; position: relative; margin-top:80px;}
 
 .home-objetivos-box img{height: 300px; margin-left:-150px;}
 
@@ -266,13 +264,17 @@ li {list-style: none;}
 
 .home-objetivos h3{font-size: 18px; font-weight: normal; text-align: left; line-height:25px;}
 
+.objetivos-img-bloco1{width:100%; margin:0; z-index:99; position:relative; z-index:20;}
+
+.home-objetivos-back{height:700px; width:100%; position:relative;}
+
 /* ---------------------------------------------- Home - Companhia ---------------------------------------------- */
 
 .home-companhia{height:550px; width:100%; background-color:#FFF; clear:both; padding-top:100px;}
 
 .home-companhia img{height:450px; position:absolute; left:0; z-index:20;}
 
-.home-companhia-line{height: 300px; width: 120%; background-color: #eeeded; position: absolute; transform: rotate(-20deg); margin-left: -10%; margin-top: -240px; z-index:19;}
+.home-companhia-line{height: 300px; width: 120%; background-color: #eeeded; position: absolute; transform: rotate(-20deg); margin-left: -10%; margin-top: -240px; z-index:0;}
 
 .home-companhia-box{width:400px; position:absolute; right:0; z-index:20; padding-top:40px;}
 
@@ -388,7 +390,7 @@ input[type=range]::-webkit-slider-thumb {width: 20px; height: 20px; border: 0; b
 		
 /* ---------------------------------------------- Footer ---------------------------------------------- */	
 		
-footer{height:570px; width:100%; position:relative; background-image: linear-gradient(to right, #1d3e80 , #1895a9); color:#FFF; padding-top:50px;}		
+footer{height:572px; width:100%; position:relative; background-image: linear-gradient(to right, #1d3e80 , #1895a9); color:#FFF; padding-top:50px;}		
 
 footer .logo-footer{height: 60px; position: absolute; margin-top: 140px; cursor: pointer; z-index: 999;}
 
