@@ -6,24 +6,7 @@
 //= require_tree .
 
 $(document).ready(function(e){
-	
-	$('input[type=range]').on('input', function(e){
-	  var min = e.target.min,
-		  max = e.target.max,
-		  val = e.target.value;
 
-	  $(e.target).css({
-		'backgroundSize': (val - min) * 100 / (max - min) + '% 100%'
-	  });
-	}).trigger('input');
-	
-	var $range = document.querySelector('input[type=range]'),
-  		$value = document.querySelector('.contato2 h5');
-	
-	$range.addEventListener('input', function() {
-	  $value.textContent = this.value;
-	});
-	
   /* ---------- Input File ---------- */			
 	
   $('#dropzone').on('dragover', function() {
@@ -82,10 +65,18 @@ $(document).ready(function(e){
 /* ---------- Menu ---------- */	
 
 	$("nav a").click(function(e){		
-		$("nav a").removeClass("active");		
-		$(this).addClass("active");			
-		event.preventDefault();		
-		$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);		
+			event.preventDefault();		
+			if($(this).attr("href") == "#1"){
+					$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top - 150}, 800);			
+			}
+			
+			else if($(this).attr("href") == "#2"){
+					$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top - 50}, 800);			
+			}
+			
+			else if($(this).attr("href") == "#3"){
+					$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top - 10}, 800);			
+			}
 	});
 	
 	$(".btn-home-login").click(function(){
@@ -111,11 +102,7 @@ $(document).ready(function(e){
 	$(".btn-painel-perfil").click(function(){
 		window.location.href = "/users/edit/";	
 	});
-	
-/* ------------------------------------------------------------ Responsive --------------------------------------------------------- */
-	
-	
-	
+
 /* -------------------- Menu - Icon-------------------- */
 		
 	$(".icon-menu").click(function(e) {
@@ -140,9 +127,54 @@ $(document).ready(function(e){
 		event.preventDefault(); 
 		$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);
 		$(".menu-animate").animate({"margin-left" : "0px"}, 300); 
-    });
+  });
+	
+	/*  ------------------------------ Contato  ------------------------------ */	
+	
+	$(".btn-contato-sb").click(function(){
+
+			if($(".contato2").hasClass("contato-aberto")){
+					$(".contato2").slideUp(500);
+					$(".contato2").removeClass("contato-aberto");
+					$("html, body").animate({scrollTop: $('.contato').offset().top - 90}, 1000);
+			}
+			
+			else{
+					$(".contato2").slideDown(500);		
+					$("html, body").animate({scrollTop: $('.contato2').offset().top -90}, 1000);
+					$(".contato2").addClass("contato-aberto");	
+			}
+			// $("html, body").animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);		
+	});
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	/* ------ Input[type=range] ----- */
+	
+	$('input[type=range]').on('input', function(e){
+	  var min = e.target.min,
+		  max = e.target.max,
+		  val = e.target.value;
+
+	  $(e.target).css({
+			'backgroundSize': (val - min) * 100 / (max - min) + '% 100%'
+	  });
+	  
+	}).trigger('input');
+	
+	var $range = document.querySelector('input[type=range]');
+  var	$value = document.querySelector('.contato2 h5');
+	
+	$range.addEventListener('input', function() {
+			$value.textContent = this.value;
+	});
 	
 	
 });
