@@ -90,7 +90,9 @@ nav a:hover{background-color:hsla(152,74%,58%,0.80); color: #FFF !important;}
 	
 .img-user-menu{height: 150px; width: 150px; background-color:#FFF; background-size: cover; background-position: center; margin-bottom: 30px; position: relative; left: 50%; margin-left: -75px; border-radius: 100%;}
 	
-.menu-animate h3{padding-left: 10%; font-size: 15px; padding-bottom: 50px; font-weight: normal; line-height: 25px; color: #FFF;}	
+.menu-animate h3{padding-left: 10%; font-size: 17px; padding-bottom: 50px; font-weight: normal; line-height: 30px; color: #FFF;}	
+	
+.menu-animate h3 strong{font-size:18px;}	
 	
 .menu-box-user{width: 100%; position: relative; background-color: #313131; background-size: cover; background-position: center; background-image: url("Painel/img-menu-user.png");}	
 	
@@ -386,7 +388,6 @@ input[type=range]::-webkit-slider-thumb {width: 20px; height: 20px; border: 0; b
 .btn-contato-enviar:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #e8275b; color: #e8275b;}	
 		
 .contato2 input[type=text]:focus, .contato2 input[type=email]:focus, textarea:focus{box-shadow: 0px 0px 10px 1px rgba(232,39,91,1);}		
-		
 /* ---------------------------------------------- Footer ---------------------------------------------- */	
 		
 footer{height:572px; width:100%; position:relative; background-image: linear-gradient(to right, #1d3e80 , #1895a9); color:#FFF; padding-top:50px;}		
