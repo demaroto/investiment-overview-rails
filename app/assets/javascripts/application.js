@@ -67,15 +67,15 @@ $(document).ready(function(e){
 	$("nav a").click(function(e){		
 			event.preventDefault();		
 			if($(this).attr("href") == "#1"){
-					$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top - 150}, 800);			
+					$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top - 150}, 1000);			
 			}
 			
 			else if($(this).attr("href") == "#2"){
-					$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top - 50}, 800);			
+					$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top - 50}, 1000);			
 			}
 			
 			else if($(this).attr("href") == "#3"){
-					$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top - 10}, 800);			
+					$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top - 10}, 1000);			
 			}
 	});
 	
@@ -146,15 +146,6 @@ $(document).ready(function(e){
 			}
 			// $("html, body").animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);		
 	});
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	/* ------ Input[type=range] ----- */
 	
