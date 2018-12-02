@@ -219,7 +219,7 @@ li {list-style: none;}
 
 /* ---------------------------------------------- Home - Vantagens ---------------------------------------------- */
 	
-.home-vantagens{width: 100%; position: relative; margin-top: 200px;}	
+.home-vantagens{width: 100%; position: relative; margin-top: 200px; z-index:5;}	
 	
 .home-vantagens-box{height: 250px; width: 47%; background-color: #FFF; float: left; margin: 1.5%; box-shadow: 0px 0px 20px 0px rgba(161,161,161,1); border-radius: 10px;}	
 	
@@ -240,7 +240,7 @@ li {list-style: none;}
 
 .home-custos{height: 500px; width: 100%; position: relative;}
 
-.home-custos-line{height: 200px; width: 120%; background-color: #eeeded; position: absolute; transform: rotate(-20deg); z-index: -999; margin-left: -10%; margin-top: -100px;}
+.home-custos .home-custos-line{height: 200px; width: 120%; background-color: #eeeded; position: absolute; transform: rotate(-20deg); z-index: 0; margin-left: -10%; margin-top: -100px;}
 
 .home-custos-img{height: 400px; position: absolute; margin-top: 100px;}
 
@@ -273,6 +273,8 @@ li {list-style: none;}
 /* ---------------------------------------------- Home - Companhia ---------------------------------------------- */
 
 .home-companhia{height:550px; width:100%; background-color:#FFF; clear:both; padding-top:100px;}
+
+.home-companhia .home-custos-line{height: 200px; width: 120%; background-color: #eeeded; position: absolute; transform: rotate(-20deg); z-index: -999; margin-left: -10%; margin-top: -100px;}
 
 .home-companhia img{height:450px; position:absolute; left:0; z-index:20;}
 
@@ -470,16 +472,23 @@ nav{display:none;}
 	
 .home-vantagens-box{width: 100%; background-color: #FFF; float: left; margin: 20px 0px; box-shadow: 0px 0px 20px 0px rgba(161,161,161,1); border-radius: 10px;}	
 	
-.home-vantagens img{width: 50%; position: relative; margin-left: 25%;}
+.home-vantagens img{width: 50%; position: relative; margin-left: 25%; margin-top:40px;}
 	
-.home-vantagens h3{padding: 16px; font-weight: normal; font-size: 18px; line-height: 25px;  padding-top: 30px;}	
+.home-vantagens h3{padding: 20px; font-weight: normal; font-size: 16px; line-height: 25px;  padding-top: 30px;}	
 	
 .home-vantagens h3 strong{font-size: 20px;}	
 	
-.home-vantagens-icon-1{margin-top: 60px;}	
-.home-vantagens-icon-2{margin-top: 60px;}	
-.home-vantagens-icon-3{margin-top: 35px;}	
-.home-vantagens-icon-4{margin-top: 40px;}		
+/* ---------------------------------------------- Home - Custos ---------------------------------------------- */
+
+.home-custos{width: 100%; position: relative;}
+
+.home-custos-img{width:90%; position:relative; margin-left:5%; margin-top: 40px;}
+
+.home-custos-box{width: 90%; position: relative; right: 0; margin-top: 30px; margin-left:5%;}
+
+.home-custos h1{font-weight: bold; font-size: 25px; line-height: 30px; padding-bottom: 20px;}
+.home-custos h3{font-weight: normal; font-size: 16px; line-height: 25px;}
+.home-custos h3 a{color: #1d99c7; font-weight: bold;}	
 	
 }	
 
