@@ -262,9 +262,9 @@ li {list-style: none;}
 
 .home-objetivos-box2 img{margin-left:-200px !important;}
 
-.home-objetivos-box h1{font-size: 22px; font-weight: bold; text-align:left; line-height: 30px; padding-bottom: 30px; padding-top: 30px;}
+.home-objetivos-box h1{font-size: 22px; font-weight: bold; text-align:left; line-height: 30px; padding-bottom: 30px; padding-top: 30px; width:70%;}
 
-.home-objetivos h3{font-size: 18px; font-weight: normal; text-align: left; line-height:25px;}
+.home-objetivos h3{font-size: 18px; font-weight: normal; text-align: left; line-height:25px; width:75%}
 
 .objetivos-img-bloco1{width:100%; margin:0; z-index:99; position:relative; z-index:20;}
 
@@ -469,7 +469,7 @@ nav{display:none;}
 /* ---------------------------------------------- Home - Vantagens ---------------------------------------------- */
 	
 .home-vantagens{width: 90%; position: relative; margin-top: 50px; margin-left:5%;}	
-	
+
 .home-vantagens-box{width: 100%; background-color: #FFF; float: left; margin: 20px 0px; box-shadow: 0px 0px 20px 0px rgba(161,161,161,1); border-radius: 10px;}	
 	
 .home-vantagens img{width: 50%; position: relative; margin-left: 25%; margin-top:40px;}
@@ -480,7 +480,7 @@ nav{display:none;}
 	
 /* ---------------------------------------------- Home - Custos ---------------------------------------------- */
 
-.home-custos{width: 100%; position: relative;}
+.home-custos{width: 100%; position: relative; padding-bottom:70px;}
 
 .home-custos-img{width:90%; position:relative; margin-left:5%; margin-top: 40px;}
 
@@ -489,6 +489,23 @@ nav{display:none;}
 .home-custos h1{font-weight: bold; font-size: 25px; line-height: 30px; padding-bottom: 20px;}
 .home-custos h3{font-weight: normal; font-size: 16px; line-height: 25px;}
 .home-custos h3 a{color: #1d99c7; font-weight: bold;}	
+	
+/* ---------------------------------------------- Home - Objetivos ---------------------------------------------- */
+
+.home-objetivos{width: 100%; position: relative; color: #FFF; z-index:20; margin-top:-5px; background-image: linear-gradient(to right, #082c7c , #00b1b8); padding:30px 0px 70px 0px;}
+
+.home-objetivos-box{width: 90%; position: relative; margin-top:30px; margin-left:5%;}
+
+.home-objetivos-box img{width:80%; margin-left:10%;}
+
+.home-objetivos-box2 img{width:70%; margin-left:15%;}
+
+.home-objetivos-box h1{font-size: 20px; font-weight: bold; text-align:left; line-height: 30px; padding-bottom: 30px; padding-top: 30px;}
+
+.home-objetivos h3{font-size: 16px; font-weight: normal; text-align: left; line-height:25px;}
+
+.objetivos-img-bloco1{display:none;}
+.home-objetivos-back{display:none;}	
 	
 }	
 
