@@ -7,6 +7,31 @@
 
 $(document).ready(function(e){
 
+	
+/* -------------------- Menu - Painel -------------------- */
+		
+	$(".icon-menu").click(function(e) {
+		$(".mask-window").fadeIn(300);
+		$(".menu-animate").animate({"margin-left" : "-400px"}, 300);
+	});
+	
+	$(".mask-window").click(function(e) {
+		$(this).fadeOut(400);
+		$(".menu-animate").animate({"margin-left" : "0px"}, 100);
+	});
+	
+	$(".seta").click(function(e) {
+		$(".menu-animate").animate({"margin-left" : "0px"}, 100);
+    });
+	
+	$(".nav a").click(function(e) { 
+		$(".nav a").removeClass("active"); 
+		$(this).addClass("active");		
+		event.preventDefault(); 
+		$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);
+		$(".menu-animate").animate({"margin-left" : "0px"}, 300); 
+  });
+
   /* ---------- Input File ---------- */			
 	
   $('#dropzone').on('dragover', function() {
@@ -102,32 +127,6 @@ $(document).ready(function(e){
 	$(".btn-painel-perfil").click(function(){
 		window.location.href = "/users/edit/";	
 	});
-
-/* -------------------- Menu - Icon-------------------- */
-		
-	$(".icon-menu").click(function(e) {
-		$(".mask-window").fadeIn(300);
-		$(".menu-animate").animate({"margin-left" : "-400px"}, 300);
-	});
-	
-	$(".mask-window").click(function(e) {
-		$(this).fadeOut(400);
-		$(".menu-animate").animate({"margin-left" : "0px"}, 100);
-	});
-	
-	$(".seta").click(function(e) {
-		$(".menu-animate").animate({"margin-left" : "0px"}, 100);
-    });
-	
-/*  ------------------------------ Menu  ------------------------------ */	
-
-	$(".nav a").click(function(e) { 
-		$(".nav a").removeClass("active"); 
-		$(this).addClass("active");		
-		event.preventDefault(); 
-		$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);
-		$(".menu-animate").animate({"margin-left" : "0px"}, 300); 
-  });
 	
 	/*  ------------------------------ Contato  ------------------------------ */	
 	
