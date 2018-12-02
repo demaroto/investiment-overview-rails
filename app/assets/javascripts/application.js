@@ -7,7 +7,6 @@
 
 $(document).ready(function(e){
 
-	
 /* -------------------- Menu - Painel -------------------- */
 		
 	$(".icon-menu").click(function(e) {

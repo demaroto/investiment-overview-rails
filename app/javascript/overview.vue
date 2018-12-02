@@ -37,7 +37,6 @@ Vue.use(VueNativeSock, 'wss://api2.poloniex.com', {
 	format: 'json'
 	 })
 	 
-
 	 	 var poloniex = new Vue()
 	 	 var eventHub = new Vue()
 	   var poloniexSocket = ""
@@ -72,7 +71,6 @@ export default {
 
   created:function() {
     
-    
   },
   mounted: function(){
      var vm = this;
@@ -84,7 +82,6 @@ export default {
       
         let data = JSON.parse(res.data)
    
-          
         if(data.length > 2){
         if(data[2][0][0] == 'o'){
           let typeTrade = data[2][0][1] // 1 for buy or 0 for sell
@@ -139,8 +136,6 @@ export default {
                 })
                 }
               vm.$forceUpdate()
-         
-            
         }
       }
       })
@@ -151,7 +146,6 @@ export default {
   },
   updated:function() {
 
-      
   },
   methods:{
     getPairsToOverview:function(){
@@ -197,8 +191,7 @@ export default {
       };
     },
     displaySelect:function(){
-      
-      
+
     },
     notificationShow:function(titulo, moeda, tipo, myValue, currentValue){
        if (Notification.permission === "granted") {
