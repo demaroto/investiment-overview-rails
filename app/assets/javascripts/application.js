@@ -134,12 +134,12 @@ $(document).ready(function(e){
 			if($(".contato2").hasClass("contato-aberto")){
 					$(".contato2").slideUp(500);
 					$(".contato2").removeClass("contato-aberto");
-					$("html, body").animate({scrollTop: $('.contato').offset().top - 90}, 1000);
+					$("html, body").animate({scrollTop: $('.contato').offset().top - 88}, 800);
 			}
 			
 			else{
 					$(".contato2").slideDown(500);		
-					$("html, body").animate({scrollTop: $('.contato2').offset().top -90}, 1000);
+					$("html, body").animate({scrollTop: $('.contato2').offset().top - 88}, 800);
 					$(".contato2").addClass("contato-aberto");	
 			}
 			// $("html, body").animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);		
