@@ -14,6 +14,11 @@ $(document).ready(function(e){
 		$(".menu-animate").animate({"margin-left" : "-400px"}, 300);
 	});
 	
+	$(".icon-menu2").click(function(e) {
+		$(".mask-window").fadeIn(300);
+		$(".menu-animate").animate({"margin-left" : "-70%"}, 300);
+	});
+	
 	$(".mask-window").click(function(e) {
 		$(this).fadeOut(400);
 		$(".menu-animate").animate({"margin-left" : "0px"}, 100);
