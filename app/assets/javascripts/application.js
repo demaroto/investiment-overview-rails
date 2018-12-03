@@ -11,21 +11,27 @@ $(document).ready(function(e){
 		
 	$(".icon-menu").click(function(e) {
 		$(".mask-window").fadeIn(300);
-		$(".menu-animate").animate({"margin-left" : "-400px"}, 300);
+		if($(window).innerWidth() > 1023){
+			$(".menu-animate").animate({"margin-left" : "-400px"}, 300);
+		}
+		else{
+			$(".menu-animate").animate({"margin-left" : "-70%"}, 300);
+		}
 	});
 	
 	$(".icon-menu2").click(function(e) {
 		$(".mask-window").fadeIn(300);
-		$(".menu-animate").animate({"margin-left" : "-70%"}, 300);
+		$(".menu-animate-resp").animate({"margin-left" : "-70%"}, 300);
 	});
 	
-	$(".mask-window").click(function(e) {
+	$(".mask-window").click(function() {
 		$(this).fadeOut(400);
 		$(".menu-animate").animate({"margin-left" : "0px"}, 100);
+		$(".menu-animate-resp").animate({"margin-left" : "0px"}, 300);
 	});
 	
 	$(".seta").click(function(e) {
-		$(".menu-animate").animate({"margin-left" : "0px"}, 300);
+		$(".menu-animate-resp").animate({"margin-left" : "0px"}, 300);
   });
 	
 	$(".nav a").click(function(e) { 
@@ -39,6 +45,22 @@ $(document).ready(function(e){
 			$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);
 		}
 		$(".menu-animate").animate({"margin-left" : "0px"}, 300); 
+  });
+  
+  /* Mobile - Home */
+  
+  $(".nav-resp a").click(function(e) { 
+  	$(".mask-window").fadeOut(300);
+		$(".nav-resp a").removeClass("active"); 
+		$(this).addClass("active");		
+		event.preventDefault(); 
+		if($(this).attr('href') == "#1"){
+			$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top - 100}, 1000);
+		}
+		else{
+			$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);
+		}
+		$(".menu-animate-resp").animate({"margin-left" : "0px"}, 300); 
   });
   
   /* ---------- Input File ---------- */			

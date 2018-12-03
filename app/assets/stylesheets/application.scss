@@ -31,6 +31,8 @@ canvas{display:block;}
 	
 .mask-window{background-color: hsla(0,0%,0%,0.50); height: 100vh; width: 100%; z-index: 9998; position: fixed; display: none;}	
 
+.menu-animate-resp{display:none;}
+
 /* ---------------------------------------------- Header ---------------------------------------------- */
 
 header{height:90px; width: 100%; position:fixed; z-index: 9997; border-bottom: 1px solid #FFF; transition: 2s;} /* #1e2f79 */
@@ -423,9 +425,11 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 	
 .content{width:90%; margin-left:5%; position:relative;}	
 	
+.mask-window{background-color: hsla(0,0%,0%,0.50); height: 100vh; width: 100%; z-index: 9997; position: fixed; display: none;}	
+	
 /* ---------------------------------------------- Header ---------------------------------------------- */
 
-header{height:60px; width: 100%; position:fixed; z-index: 9997; border-bottom: 1px solid #FFF; transition: 2s;} /* #1e2f79 */
+header{height:60px; width: 100%; position:fixed; z-index: 9996; border-bottom: 1px solid #FFF; transition: 2s;} /* #1e2f79 */
 
 .header-active{background-color: hsla(229,60%,30%,0.80);}	
 	
@@ -437,17 +441,15 @@ nav{display:none;}
 
 .icon-menu2{height:32px; width:42px; position:absolute; left:100%; margin-left:-60px; margin-top:14px !important;}
 
-.menu-animate{height:100%; width:70%; background-color:#180d5b; margin-top:0px; left:100%; z-index:999; position:fixed; overflow:auto;}
+.menu-animate-resp{height:100%; width:70%; background-color:#180d5b; margin-top:0px; left:100%; z-index:999; position:fixed; overflow:auto; z-index:9999; padding-top:59px;}
 
-.seta{background-image:url("/assets/Home/Right.png"); height:30px; width:30px; position:relative; margin-top:20px; margin-left:20px; margin-bottom: 20px; background-size: cover;}
+.nav-resp{position:relative;}
 
-.nav{position:relative;}
+.nav-resp a{display:flex; font-size:16px; color:#FFFFFF; font-family: 'Montserrat', sans-serif; transition-duration:.3s; text-decoration:none; font-weight:normal; line-height:55px; padding-left:10%;}
 
-.nav a{display:flex; font-size:16px; color:#FFFFFF; font-family: 'Montserrat', sans-serif; transition-duration:.3s; text-decoration:none; font-weight:normal; line-height:55px; padding-left:10%;}
+.nav-resp ul, li{list-style:none; margin:0; padding:0;}
 
-.nav ul, li{list-style:none; margin:0; padding:0;}
-
-.menu-line{height:1px; width:100%; background-color:#FFF; position:relative;}
+.menu-line-resp{height:1px; width:100%; background-color:#FFF; position:relative;}
 
 .active{background-color:#F1F1F1; color: #000 !important;}
 	
@@ -590,11 +592,11 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 
 .cadastro-content{width:90%; margin-left:5%; position:relative;}
 
-.cadastro h1{text-transform: uppercase; font-size:20px; font-weight: normal; line-height: 40px; text-transform: uppercase;}
+.cadastro h1{text-transform: uppercase; font-size:18px; font-weight: normal; line-height: 40px; text-transform: uppercase;}
 
 .cadastro h2{text-transform: uppercase; font-size:24px; font-weight: bold; text-transform: uppercase; line-height: 40px;}
 
-.cadastro h3{text-transform: uppercase; font-size:20px; font-weight: normal; text-transform: uppercase; color: #06f03d; line-height: 40px; padding-bottom: 30px;}
+.cadastro h3{text-transform: uppercase; font-size:18px; font-weight: normal; text-transform: uppercase; color: #06f03d; line-height: 40px; padding-bottom: 30px;}
 
 .cadastro input[type=email], .cadastro input[type=password], .cadastro input[type=text]{height: 50px; width: 90%; padding: 0px 20px; border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00); font-weight: normal; font-size: 14px; border-radius: 30px; margin: 8px 0px; color: #FFF; transition: .3s; margin-left:5%;}
 
@@ -608,7 +610,6 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 
 .cadastro .erro-mensagem ul{margin:0; padding: 0;}
 	
-
 /* ---------------------------------------------- Login ---------------------------------------------- */
 
 .login{width: 100%; background-color:#180d5b; position: relative; padding-top: 100px; color: #FFF; padding-bottom:70px;}
@@ -617,9 +618,9 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 
 .login-content{width:90%; margin-left:5%; position:relative;}
 
-.login h1{text-transform: uppercase; font-size:20px; font-weight: normal; line-height: 40px; text-transform: uppercase;}
+.login h1{text-transform: uppercase; font-size:16px; font-weight: normal; line-height: 40px; text-transform: uppercase;}
 
-.login h2{text-transform: uppercase; font-size:24px; font-weight: bold; text-transform: uppercase; line-height: 40px;}
+.login h2{text-transform: uppercase; font-size:22px; font-weight: bold; text-transform: uppercase; line-height: 40px;}
 
 .login h3{font-size: 14px; font-weight: normal; padding-top: 30px; width:70%; margin-left:15%; text-align:center; line-height:25px;}
 
@@ -636,6 +637,98 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 .login .erro-mensagem h2{font-size: 15px; margin-top: 30px;}
 
 .login .erro-mensagem ul{margin:0; padding: 0;}	
+	
+/* ---------------------------------------------- Painel ---------------------------------------------- */
+
+.header-painel{background-color:#180d5b;}
+	
+.icon-menu{height:32px; width:42px; position:absolute; left:100%; margin-left:-60px; margin-top:14px !important;}
+
+.line-icon{height:5px; width:35px; background-color: #FFF; margin: 4px;}	
+
+.menu-animate{height:100%; width:70%; background-color:#FFF; margin-top:0px; left:100%; z-index:9999; position:fixed; overflow:auto; transition:.3s; border-bottom:5px solid #18d67f;}
+
+.nav{position:relative;}
+
+.nav a{display:flex; font-size:16px; color:#303030; font-family: 'Montserrat', sans-serif; transition-duration:.3s; text-decoration:none; font-weight:normal; line-height:55px; padding-left:100px; font-weight: 500;}
+
+.nav a:hover{background-color:#e3e3e3; color:#409FCB;}
+
+.nav ul, li{list-style:none; margin:0; padding:0;}
+
+.menu-line{height:1px; width:100%; background-color:#d0d0d0; position:relative;}
+
+.active{background-color:#F1F1F1; color: #000 !important;}
+	
+.img-user-menu{height: 150px; width: 150px; background-color:#FFF; background-size: cover; background-position: center; margin-bottom: 30px; position: relative; left: 50%; margin-left: -75px; border-radius: 100%;}
+	
+.menu-animate h3{padding-left: 10%; font-size: 17px; padding-bottom: 50px; font-weight: normal; line-height: 30px; color: #FFF;}	
+	
+.menu-animate h3 strong{font-size:18px;}	
+	
+.menu-box-user{width: 100%; position: relative; background-color: #313131; background-size: cover; background-position: center; background-image: url("Painel/img-menu-user.png");}	
+	
+.menu-box-user-mask{width: 100%; background-color:hsla(0,0%,0%,0.20); padding-top: 50px;}	
+	
+.nav .icons-nav{position: absolute; height:  20px; margin-top: 17px; margin-left: 40px;}	
+
+.painel-invest{min-height:100vh; width:100%; padding-bottom:50px; background-color:#180d5b; background-size: cover; background-repeat: no-repeat; background-position: center; }
+
+.painel-invest input[type=number]{height:40px; width:80px; border:none; border-radius:4px; text-align: center; font-size: 16px; padding-left: 15px;}
+
+.painel-invest h3{font-weight:normal; font-size:40px; padding:30px 0px 30px 0px; color:#FFF; font-weight: 500;}
+
+.painel-invest h1{font-weight:normal; font-size:50px; padding:200px 0px 30px 0px; color:#FFF; font-weight: 500; border-bottom: 2px solid #18d67f; margin-bottom: 80px;}
+
+/* ----- Tabela Modelo 1 ----- */
+
+.painel-invest table{font-weight:normal !important; border:0px !important; border-collapse: collapse; margin-bottom:50px;}
+.painel-invest table th{color:#18d67f; font-size:18px; border-bottom:3px solid #18d67f; background-color:hsla(0,0%,0%,0.00) !important; font-weight: 500;}
+.painel-invest thead tr{height:60px; background-color:#180d5b;}	
+.painel-invest tbody{border-collapse: collapse;} 
+.painel-invest tbody tr{height:80px; font-weight:normal; font-size:16px; transition:.3s; border-bottom:1px solid #FFF;}
+.painel-invest tbody tr:nth-child(2n+2){background-color:#251589;}
+.painel-invest tbody tr:nth-child(2n+1){background-color:#180d5b;}
+.painel-invest tbody tr:hover{background-color:hsla(0,0%,100%,0.30) !important;}
+.painel-invest table td{color:#FFF; text-align:center; width:20%; transition:.3s;}
+.painel-invest tbody td:hover{background-color:hsla(153,80%,47%,0.50);}
+
+.active-tr-table{background-color:#18d67f !important;}
+
+.painel-invest .btn-sinalizar-compra{height:40px; width:200px; background-color:#18d67f; color:#FFF; border:2px solid #18d67f; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:16px;}
+
+.painel-invest .btn-sinalizar-compra:hover{background-color: #12A15F; border:2px solid #12A15F; color:#FFF;}
+
+.painel-invest .btn-sinalizar-venda{height:40px; width:180px; background-color:#ec0042; color:#FFF; border:2px solid #ec0042; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:16px;}
+
+.painel-invest .btn-sinalizar-venda:hover{background-color: #B10031; border:2px solid #B10031; color:#FFF;}
+
+.painel-invest .btn-remover{height:30px; width:100px; background-color:#ec0042; color:#FFF; border:2px solid #ec0042; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:14px;}
+
+.painel-invest .btn-remover:hover{background-color: #B10031; border:2px solid #B10031; color:#FFF;}
+
+.painel-invest select{height:60px; width:300px; background-color:#18d67f; color:#FFF; border:2px solid #18d67f; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:18px; padding-left: 20px; margin-bottom: 30px;}
+
+.painel-invest option{background-color:#FFF; color: #404040; font-weight: bold; cursor: pointer; font-size: 15px;}
+
+.btn-nova-moeda{position:absolute; height:40px; width:250px; background-color:#18d67f; color:#FFF; border:2px solid #18d67f; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:16px; margin-top:-80px; right:0; }
+
+.painel-invest .btn-nova-moeda:hover{background-color: #12A15F; border:2px solid #12A15F; color:#FFF;}
+
+/*Select Painel*/
+.btn-group {width: 335px; height: 60px; position: relative; background-color:#18d67f !important; padding-top:10px; transition:.3s; padding-left:20px;padding-right:15px; border-radius:4px; margin-bottom:50px; color:#FFF; background: image-url("Painel/imgArrow.png");background-repeat:no-repeat;background-size:20px; background-position:280px 20px;}
+.dropdown-toggle:after {position: absolute; top: 14px; right: 10px; width: 0;  height: 0; border: 10px solid transparent; border-color: #fff transparent transparent transparent;}
+.dropdown-toggle {color: #FFF; width: 290px; height: 60px; padding: 10px;  text-transform: none; font-weight: 500; margin-bottom: 7px; transition: background 0s ease-out;}
+.btn-group:hover {background-color: #12A15F !important; cursor: pointer;}
+.dropdown-menu {position: absolute; top: 100%;left: 0;z-index: 1000;float: left;height: 300px;width: 335px; padding: 5px 0; margin: 2px 0 0;list-style: none; font-size: 14px;  text-align: left;
+  background-color: #fff; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);background-clip: padding-box; overflow:auto; margin-top:10px;}
+.dropdown-menu > li > a {padding: 15px 30px; display: block; clear: both; font-weight: 500; color: #333333; white-space: nowrap;text-decoration: none;transition: .3s;}
+.dropdown-menu > li > a:hover { background: #efefef;color: #409FCB;}
+.dropdown-menu > li { width: 100%;position: relative; margin: 0;}
+.caret {display: inline-block;width: 0; position: relative; top: 10px;height: 0;margin-left: 2px; vertical-align: middle; border-top: 4px dashed; border-top: 4px solid #999;
+  border-right: 4px solid transparent;border-left: 4px solid transparent; float: right; display:none;}
+li {list-style: none;}
+/*Fim do select painel*/	
 	
 }	
 
