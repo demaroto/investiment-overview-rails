@@ -214,7 +214,7 @@ $(document).ready(function(e){
 	
 	var $range = document.querySelector('input[type=range]');
   var	$value = document.querySelector('.contato2 h5');
-	console.log($range);
+	
 	$range.addEventListener('input', function() {
 			$value.textContent = this.value;
 	});
