@@ -25,17 +25,22 @@ $(document).ready(function(e){
 	});
 	
 	$(".seta").click(function(e) {
-		$(".menu-animate").animate({"margin-left" : "0px"}, 100);
-    });
+		$(".menu-animate").animate({"margin-left" : "0px"}, 300);
+  });
 	
 	$(".nav a").click(function(e) { 
 		$(".nav a").removeClass("active"); 
 		$(this).addClass("active");		
 		event.preventDefault(); 
-		$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);
+		if($(this).attr('href') == "#1"){
+			$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top - 100}, 1000);
+		}
+		else{
+			$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);
+		}
 		$(".menu-animate").animate({"margin-left" : "0px"}, 300); 
   });
-
+  
   /* ---------- Input File ---------- */			
 	
   $('#dropzone').on('dragover', function() {
@@ -96,7 +101,12 @@ $(document).ready(function(e){
 	$("nav a").click(function(e){		
 			event.preventDefault();		
 			if($(this).attr("href") == "#1"){
-					$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top - 150}, 1000);			
+					if($(window).innerWidth() > 1023){
+						$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top - 150}, 1000);	
+					}
+					else{
+						$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top - 200}, 1000);	
+					}
 			}
 			
 			else if($(this).attr("href") == "#2"){
@@ -132,6 +142,14 @@ $(document).ready(function(e){
 		window.location.href = "/users/edit/";	
 	});
 	
+	$(".redir-cadastro").click(function(){
+		window.location.href = "/users/sign_up/";	
+	});
+	
+	$(".redir-login").click(function(){
+		window.location.href = "/users/sign_in";	
+	});
+
 	/*  ------------------------------ Contato  ------------------------------ */	
 	
 	$(".btn-contato-sb").click(function(){

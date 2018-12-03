@@ -1,43 +1,20 @@
 <body>
 
-<!-------------------------------------------------------------- Global - Erro Contato ------------------------------------------------------------------
-
-<article class="erro" id="erro-nome"><%= notice %></article>
-<article class="erro" id="erro-email"><%= alert %></article>
-<article class="erro" id="erro-telefone">Digite o Telefone</article>
-<article class="erro" id="erro-mensagem">Digite a Mensagem</article>
-<article class="success" id="success">Mensagem Enviada com Sucesso</article>
-
-<!-------------------------------------------------------------- End Global ------------------------------------------------------------------>
-
-	
-	
-<!-------------------------------------------------------------- Desktop ------------------------------------------------------------------>
-
-<section id="Desktop">
-
 <!--------------------------------------------------- Header --------------------------------------------------->
 
 <header>
 	 <%= image_tag("Home/logo.png", class: 'logo-header') %>
 	<nav>
 		<ul>
-			<li><a href="#1" id="sobre">Como Funciona</a></li>
-			<li><a href="#2" id="servicos">Custo</a></li>
-			<li><a href="#3" id="contato">Equipe</a></li>
+			<li><a href="#1">Como Funciona</a></li>
+			<li><a href="#2">Custo</a></li>
+			<li><a href="#3">Equipe</a></li>
 		</ul>
 	</nav>
 	
-	<% if @authenticate %>
-
-      <%= link_to "Sair", destroy_user_session_path, method: :delete %>
-      <%= link_to "Perfil", edit_user_registration_path %>
-     
-    <% else %>
-    	<input type="button" value="EXPERIMENTAR" class="btn-home-experimentar">
-		<%= button_tag('LOGIN', class: 'btn-home-login')%>
-    <% end %>
-  
+	<input type="button" value="EXPERIMENTAR" class="btn-home-experimentar">
+	<%= button_tag('LOGIN', class: 'btn-home-login')%>
+ 
   	<div class="icon-menu2">
 		<div class="line-icon2"></div>
 		<div class="line-icon2"></div>
@@ -49,11 +26,15 @@
 	    <div class="menu-line"></div>
 	    <div class="nav">
 	        <ul>
-				<li><a href="#r1" id="sobre">Sobre</a></li>
+				<li><a href="#1">Como Funciona</a></li>
 				<div class="menu-line"></div>
-				<li><a href="#r2" id="servicos">Serviços</a></li>
+				<li><a href="#2">Custo</a></li>
 				<div class="menu-line"></div>
-				<li><a href="#r3" id="contato">Contato</a></li>
+				<li><a href="#3">Equipe</a></li>
+				<div class="menu-line"></div>
+				<li class="redir-cadastro"><a>Experimentar</a></li>
+				<div class="menu-line"></div>
+				<li class="redir-login"><a>Login</a></li>
 				<div class="menu-line"></div>
 	        </ul>
 	    </div>
@@ -147,7 +128,7 @@
 	
 </section>
 
-<!--------------------------------------------------- Home - Objetivos --------------------------------------------------->
+<!------------------------------------------------- Home - Objetivos --------------------------------------------------->
 
 <%= image_tag("Home/bloco2-1.png", class: 'objetivos-img-bloco1') %>
 
@@ -256,12 +237,6 @@
 		 </div>
 	</div>
 </footer>
-
-	
-	
-	
-	
-</section>
 
 </body>
 
