@@ -586,9 +586,9 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 
 .cadastro{width: 100%; background-color:#180d5b; position: relative; padding-top: 100px; color: #FFF; padding-bottom:70px;}
 
-.img-cadastro{display:none;}
+.img-cadastro{height: 80%; position: absolute; right: 0; opacity:0.3;}
 
-.cadastro-content{width:80%; margin-left:10%; position:relative;}
+.cadastro-content{width:90%; margin-left:5%; position:relative;}
 
 .cadastro h1{text-transform: uppercase; font-size:20px; font-weight: normal; line-height: 40px; text-transform: uppercase;}
 
@@ -596,11 +596,9 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 
 .cadastro h3{text-transform: uppercase; font-size:20px; font-weight: normal; text-transform: uppercase; color: #06f03d; line-height: 40px; padding-bottom: 30px;}
 
-.cadastro input[type=email], .cadastro input[type=password], .cadastro input[type=text]{height: 50px; width: 100%; padding: 0px 20px; border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00); font-weight: normal; font-size: 14px; border-radius: 30px; margin: 8px 0px; color: #FFF; transition: .3s;}
+.cadastro input[type=email], .cadastro input[type=password], .cadastro input[type=text]{height: 50px; width: 90%; padding: 0px 20px; border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00); font-weight: normal; font-size: 14px; border-radius: 30px; margin: 8px 0px; color: #FFF; transition: .3s; margin-left:5%;}
 
-.cadastro input[type=submit]{height: 50px; width: 80%; background-color: #18d67f; border-radius: 6px; color: #FFF; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: 16px; border:none; margin-top: 40px; border:2px solid transparent; transition:.3s; margin-left:10%;}
-
-.cadastro input[type=submit]:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #18d67f; color: #18d67f;}
+.cadastro input[type=submit]{height: 50px; width: 60%; background-color: #18d67f; border-radius: 6px; color: #FFF; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: 16px; border:none; margin-top: 40px; border:2px solid transparent; transition:.3s; margin-left:20%;}
 
 .cadastro ::-webkit-input-placeholder{color: #FFF; text-transform: uppercase;}
 
@@ -609,6 +607,35 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 .cadastro .erro-mensagem h2{font-size: 15px; margin-top: 30px;}
 
 .cadastro .erro-mensagem ul{margin:0; padding: 0;}
+	
+
+/* ---------------------------------------------- Login ---------------------------------------------- */
+
+.login{width: 100%; background-color:#180d5b; position: relative; padding-top: 100px; color: #FFF; padding-bottom:70px;}
+
+.img-login{height: 60%; position: absolute; right: 0; opacity:0.3;}
+
+.login-content{width:90%; margin-left:5%; position:relative;}
+
+.login h1{text-transform: uppercase; font-size:20px; font-weight: normal; line-height: 40px; text-transform: uppercase;}
+
+.login h2{text-transform: uppercase; font-size:24px; font-weight: bold; text-transform: uppercase; line-height: 40px;}
+
+.login h3{font-size: 14px; font-weight: normal; padding-top: 30px; width:70%; margin-left:15%; text-align:center; line-height:25px;}
+
+.login h3 a{text-decoration: none; color: #FFF; font-weight: bold; transition:.3s;}
+
+.login input[type=email], .login input[type=password]{height: 50px; width: 90%; padding: 0px 20px; border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00);  font-weight: normal; font-size: 14px; border-radius: 30px; margin: 8px 0px; color: #FFF; transition: .3s; margin-left:5%;}
+
+.login input[type=submit]{height: 50px; width: 60%; background-color: #18d67f; border-radius: 6px; color: #FFF; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: 16px; border:none; cursor: pointer; margin-top: 40px; border:2px solid transparent; transition:.3s; margin-left:20%;}
+
+.login ::-webkit-input-placeholder{color: #FFF; text-transform: uppercase;}
+
+.login input[type=email]:focus, .login input[type=password]:focus{border:2px solid #18d67f;}
+
+.login .erro-mensagem h2{font-size: 15px; margin-top: 30px;}
+
+.login .erro-mensagem ul{margin:0; padding: 0;}	
 	
 }	
 
