@@ -559,6 +559,34 @@ input[type=range]::-webkit-slider-thumb {width: 20px; height: 20px; border: 0; b
 	
 .contato2 input[type=text]:focus, .contato2 input[type=email]:focus, textarea:focus{box-shadow: 0px 0px 10px 1px rgba(232,39,91,1);}			
 	
+
+/* ---------------------------------------------- Footer ---------------------------------------------- */	
+		
+footer{height:572px; width:100%; position:relative; background-image: linear-gradient(to right, #1d3e80 , #1895a9); color:#FFF; padding-top:50px;}		
+
+footer .logo-footer{height: 60px; position: absolute; margin-top: 140px; cursor: pointer; z-index: 999;}
+
+.footer-content{width: 1100px; position:relative; left: 50%; margin-left: -550px; padding:40px 0px;}
+	
+.footer-redes{position:absolute; right:0; margin-top:60px;}	
+
+footer h2{font-size:28px;}
+footer h3{font-weight:normal; font-size:22px; padding-top:15px;}
+footer h4{font-size:20px; padding-bottom:15px; line-height:30px;}
+footer h5{font-size:16px; font-weight:normal; line-height:50px; margin-left:40px;}
+
+footer h5 a{color:#FFF; text-decoration:none; transition:.3s;}
+footer h5 a:hover{color:#18d67f;}
+
+footer .btn-home-registrar{border:2px solid #18d67f; background-color: #18d67f; color: #FFF; border-radius: 5px; height: 45px; width: 170px; font-size: 14px; font-weight: bold; cursor: pointer; transition: .3s; text-transform: uppercase; position:absolute; margin-top:-55px; right:0; margin-right:130px;}
+	
+footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00); color: #FFF; border-radius: 5px; height: 45px; width: 110px; font-size: 14px; font-weight: bold; cursor: pointer; transition: .3s; margin-top: 27px; margin-left: 20px; text-transform: uppercase; position:absolute; margin-top:-55px; right:0;}	
+
+.footer-line{height:1px; width:100%; position:absolute; background-color:#FFF; margin-top:200px;}
+
+.lkd-icon-footer{height:30px; position:absolute; margin-top:8px;}
+
+
 	
 }	
 
