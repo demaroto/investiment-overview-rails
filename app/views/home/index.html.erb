@@ -193,20 +193,23 @@
 
 <section class="contato2">
 	<article class="content-contato2">
+		<%= form_with(model: @contato, local: true) do |form| %>
 		<label class="box-email-contato">
 			<h3>Seu email</h3><br>
-			<input type="email" placeholder="Seu email">
+			<%= form.text_field :email, placeholder: 'Seu email'%><br><br>
 		</label>
 		<label>
 			<h3>Seu nome</h3><br>
-			<input type="text" placeholder="Seu nome">
+			<%= form.text_field :nome, placeholder: 'Seu nome' %><br><br>
 		</label><br>
 		<h3 class="contato2-ajust-font">Conte-me mais</h3><br>
-		<textarea placeholder="Digite aqui..."></textarea><br>
+		<%= form.text_area :mensagem, placeholder: 'Digite aqui..' %><br>
 		<h3>O que está achando do projeto?</h3><br><br>
-		<input type="range" step="1" min="0" max="100"><br><br>
+		<%= form.range_field :pontuacao, in: 0..100 %><br><br>
 		<h5>50</h5><br><br>
-		<input type="button" class="btn-contato-enviar" value="Enviar">
+		 <%= form.submit 'Enviar', class: 'btn-contato-enviar' %>
+		
+		<% end %>
 	</article>
 </section>
 

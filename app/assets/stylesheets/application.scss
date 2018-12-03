@@ -19,12 +19,12 @@ canvas{display:block;}
 
 /* ---- particles.js container ---- */
 
+@media only screen and (min-width:1024px){
+
 #particles-js{width: 100%; height: 120vh; background-color: #180d5b; position:absolute;}
 
 .painel-perfil #particles-js{width: 100%; height: 1600px; background-color: #180d5b; position:absolute;}
 
-@media only screen and (min-width:1024px){
-	
 /* ---------------------------------------------- Global ---------------------------------------------- */
 
 .content{width: 1100px; position:relative; left: 50%; margin-left: -550px;}
@@ -95,7 +95,7 @@ nav a:hover{background-color:hsla(0,0%,100%,0.90); color: #1E2F7A !important;}
 	
 .menu-animate h3 strong{font-size:18px;}	
 	
-.menu-box-user{width: 100%; position: relative; background-color: #313131; background-size: cover; background-position: center; background: image-url("Painel/img-menu-user.png");}	
+.menu-box-user{width: 100%; position: relative; background-color: #313131; background: image-url("Painel/img-menu-user.png"); background-size: cover; background-position: center;  }	
 	
 .menu-box-user-mask{width: 100%; background-color:hsla(0,0%,0%,0.20); padding-top: 50px;}	
 	
@@ -421,7 +421,22 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width:1023px){
+	
+#particles-js{width: 100%; height: 120vh; background-color: #180d5b; position:absolute;}
+
+.painel-perfil #particles-js{width: 100%; height: 1500px; background-color: #180d5b; position:absolute;}
 	
 .content{width:90%; margin-left:5%; position:relative;}	
 	
@@ -637,7 +652,7 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 .login .erro-mensagem h2{font-size: 15px; margin-top: 30px;}
 
 .login .erro-mensagem ul{margin:0; padding: 0;}	
-	
+
 /* ---------------------------------------------- Painel ---------------------------------------------- */
 
 .header-painel{background-color:#180d5b;}
@@ -663,7 +678,7 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 .menu-animate h3{padding-left: 10%; font-size: 12px; padding-bottom: 40px; font-weight: normal; line-height: 30px; color: #FFF;}	
 .menu-animate h3 strong{font-size:16px;}	
 	
-.menu-box-user{width: 100%; position: relative; background-color: #313131; background-size: cover; background-position: center; background-image: url("Painel/img-menu-user.png");}	
+.menu-box-user{width: 100%; position: relative; background-color: #313131; background: image-url("Painel/img-menu-user.png"); background-size: cover; background-position: center;}	
 	
 .menu-box-user-mask{width: 100%; background-color:hsla(0,0%,0%,0.20); padding-top: 50px;}	
 	
@@ -679,28 +694,32 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 
 /* ----- Tabela Modelo 1 ----- */
 
-.painel-invest table{font-weight:normal !important; border:0px !important; border-collapse: collapse; margin-bottom:50px;}
+.painel-invest::-webkit-scrollbar-track{background-color:#dedede;}
+.painel-invest::-webkit-scrollbar{width:0px; height:3px;}
+.painel-invest::-webkit-scrollbar-thumb{background:#646464; border-radius:5px;}
+
+.painel-invest table{font-weight:normal !important; border:0px !important; border-collapse: collapse; margin-bottom:50px; width:1050px; margin-right:50%; margin-right:5%; padding-right:5%;}
 .painel-invest table th{color:#18d67f; font-size:15px; border-bottom:3px solid #18d67f; background-color:hsla(0,0%,0%,0.00) !important; font-weight: 500;}
 .painel-invest thead tr{height:60px; background-color:#180d5b;}	
 .painel-invest tbody{border-collapse: collapse;} 
-.painel-invest tbody tr{height:80px; font-weight:normal; font-size:16px; transition:.3s; border-bottom:1px solid #FFF;}
+.painel-invest tbody tr{height:80px; font-weight:normal; font-size:14px; transition:.3s; border-bottom:1px solid #FFF;}
 .painel-invest tbody tr:nth-child(2n+2){background-color:#251589;}
 .painel-invest tbody tr:nth-child(2n+1){background-color:#180d5b;}
 .painel-invest tbody tr:hover{background-color:hsla(0,0%,100%,0.30) !important;}
-.painel-invest table td{color:#FFF; text-align:center; width:20%; transition:.3s;}
+.painel-invest table td{color:#FFF; text-align:center; width:20%; transition:.3s; padding:0px 20px;}
 .painel-invest tbody td:hover{background-color:hsla(153,80%,47%,0.50);}
 
 .active-tr-table{background-color:#18d67f !important;}
 
-.painel-invest .btn-sinalizar-compra{height:40px; width:200px; background-color:#18d67f; color:#FFF; border:2px solid #18d67f; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:16px;}
+.painel-invest .btn-sinalizar-compra{height:30px; width:140px; background-color:#18d67f; color:#FFF; border:2px solid #18d67f; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:13px;}
 
 .painel-invest .btn-sinalizar-compra:hover{background-color: #12A15F; border:2px solid #12A15F; color:#FFF;}
 
-.painel-invest .btn-sinalizar-venda{height:40px; width:180px; background-color:#ec0042; color:#FFF; border:2px solid #ec0042; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:16px;}
+.painel-invest .btn-sinalizar-venda{height:30px; width:140px; background-color:#ec0042; color:#FFF; border:2px solid #ec0042; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:13px;}
 
 .painel-invest .btn-sinalizar-venda:hover{background-color: #B10031; border:2px solid #B10031; color:#FFF;}
 
-.painel-invest .btn-remover{height:30px; width:100px; background-color:#ec0042; color:#FFF; border:2px solid #ec0042; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:14px;}
+.painel-invest .btn-remover{height:30px; width:100px; background-color:#ec0042; color:#FFF; border:2px solid #ec0042; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:13px;}
 
 .painel-invest .btn-remover:hover{background-color: #B10031; border:2px solid #B10031; color:#FFF;}
 
@@ -725,6 +744,45 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
   border-right: 4px solid transparent;border-left: 4px solid transparent; float: right; display:none;}
 li {list-style: none;}
 /*Fim do select painel*/	
+	
+/* ---------------------------------------------- Painel - Perfil ---------------------------------------------- */
+
+.painel-perfil{min-height:100vh; width:100%; padding-bottom:-50px; background-color:#180d5b; text-align:center; color:#FFF;}
+
+.painel-perfil-content{width: 90%; position:relative; margin-left:5%;}
+
+#dropzone {position: relative; border: 2px solid #FFF; color: white; height: 300px; margin: 50px auto; text-align: center; width: 90%; transition:.3s;}
+
+#dropzone:hover{border: 2px solid #18d67f; background-color: hsla(0,0%,100%,0.30);}
+
+#dropzone:hover div{color:#18d67f;}
+
+#dropzone div {position: absolute; top: 0; right: 0; bottom: 0; left: 0; line-height:300px; font-size:18px;}
+
+#dropzone img {max-width: 95%; max-height: 95%; margin-top:2.5%;}
+
+#dropzone [type="file"] { cursor: pointer; position: absolute; opacity: 0; top: 0; right: 0; bottom: 0; left: 0;}
+
+.painel-perfil input[type=email], .painel-perfil input[type=password], .painel-perfil input[type=text]{height: 50px; width: 90%; padding: 0px 20px; border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00);  font-weight: normal; font-size: 14px; border-radius: 30px; margin: 8px 0px; color: #FFF; transition: .3s;}
+
+.painel-perfil .btn-atualizar-dados{height: 50px; width: 90%; background-color: #18d67f; border-radius: 6px; color: #FFF; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; border:none; cursor: pointer; margin-top: 10px; border:2px solid transparent; transition:.3s;}
+
+.painel-perfil .btn-atualizar-dados:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #18d67f; color: #18d67f;}
+
+.painel-perfil .btn-cancelar-conta{height: 50px; width: 90%; background-color: #dc1053; border-radius: 6px; color: #FFF; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; border:none; cursor: pointer; margin-top: 20px; border:2px solid transparent; transition:.3s;}
+
+.painel-perfil .btn-cancelar-conta:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #dc1053; color: #dc1053;}
+
+.painel-perfil ::-webkit-input-placeholder{color: #FFF; text-transform: uppercase;}
+
+.painel-perfil input[type=email]:focus, .painel-perfil input[type=password]:focus, .painel-perfil input[type=text]:focus{border:2px solid #18d67f;}
+
+.painel-perfil h1{font-weight:normal; font-size:30px; padding:100px 0px 30px 0px; color:#FFF; font-weight: 500; border-bottom: 2px solid #18d67f; margin-bottom: 60px;}
+
+.painel-perfil h2{font-size: 20px; font-weight: normal; padding-top: 60px;}
+
+.painel-perfil h4{font-size: 16px; font-weight: normal; padding-top:15px; padding-bottom:5px; text-align:left; margin-left:15%;}	
+	
 	
 }	
 

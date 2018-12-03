@@ -4,7 +4,6 @@
 <!--------------------------------------------------- Header --------------------------------------------------->
 
 <header class="header-painel">
-	
 	<%= image_tag('Home/logo.png', class: 'logo-header')%>
 	<div class="icon-menu">
 		<div class="line-icon"></div>
@@ -54,13 +53,14 @@
 	
 <!-- particles.js container -->
 <div id="particles-js"></div>
-
-	<article class="content">
+<!-- scripts -->
+ <%= javascript_include_tag('particles.js') %>
+ <%= javascript_include_tag('app.js') %>
+ 
+	<article class="content content-painel">
 		<div id="vue"></div>
 	</article>
 	
-<!-- scripts -->
- <%= javascript_include_tag('particles.js') %>
- <%= javascript_include_tag('app.js') %>	 
+	 
 	
 </section>

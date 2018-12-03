@@ -1,5 +1,7 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do
+
+  resources :contatos
   namespace :api do
     get 'v1/pairs' => 'v1#pairs', as: 'api_v1_pairs'
     get 'v1/pairs/:id' => 'v1#show', as: 'api_v1_show'

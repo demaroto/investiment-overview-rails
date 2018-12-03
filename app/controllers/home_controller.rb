@@ -6,5 +6,6 @@ class HomeController < ApplicationController
     @user = current_user
   	@session = user_session
   	@authenticate = user_signed_in?
+  	@contato = Contato.new
   end
 end
