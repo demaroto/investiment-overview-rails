@@ -429,7 +429,7 @@ header{height:60px; width: 100%; position:fixed; z-index: 9997; border-bottom: 1
 
 .header-active{background-color: hsla(229,60%,30%,0.80);}	
 	
-header .logo-header{height: 35px; position: absolute; margin-left: 12px; margin-top: 12px;}	
+.logo-header{height: 35px; position: absolute; margin-left: 12px; margin-top: 12px; z-index:99;}	
 	
 nav{display:none;}
 .btn-home-experimentar{display:none;}
@@ -582,6 +582,33 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 .lkd-icon-footer{height:30px; position:absolute; margin-top:8px;}
 
 
+/* ---------------------------------------------- Cadastro ---------------------------------------------- */
+
+.cadastro{width: 100%; background-color:#180d5b; position: relative; padding-top: 100px; color: #FFF; padding-bottom:70px;}
+
+.img-cadastro{display:none;}
+
+.cadastro-content{width:80%; margin-left:10%; position:relative;}
+
+.cadastro h1{text-transform: uppercase; font-size:20px; font-weight: normal; line-height: 40px; text-transform: uppercase;}
+
+.cadastro h2{text-transform: uppercase; font-size:24px; font-weight: bold; text-transform: uppercase; line-height: 40px;}
+
+.cadastro h3{text-transform: uppercase; font-size:20px; font-weight: normal; text-transform: uppercase; color: #06f03d; line-height: 40px; padding-bottom: 30px;}
+
+.cadastro input[type=email], .cadastro input[type=password], .cadastro input[type=text]{height: 50px; width: 100%; padding: 0px 20px; border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00); font-weight: normal; font-size: 14px; border-radius: 30px; margin: 8px 0px; color: #FFF; transition: .3s;}
+
+.cadastro input[type=submit]{height: 50px; width: 80%; background-color: #18d67f; border-radius: 6px; color: #FFF; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: 16px; border:none; margin-top: 40px; border:2px solid transparent; transition:.3s; margin-left:10%;}
+
+.cadastro input[type=submit]:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #18d67f; color: #18d67f;}
+
+.cadastro ::-webkit-input-placeholder{color: #FFF; text-transform: uppercase;}
+
+.cadastro input[type=email]:focus, .cadastro input[type=password]:focus, .cadastro input[type=text]:focus{border:2px solid #18d67f;}
+
+.cadastro .erro-mensagem h2{font-size: 15px; margin-top: 30px;}
+
+.cadastro .erro-mensagem ul{margin:0; padding: 0;}
 	
 }	
 
