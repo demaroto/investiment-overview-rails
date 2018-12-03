@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, h6{margin:0; padding: 0;}
 
 ::-webkit-scrollbar-track{background-color:#dedede;}
 ::-webkit-scrollbar{width:0px;}
-::-webkit-scrollbar-thumb{background:#646464; border-radius:25%;}
+::-webkit-scrollbar-thumb{background:#646464; border-radius:5px;}
 
 input[type=text], input[type=email], input[type=password], input[type=number], input[type=button], select, option, textarea{font-family: 'Montserrat', sans-serif !important;}
 
@@ -669,18 +669,18 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 	
 .nav .icons-nav{position: absolute; height:  20px; margin-top: 17px; margin-left: 20px;}	
 
-.painel-invest{min-height:100vh; width:100%; padding-bottom:50px; background-color:#180d5b; background-size: cover; background-repeat: no-repeat; background-position: center; }
+.painel-invest{min-height:100vh; width:100%; padding-bottom:50px; background-color:#180d5b; background-size: cover; background-repeat: no-repeat; background-position: center; overflow-x:auto;}
 
 .painel-invest input[type=number]{height:40px; width:80px; border:none; border-radius:4px; text-align: center; font-size: 16px; padding-left: 15px;}
 
-.painel-invest h3{font-weight:normal; font-size:40px; padding:30px 0px 30px 0px; color:#FFF; font-weight: 500;}
+.painel-invest h3{font-weight:normal; font-size:30px; padding:30px 0px 30px 0px; color:#FFF; font-weight: 500;}
 
 .painel-invest h1{font-weight:normal; font-size:30px; padding:100px 0px 30px 0px; color:#FFF; font-weight: 500; border-bottom: 2px solid #18d67f; margin-bottom: 80px;}
 
 /* ----- Tabela Modelo 1 ----- */
 
 .painel-invest table{font-weight:normal !important; border:0px !important; border-collapse: collapse; margin-bottom:50px;}
-.painel-invest table th{color:#18d67f; font-size:18px; border-bottom:3px solid #18d67f; background-color:hsla(0,0%,0%,0.00) !important; font-weight: 500;}
+.painel-invest table th{color:#18d67f; font-size:15px; border-bottom:3px solid #18d67f; background-color:hsla(0,0%,0%,0.00) !important; font-weight: 500;}
 .painel-invest thead tr{height:60px; background-color:#180d5b;}	
 .painel-invest tbody{border-collapse: collapse;} 
 .painel-invest tbody tr{height:80px; font-weight:normal; font-size:16px; transition:.3s; border-bottom:1px solid #FFF;}
@@ -716,8 +716,7 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 .btn-group {width: 100%; height: 50px; position: relative; background-color:#18d67f !important; padding-top:5px; transition:.3s; padding-left:14px; padding-right:10px; border-radius:4px; margin-bottom:50px; color:#FFF;}
 .dropdown-toggle:after {position: absolute; top: 14px; right: 10px; width: 0;  height: 0; border: 10px solid transparent; border-color: #fff transparent transparent transparent;}
 .dropdown-toggle {color: #FFF; width: 100%; height: 60px; padding: 10px;  text-transform: none; font-weight: 500; margin-bottom: 7px; transition: background 0s ease-out;}
-.btn-group:hover {background-color: #12A15F !important; cursor: pointer;}
-.dropdown-menu {position: absolute; top: 100%;left: 0;z-index: 1000;float: left;height: 300px;width: 335px; padding: 5px 0; margin: 2px 0 0;list-style: none; font-size: 14px;  text-align: left;
+.dropdown-menu {position: absolute; top: 100%;left: 0;z-index: 1000;float: left;height: 300px;width: 100%; padding: 5px 0; margin: 2px 0 0;list-style: none; font-size: 14px;  text-align: left;
   background-color: #fff; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);background-clip: padding-box; overflow:auto; margin-top:10px;}
 .dropdown-menu > li > a {padding: 15px 30px; display: block; clear: both; font-weight: 500; color: #333333; white-space: nowrap;text-decoration: none;transition: .3s;}
 .dropdown-menu > li > a:hover { background: #efefef;color: #409FCB;}

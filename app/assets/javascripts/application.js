@@ -1,5 +1,4 @@
 //= require jquery
-//= require jquery_ujs
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
@@ -12,10 +11,10 @@ $(document).ready(function(e){
 	$(".icon-menu").click(function(e) {
 		$(".mask-window").fadeIn(300);
 		if($(window).innerWidth() > 1023){
-			$(".menu-animate").animate({"margin-left" : "-400px"}, 300);
+			$(".menu-animate").animate({"margin-left" : "-400px"}, 100);
 		}
 		else{
-			$(".menu-animate").animate({"margin-left" : "-70%"}, 300);
+			$(".menu-animate").animate({"margin-left" : "-70%"}, 100);
 		}
 	});
 	
@@ -215,7 +214,7 @@ $(document).ready(function(e){
 	
 	var $range = document.querySelector('input[type=range]');
   var	$value = document.querySelector('.contato2 h5');
-	
+	console.log($range);
 	$range.addEventListener('input', function() {
 			$value.textContent = this.value;
 	});
