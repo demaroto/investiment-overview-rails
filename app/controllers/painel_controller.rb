@@ -7,6 +7,7 @@ class PainelController < ApplicationController
   	@authenticate = user_signed_in?
   	@messages = @user.message.all
   	@pairs = []
+  	@contatos = Contato.all
   end
   
 end
