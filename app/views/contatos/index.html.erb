@@ -1,33 +1,98 @@
-<p id="notice"><%= notice %></p>
+<div class="mask-window"></div>
 
-<h1>Contatos</h1>
+<!--------------------------------------------------- Header --------------------------------------------------->
 
-<table>
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Email</th>
-      <th>Mensagem</th>
-      <th>Pontuacao</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<header class="header-painel">
+	<%= link_to (image_tag('Home/logo.png', class: 'logo-header')), root_path %>
+	<div class="icon-menu">
+		<div class="line-icon"></div>
+		<div class="line-icon"></div>
+		<div class="line-icon"></div>		
+	</div>
+</header>    
 
-  <tbody>
-    <% @contatos.each do |contato| %>
-      <tr>
-        <td><%= contato.nome %></td>
-        <td><%= contato.email %></td>
-        <td><%= contato.mensagem %></td>
-        <td><%= contato.pontuacao %></td>
-        <td><%= link_to 'Show', contato %></td>
-        <td><%= link_to 'Edit', edit_contato_path(contato) %></td>
-        <td><%= link_to 'Destroy', contato, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<!--------------------------------------------------- Menu --------------------------------------------------->
 
-<br>
+<div class="menu-animate">
+	<div class="menu-box-user">
+		<div class="menu-box-user-mask">
+			<%= image_tag(@user.image_url(:thumb).to_s, class: "img-user-menu") %>
+			<h3>
+				<strong><%= @user.nome %></strong><br>
+				<%= @user.email %>
+			</h3>
+		</div>
+	</div>
+	<div class="menu-line"></div>
+    <div class="nav">
+        <ul>
+			<% if @authenticate %>
+				<% if @user.kind == 'admin' %>
+					<%= image_tag('Painel/admin.png', class: 'icons-nav')%>
+					<%= link_to 'Administrador', rails_admin_path, method: :get %>
+					<div class="menu-line"></div>
+					<%= image_tag('Painel/contato.png', class: 'icons-nav')%>
+					<a data-method="get" href="/contatos">Contatos</a>
+					<div class="menu-line"></div>
+				<% end %>
+				<%= image_tag('Painel/painel.png', class: 'icons-nav')%>
+			 	<%= link_to "Painel", root_path, method: :get %>
+		     	<div class="menu-line"></div>
+		     	<%= image_tag('Painel/perfil.png', class: 'icons-nav')%>
+			 	<%= link_to "Perfil", edit_user_registration_path, method: :get %>
+		     	<div class="menu-line"></div>
+		     	<%= image_tag('Painel/sair.png', class: 'icons-nav')%>
+		     	<%= link_to "Sair", destroy_user_session_path, method: :delete %>
+		    <% end %>
+			<div class="menu-line"></div>
+        </ul>
+    </div>
+</div>
 
-<%= link_to 'New Contato', new_contato_path %>
+<!--------------------------------------------------- Painel --------------------------------------------------->
+
+<section class="painel-contato">
+	
+   <!-- particles.js container -->
+   <div id="particles-js"></div>
+   <!-- scripts -->
+   <%= javascript_include_tag('particles.js') %>
+   <%= javascript_include_tag('app.js') %>
+
+  <article class="content">
+
+        <p id="notice"><%= notice %></p>
+        
+        <h1>Contatos</h1>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Mensagem</th>
+              <th>Pontuacao</th>
+              <th>Excluir</th>
+            </tr>
+          </thead>
+        
+          <tbody>
+            <% @contatos.each do |contato| %>
+              <tr>
+                <td><%= contato.nome %></td>
+                <td><%= contato.email %></td>
+                <td><%= contato.mensagem %></td>
+                <td><%= contato.pontuacao %></td>
+            <!--<td><= link_to 'Exibir', contato, class: "btn-contato-exibir" ></td>
+                <td><= link_to 'Editar', edit_contato_path(contato), class: "btn-contato-editar" %></td>-->
+                <td><%= link_to 'Excluir', contato, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-contato-excluir" %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        
+        <br>
+
+  </article>
+  
+</section>  

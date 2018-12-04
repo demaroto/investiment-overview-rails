@@ -4,7 +4,7 @@
 <!--------------------------------------------------- Header --------------------------------------------------->
 
 <header class="header-painel">
-	<%= image_tag('Home/logo.png', class: 'logo-header')%>
+	<%= link_to (image_tag('Home/logo.png', class: 'logo-header')), root_path %>
 	<div class="icon-menu">
 		<div class="line-icon"></div>
 		<div class="line-icon"></div>
@@ -17,7 +17,11 @@
 <div class="menu-animate">
 	<div class="menu-box-user">
 		<div class="menu-box-user-mask">
+			<% if @image %>
 			<%= image_tag(@user.image_url(:thumb).to_s, class: "img-user-menu") %>
+			<% else %>
+			<%= image_tag('Perfil/perfil-new.png', class: "img-user-menu") %>
+			<% end %>
 			<h3>
 				<strong><%= @user.nome %></strong><br>
 				<%= @user.email %>
@@ -31,6 +35,9 @@
 				<% if @user.kind == 'admin' %>
 					<%= image_tag('Painel/admin.png', class: 'icons-nav')%>
 					<%= link_to 'Administrador', rails_admin_path, method: :get %>
+					<div class="menu-line"></div>
+					<%= image_tag('Painel/contato.png', class: 'icons-nav')%>
+					<a data-method="get" href="/contatos">Contatos</a>
 					<div class="menu-line"></div>
 				<% end %>
 				<%= image_tag('Painel/painel.png', class: 'icons-nav')%>
@@ -60,7 +67,5 @@
 	<article class="content content-painel">
 		<div id="vue"></div>
 	</article>
-	
-	 
 	
 </section>

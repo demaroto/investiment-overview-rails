@@ -8,6 +8,7 @@ class PainelController < ApplicationController
   	@messages = @user.message.all
   	@pairs = []
   	@contatos = Contato.all
+  	@image = @user.image_url ? @user.image_url : false
   end
   
 end

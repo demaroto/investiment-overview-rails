@@ -1,10 +1,13 @@
 class ContatosController < ApplicationController
   before_action :set_contato, only: [:show, :edit, :update, :destroy]
+  before_action :is_admin, only: [:index]
 
   # GET /contatos
   # GET /contatos.json
   def index
     @contatos = Contato.all
+    @user = current_user
+    @authenticate = user_signed_in?
   end
 
   # GET /contatos/1
@@ -28,6 +31,16 @@ class ContatosController < ApplicationController
    
   end
 
+  def destroy
+    
+      @contato = Contato.find(params[:id])
+      name = @contato.nome
+        if @contato.destroy
+          redirect_to root_path, notice: "Contato #{name} excluído com sucesso"
+        end
+    
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_contato
@@ -38,4 +51,13 @@ class ContatosController < ApplicationController
     def contato_params
       params.require(:contato).permit(:nome, :email, :mensagem, :pontuacao)
     end
+    
+    def is_admin
+      @user = current_user
+      @authenticate = user_signed_in?
+      unless @authenticate and @user.kind == 'admin'
+        redirect_to root_path
+      end
+    end
+    
 end

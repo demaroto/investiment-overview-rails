@@ -63,140 +63,6 @@ nav a:hover{background-color:hsla(0,0%,100%,0.90); color: #1E2F7A !important;}
 
 .logo-header{height: 45px; position: absolute; margin-left: 50px; margin-top: 20px; cursor: pointer; z-index: 999;}	
 
-/* ---------------------------------------------- Painel ---------------------------------------------- */
-
-.header-painel{background-color:#180d5b;}
-	
-.icon-menu{height:36px; width:46px; position:absolute; left:100%; margin-left:-71px; margin-top:29px; cursor: pointer;}
-
-.icon-menu:hover .line-icon{background-color:#18d67f !important;}	
-
-.line-icon{height:5px; width:35px; background-color: #FFF; margin: 5px; transition:.3s;}	
-
-.menu-animate{height:100%; width:400px; background-color:#FFF; margin-top:0px; left:100%; z-index:9999; position:fixed; overflow:auto; transition:.3s; border-bottom:5px solid #18d67f;}
-
-.seta{background: image-url("Painel/Seta.png"); height:30px; width:30px; position:relative; margin-top:20px; margin-left:20px; margin-bottom: 20px; background-size: cover; cursor: pointer;}
-
-.nav{position:relative;}
-
-.nav a{display:flex; font-size:16px; color:#303030; font-family: 'Montserrat', sans-serif; transition-duration:.3s; text-decoration:none; font-weight:normal; line-height:55px; padding-left:100px; font-weight: 500;}
-
-.nav a:hover{background-color:#e3e3e3; color:#409FCB;}
-
-.nav ul, li{list-style:none; margin:0; padding:0;}
-
-.menu-line{height:1px; width:100%; background-color:#d0d0d0; position:relative;}
-
-.active{background-color:#F1F1F1; color: #000 !important;}
-	
-.img-user-menu{height: 150px; width: 150px; background-color:#FFF; background-size: cover; background-position: center; margin-bottom: 30px; position: relative; left: 50%; margin-left: -75px; border-radius: 100%;}
-	
-.menu-animate h3{padding-left: 10%; font-size: 17px; padding-bottom: 50px; font-weight: normal; line-height: 30px; color: #FFF;}	
-	
-.menu-animate h3 strong{font-size:18px;}	
-	
-.menu-box-user{width: 100%; position: relative; background-color: #313131; background: image-url("Painel/img-menu-user.png"); background-size: cover; background-position: center;  }	
-	
-.menu-box-user-mask{width: 100%; background-color:hsla(0,0%,0%,0.20); padding-top: 50px;}	
-	
-.nav .icons-nav{position: absolute; height:  20px; margin-top: 17px; margin-left: 40px;}	
-
-.painel-invest{min-height:100vh; width:100%; padding-bottom:50px; background-color:#180d5b; background-size: cover; background-repeat: no-repeat; background-position: center; }
-
-.painel-invest input[type=number]{height:40px; width:80px; border:none; border-radius:4px; text-align: center; font-size: 16px; padding-left: 15px;}
-
-.painel-invest h3{font-weight:normal; font-size:40px; padding:30px 0px 30px 0px; color:#FFF; font-weight: 500;}
-
-.painel-invest h1{font-weight:normal; font-size:50px; padding:200px 0px 30px 0px; color:#FFF; font-weight: 500; border-bottom: 2px solid #18d67f; margin-bottom: 80px;}
-
-/* ----- Tabela Modelo 1 ----- */
-
-.painel-invest table{font-weight:normal !important; border:0px !important; border-collapse: collapse; margin-bottom:50px;}
-.painel-invest table th{color:#18d67f; font-size:18px; border-bottom:3px solid #18d67f; background-color:hsla(0,0%,0%,0.00) !important; font-weight: 500;}
-.painel-invest thead tr{height:60px; background-color:#180d5b;}	
-.painel-invest tbody{border-collapse: collapse;} 
-.painel-invest tbody tr{height:80px; font-weight:normal; font-size:16px; transition:.3s; border-bottom:1px solid #FFF;}
-.painel-invest tbody tr:nth-child(2n+2){background-color:#251589;}
-.painel-invest tbody tr:nth-child(2n+1){background-color:#180d5b;}
-.painel-invest tbody tr:hover{background-color:hsla(0,0%,100%,0.30) !important;}
-.painel-invest table td{color:#FFF; text-align:center; width:20%; transition:.3s;}
-.painel-invest tbody td:hover{background-color:hsla(153,80%,47%,0.50);}
-
-.active-tr-table{background-color:#18d67f !important;}
-
-.painel-invest .btn-sinalizar-compra{height:40px; width:200px; background-color:#18d67f; color:#FFF; border:2px solid #18d67f; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:16px;}
-
-.painel-invest .btn-sinalizar-compra:hover{background-color: #12A15F; border:2px solid #12A15F; color:#FFF;}
-
-.painel-invest .btn-sinalizar-venda{height:40px; width:180px; background-color:#ec0042; color:#FFF; border:2px solid #ec0042; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:16px;}
-
-.painel-invest .btn-sinalizar-venda:hover{background-color: #B10031; border:2px solid #B10031; color:#FFF;}
-
-.painel-invest .btn-remover{height:30px; width:100px; background-color:#ec0042; color:#FFF; border:2px solid #ec0042; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:14px;}
-
-.painel-invest .btn-remover:hover{background-color: #B10031; border:2px solid #B10031; color:#FFF;}
-
-.painel-invest select{height:60px; width:300px; background-color:#18d67f; color:#FFF; border:2px solid #18d67f; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:18px; padding-left: 20px; margin-bottom: 30px;}
-
-.painel-invest option{background-color:#FFF; color: #404040; font-weight: bold; cursor: pointer; font-size: 15px;}
-
-.btn-nova-moeda{position:absolute; height:40px; width:250px; background-color:#18d67f; color:#FFF; border:2px solid #18d67f; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:16px; margin-top:-80px; right:0; }
-
-.painel-invest .btn-nova-moeda:hover{background-color: #12A15F; border:2px solid #12A15F; color:#FFF;}
-
-/*Select Painel*/
-.btn-group {width: 335px; height: 60px; position: relative; background-color:#18d67f !important; padding-top:10px; transition:.3s; padding-left:20px;padding-right:15px; border-radius:4px; margin-bottom:50px; color:#FFF; background: image-url("Painel/imgArrow.png");background-repeat:no-repeat;background-size:20px; background-position:280px 20px;}
-.dropdown-toggle:after {position: absolute; top: 14px; right: 10px; width: 0;  height: 0; border: 10px solid transparent; border-color: #fff transparent transparent transparent;}
-.dropdown-toggle {color: #FFF; width: 290px; height: 60px; padding: 10px;  text-transform: none; font-weight: 500; margin-bottom: 7px; transition: background 0s ease-out;}
-.btn-group:hover {background-color: #12A15F !important; cursor: pointer;}
-.dropdown-menu {position: absolute; top: 100%;left: 0;z-index: 1000;float: left;height: 300px;width: 335px; padding: 5px 0; margin: 2px 0 0;list-style: none; font-size: 14px;  text-align: left;
-  background-color: #fff; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);background-clip: padding-box; overflow:auto; margin-top:10px;}
-.dropdown-menu > li > a {padding: 15px 30px; display: block; clear: both; font-weight: 500; color: #333333; white-space: nowrap;text-decoration: none;transition: .3s;}
-.dropdown-menu > li > a:hover { background: #efefef;color: #409FCB;}
-.dropdown-menu > li { width: 100%;position: relative; margin: 0;}
-.caret {display: inline-block;width: 0; position: relative; top: 10px;height: 0;margin-left: 2px; vertical-align: middle; border-top: 4px dashed; border-top: 4px solid #999;
-  border-right: 4px solid transparent;border-left: 4px solid transparent; float: right; display:none;}
-li {list-style: none;}
-/*Fim do select painel*/
-
-/* ---------------------------------------------- Painel - Perfil ---------------------------------------------- */
-
-.painel-perfil{min-height:100vh; width:100%; padding-bottom:100px; background-color:#180d5b; text-align:center; color:#FFF;}
-
-.painel-perfil-content{width: 900px; position:relative; left: 50%; margin-left: -450px;}
-
-#dropzone {position: relative; border: 2px solid #FFF; color: white; height: 300px; margin: 50px auto; text-align: center; width: 300px; transition:.3s;}
-
-#dropzone:hover{border: 2px solid #18d67f; background-color: hsla(0,0%,100%,0.30);}
-
-#dropzone:hover div{color:#18d67f;}
-
-#dropzone div {position: absolute; top: 0; right: 0; bottom: 0; left: 0; line-height:300px; font-size:20px;}
-
-#dropzone img {max-width: 95%; max-height: 95%; margin-top:2.5%;}
-
-#dropzone [type="file"] { cursor: pointer; position: absolute; opacity: 0; top: 0; right: 0; bottom: 0; left: 0;}
-
-.painel-perfil input[type=email], .painel-perfil input[type=password], .painel-perfil input[type=text]{height: 50px; width: 500px; padding: 0px 20px; border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00);  font-weight: normal; font-size: 14px; border-radius: 30px; margin: 8px 0px; color: #FFF; transition: .3s;}
-
-.painel-perfil .btn-atualizar-dados{height: 50px; width: 250px; background-color: #18d67f; border-radius: 6px; color: #FFF; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; border:none; cursor: pointer; margin-top: 10px; border:2px solid transparent; transition:.3s;}
-
-.painel-perfil .btn-atualizar-dados:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #18d67f; color: #18d67f;}
-
-.painel-perfil .btn-cancelar-conta{height: 50px; width: 250px; background-color: #dc1053; border-radius: 6px; color: #FFF; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; border:none; cursor: pointer; margin-top: 20px; border:2px solid transparent; transition:.3s;}
-
-.painel-perfil .btn-cancelar-conta:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #dc1053; color: #dc1053;}
-
-.painel-perfil ::-webkit-input-placeholder{color: #FFF; text-transform: uppercase;}
-
-.painel-perfil input[type=email]:focus, .painel-perfil input[type=password]:focus, .painel-perfil input[type=text]:focus{border:2px solid #18d67f;}
-
-.painel-perfil h1{font-weight:normal; font-size:50px; padding:200px 0px 30px 0px; color:#FFF; font-weight: 500; border-bottom: 2px solid #18d67f; margin-bottom: 60px;}
-
-.painel-perfil h2{font-size: 30px; font-weight: normal; padding-top: 60px;}
-
-.painel-perfil h4{font-size: 20px; font-weight: normal; padding-top:20px; padding-bottom:5px; text-align:left; margin-left:220px;}
-
 /* ---------------------------------------------- Home ---------------------------------------------- */
 
 .home{height: 1400px; width:100%; position:relative; background: image-url("Home/bloco1.png"); background-size: cover; padding-top: 270px; background-position:bottom; background-repeat: no-repeat;}
@@ -418,6 +284,266 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 .footer-line{height:1px; width:100%; position:absolute; background-color:#FFF; margin-top:200px;}
 
 .lkd-icon-footer{height:30px; position:absolute; margin-top:8px;}
+
+
+/* ---------------------------------------------- Painel ---------------------------------------------- */
+
+.header-painel{background-color:#180d5b;}
+	
+.icon-menu{height:36px; width:46px; position:absolute; left:100%; margin-left:-71px; margin-top:29px; cursor: pointer;}
+
+.icon-menu:hover .line-icon{background-color:#18d67f !important;}	
+
+.line-icon{height:5px; width:35px; background-color: #FFF; margin: 5px; transition:.3s;}	
+
+.menu-animate{height:100%; width:400px; background-color:#FFF; margin-top:0px; left:100%; z-index:9999; position:fixed; overflow:auto; transition:.3s; border-bottom:5px solid #18d67f;}
+
+.seta{background: image-url("Painel/Seta.png"); height:30px; width:30px; position:relative; margin-top:20px; margin-left:20px; margin-bottom: 20px; background-size: cover; cursor: pointer;}
+
+.nav{position:relative;}
+
+.nav a{display:flex; font-size:16px; color:#303030; font-family: 'Montserrat', sans-serif; transition-duration:.3s; text-decoration:none; font-weight:normal; line-height:55px; padding-left:100px; font-weight: 500;}
+
+.nav a:hover{background-color:#e3e3e3; color:#409FCB;}
+
+.nav ul, li{list-style:none; margin:0; padding:0;}
+
+.menu-line{height:1px; width:100%; background-color:#d0d0d0; position:relative;}
+
+.active{background-color:#F1F1F1; color: #000 !important;}
+	
+.img-user-menu{height: 150px; width: 150px; background-color:#FFF; background-size: cover; background-position: center; margin-bottom: 30px; position: relative; left: 50%; margin-left: -75px; border-radius: 100%;}
+	
+.menu-animate h3{padding-left: 10%; font-size: 17px; padding-bottom: 50px; font-weight: normal; line-height: 30px; color: #FFF;}	
+	
+.menu-animate h3 strong{font-size:18px;}	
+	
+.menu-box-user{width: 100%; position: relative; background-color: #313131; background: image-url("Painel/img-menu-user.png"); background-size: cover; background-position: center;  }	
+	
+.menu-box-user-mask{width: 100%; background-color:hsla(0,0%,0%,0.20); padding-top: 50px;}	
+	
+.nav .icons-nav{position: absolute; height:  20px; margin-top: 17px; margin-left: 40px;}	
+
+.painel-invest{min-height:100vh; width:100%; padding-bottom:50px; background-color:#180d5b; background-size: cover; background-repeat: no-repeat; background-position: center; }
+
+.painel-invest input[type=number]{height:40px; width:80px; border:none; border-radius:4px; text-align: center; font-size: 16px; padding-left: 15px;}
+
+.painel-invest h3{font-weight:normal; font-size:40px; padding:30px 0px 30px 0px; color:#FFF; font-weight: 500;}
+
+.painel-invest h1{font-weight:normal; font-size:50px; padding:200px 0px 30px 0px; color:#FFF; font-weight: 500; border-bottom: 2px solid #18d67f; margin-bottom: 80px;}
+
+/* ----- Tabela Modelo 1 ----- */
+
+.painel-invest table{font-weight:normal !important; border:0px !important; border-collapse: collapse; margin-bottom:50px;}
+.painel-invest table th{color:#18d67f; font-size:18px; border-bottom:3px solid #18d67f; background-color:hsla(0,0%,0%,0.00) !important; font-weight: 500;}
+.painel-invest thead tr{height:60px; background-color:#180d5b;}	
+.painel-invest tbody{border-collapse: collapse;} 
+.painel-invest tbody tr{height:80px; font-weight:normal; font-size:16px; transition:.3s; border-bottom:1px solid #FFF;}
+.painel-invest tbody tr:nth-child(2n+2){background-color:#251589;}
+.painel-invest tbody tr:nth-child(2n+1){background-color:#180d5b;}
+.painel-invest tbody tr:hover{background-color:hsla(0,0%,100%,0.30) !important;}
+.painel-invest table td{color:#FFF; text-align:center; width:20%; transition:.3s;}
+.painel-invest tbody td:hover{background-color:hsla(153,80%,47%,0.50);}
+
+.active-tr-table{background-color:#18d67f !important;}
+
+.painel-invest .btn-sinalizar-compra{height:40px; width:200px; background-color:#18d67f; color:#FFF; border:2px solid #18d67f; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:16px;}
+
+.painel-invest .btn-sinalizar-compra:hover{background-color: #12A15F; border:2px solid #12A15F; color:#FFF;}
+
+.painel-invest .btn-sinalizar-venda{height:40px; width:180px; background-color:#ec0042; color:#FFF; border:2px solid #ec0042; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:16px;}
+
+.painel-invest .btn-sinalizar-venda:hover{background-color: #B10031; border:2px solid #B10031; color:#FFF;}
+
+.painel-invest .btn-remover{height:30px; width:100px; background-color:#ec0042; color:#FFF; border:2px solid #ec0042; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:14px;}
+
+.painel-invest .btn-remover:hover{background-color: #B10031; border:2px solid #B10031; color:#FFF;}
+
+.painel-invest select{height:60px; width:300px; background-color:#18d67f; color:#FFF; border:2px solid #18d67f; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:18px; padding-left: 20px; margin-bottom: 30px;}
+
+.painel-invest option{background-color:#FFF; color: #404040; font-weight: bold; cursor: pointer; font-size: 15px;}
+
+.btn-nova-moeda{position:absolute; height:40px; width:250px; background-color:#18d67f; color:#FFF; border:2px solid #18d67f; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:16px; margin-top:-80px; right:0; }
+
+.painel-invest .btn-nova-moeda:hover{background-color: #12A15F; border:2px solid #12A15F; color:#FFF;}
+
+/*Select Painel*/
+.btn-group {width: 335px; height: 60px; position: relative; background-color:#18d67f !important; padding-top:10px; transition:.3s; padding-left:20px;padding-right:15px; border-radius:4px; margin-bottom:50px; color:#FFF; background: image-url("Painel/imgArrow.png");background-repeat:no-repeat;background-size:20px; background-position:280px 20px;}
+.dropdown-toggle:after {position: absolute; top: 14px; right: 10px; width: 0;  height: 0; border: 10px solid transparent; border-color: #fff transparent transparent transparent;}
+.dropdown-toggle {color: #FFF; width: 290px; height: 60px; padding: 10px;  text-transform: none; font-weight: 500; margin-bottom: 7px; transition: background 0s ease-out;}
+.btn-group:hover {background-color: #12A15F !important; cursor: pointer;}
+.dropdown-menu {position: absolute; top: 100%;left: 0;z-index: 1000;float: left;height: 300px;width: 335px; padding: 5px 0; margin: 2px 0 0;list-style: none; font-size: 14px;  text-align: left;
+  background-color: #fff; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);background-clip: padding-box; overflow:auto; margin-top:10px;}
+.dropdown-menu > li > a {padding: 15px 30px; display: block; clear: both; font-weight: 500; color: #333333; white-space: nowrap;text-decoration: none;transition: .3s;}
+.dropdown-menu > li > a:hover { background: #efefef;color: #409FCB;}
+.dropdown-menu > li { width: 100%;position: relative; margin: 0;}
+.caret {display: inline-block;width: 0; position: relative; top: 10px;height: 0;margin-left: 2px; vertical-align: middle; border-top: 4px dashed; border-top: 4px solid #999;
+  border-right: 4px solid transparent;border-left: 4px solid transparent; float: right; display:none;}
+li {list-style: none;}
+/*Fim do select painel*/
+
+/* ---------------------------------------------- Painel - Perfil ---------------------------------------------- */
+
+.painel-perfil{min-height:100vh; width:100%; padding-bottom:100px; background-color:#180d5b; text-align:center; color:#FFF;}
+
+.painel-perfil-content{width: 900px; position:relative; left: 50%; margin-left: -450px;}
+
+#dropzone {position: relative; border: 2px solid #FFF; color: white; height: 300px; margin: 50px auto; text-align: center; width: 300px; transition:.3s;}
+
+#dropzone:hover{border: 2px solid #18d67f; background-color: hsla(0,0%,100%,0.30);}
+
+#dropzone:hover div{color:#18d67f;}
+
+#dropzone div {position: absolute; top: 0; right: 0; bottom: 0; left: 0; line-height:300px; font-size:20px;}
+
+#dropzone img {max-width: 95%; max-height: 95%; margin-top:2.5%;}
+
+#dropzone [type="file"] { cursor: pointer; position: absolute; opacity: 0; top: 0; right: 0; bottom: 0; left: 0;}
+
+.painel-perfil input[type=email], .painel-perfil input[type=password], .painel-perfil input[type=text]{height: 50px; width: 500px; padding: 0px 20px; border:2px solid #FFF; background-color: hsla(0,0%,0%,0.00);  font-weight: normal; font-size: 14px; border-radius: 30px; margin: 8px 0px; color: #FFF; transition: .3s;}
+
+.painel-perfil .btn-atualizar-dados{height: 50px; width: 250px; background-color: #18d67f; border-radius: 6px; color: #FFF; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; border:none; cursor: pointer; margin-top: 10px; border:2px solid transparent; transition:.3s;}
+
+.painel-perfil .btn-atualizar-dados:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #18d67f; color: #18d67f;}
+
+.painel-perfil .btn-cancelar-conta{height: 50px; width: 250px; background-color: #dc1053; border-radius: 6px; color: #FFF; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; border:none; cursor: pointer; margin-top: 20px; border:2px solid transparent; transition:.3s;}
+
+.painel-perfil .btn-cancelar-conta:hover{background-color: hsla(0,0%,0%,0.00); border:2px solid #dc1053; color: #dc1053;}
+
+.painel-perfil ::-webkit-input-placeholder{color: #FFF; text-transform: uppercase;}
+
+.painel-perfil input[type=email]:focus, .painel-perfil input[type=password]:focus, .painel-perfil input[type=text]:focus{border:2px solid #18d67f;}
+
+.painel-perfil h1{font-weight:normal; font-size:50px; padding:200px 0px 30px 0px; color:#FFF; font-weight: 500; border-bottom: 2px solid #18d67f; margin-bottom: 60px;}
+
+.painel-perfil h2{font-size: 30px; font-weight: normal; padding-top: 60px;}
+
+.painel-perfil h4{font-size: 20px; font-weight: normal; padding-top:20px; padding-bottom:5px; text-align:left; margin-left:220px;}
+
+/* ---------------------------------------------- Painel - Contato ---------------------------------------------- */
+
+.painel-contato{min-height:100vh; width:100%; padding-bottom:100px; background-color:#180d5b; color:#FFF;}
+
+.painel-contato table{font-weight:normal !important; border:0px !important; border-collapse: collapse; margin-bottom:50px;}
+.painel-contato table th{color:#18d67f; font-size:18px; border-bottom:3px solid #18d67f; background-color:hsla(0,0%,0%,0.00) !important; font-weight: 500;}
+.painel-contato thead tr{height:60px; background-color:#180d5b;}	
+.painel-contato tbody{border-collapse: collapse;} 
+.painel-contato tbody tr{height:80px; font-weight:normal; font-size:16px; transition:.3s; border-bottom:1px solid #FFF;}
+.painel-contato tbody tr:nth-child(2n+2){background-color:#251589;}
+.painel-contato tbody tr:nth-child(2n+1){background-color:#180d5b;}
+.painel-contato tbody tr:hover{background-color:hsla(0,0%,100%,0.30) !important;}
+.painel-contato table td{color:#FFF; text-align:center; transition:.3s; }
+.painel-contato table td:nth-child(3){width:30%; padding:30px 15px; line-height:25px;}
+.painel-contato tbody td:hover{background-color:hsla(153,80%,47%,0.50);}
+
+.painel-contato h1{font-weight:normal; font-size:50px; padding:200px 0px 30px 0px; color:#FFF; font-weight: 500; border-bottom: 2px solid #18d67f; margin-bottom: 60px;}
+
+.painel-contato .btn-contato-exibir{}
+
+.painel-contato .btn-contato-excluir{height:30px; width:100px; background-color:#ec0042; color:#FFF; border:2px solid #ec0042; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:14px; text-decoration:none; padding:4px 6px;}
+
+.painel-contato .btn-contato-excluir:hover{background-color: #B10031; border:2px solid #B10031; color:#FFF;}
+
+.painel-contato .btn-contato-editar{height:30px; width:100px; background-color:#06c5d5; color:#FFF; border:2px solid #06c5d5; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:14px; text-decoration:none; padding:4px 6px;}
+
+.painel-contato .btn-contato-exibir{height:30px; width:100px; background-color:#f0f0f0; color:#180d5b; border:2px solid #f0f0f0; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:14px; text-decoration:none; padding:4px 6px;}
+
+.btn-home-experimentar:hover{background-color: #18d67f; border:2px solid #18d67f;}	
+		
+.btn-home-login:hover{background-color: #06c5d5; border:2px solid #06c5d5;}	
+
+.loading-content {display: block; position: relative; left: 50%; top: 50%; width: 400px; height: 400px; margin: -200px 0 0 -200px; border: 4px solid #F00;}
+	
+.loading-wrapper img{position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; height: 60px;}	
+
+.loading-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  background-color: #180d5b;
+}
+
+.loading-content:after {
+  content: "";
+  position: absolute;
+  border: 4px solid #0F0;
+  left: 15px;
+  right: 15px;
+  top: 15px;
+  bottom: 15px;
+}
+
+.loading-content:before {
+  content: "";
+  position: absolute;
+  border: 4px solid #00F;
+  left: 5px;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
+}
+
+.loading-content {
+  border: 4px solid transparent;
+  border-top-color: #06c5d7;
+  border-bottom-color: #06c5d7;
+  border-radius: 50%;
+  -webkit-animation: loader 2s linear infinite;
+  -moz-animation: loader 2s linear infinite;
+  -o-animation: loader 2s linear infinite;
+  animation: loader 2s linear infinite;
+}
+
+.loading-content:before {
+  border: 4px solid transparent;
+  border-top-color: #43e39b;
+  border-bottom-color: #43e39b;
+  border-radius: 50%;
+  -webkit-animation: loader 3s linear infinite;
+    -moz-animation: loader 2s linear infinite;
+  -o-animation: loader 2s linear infinite;
+  animation: loader 3s linear infinite;
+}
+
+.loading-content:after {
+  border: 4px solid transparent;
+  border-top-color: #FFF;
+  border-bottom-color: #FFF;
+  border-radius: 50%;
+  -webkit-animation: loader 1.5s linear infinite;
+  animation: loader 1.5s linear infinite;
+    -moz-animation: loader 2s linear infinite;
+  -o-animation: loader 2s linear infinite;
+}
+
+@-webkit-keyframes loaders {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 
 }
 
@@ -782,7 +908,99 @@ li {list-style: none;}
 .painel-perfil h2{font-size: 20px; font-weight: normal; padding-top: 60px;}
 
 .painel-perfil h4{font-size: 16px; font-weight: normal; padding-top:15px; padding-bottom:5px; text-align:left; margin-left:15%;}	
+
+.loading-content {display: block; position: relative; left: 50%; top: 50%; width: 300px; height: 300px; margin: -150px 0 0 -150px; border: 4px solid #F00;}
 	
+.loading-wrapper img{position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; height: 40px;}	
+
+.loading-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  background-color: #180d5b;
+}
+
+.loading-content:after {
+  content: "";
+  position: absolute;
+  border: 4px solid #0F0;
+  left: 15px;
+  right: 15px;
+  top: 15px;
+  bottom: 15px;
+}
+
+.loading-content:before {
+  content: "";
+  position: absolute;
+  border: 4px solid #00F;
+  left: 5px;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
+}
+
+.loading-content {
+  border: 4px solid transparent;
+  border-top-color: #06c5d7;
+  border-bottom-color: #06c5d7;
+  border-radius: 50%;
+  -webkit-animation: loader 2s linear infinite;
+  -moz-animation: loader 2s linear infinite;
+  -o-animation: loader 2s linear infinite;
+  animation: loader 2s linear infinite;
+}
+
+.loading-content:before {
+  border: 4px solid transparent;
+  border-top-color: #43e39b;
+  border-bottom-color: #43e39b;
+  border-radius: 50%;
+  -webkit-animation: loader 3s linear infinite;
+    -moz-animation: loader 2s linear infinite;
+  -o-animation: loader 2s linear infinite;
+  animation: loader 3s linear infinite;
+}
+
+.loading-content:after {
+  border: 4px solid transparent;
+  border-top-color: #FFF;
+  border-bottom-color: #FFF;
+  border-radius: 50%;
+  -webkit-animation: loader 1.5s linear infinite;
+  animation: loader 1.5s linear infinite;
+    -moz-animation: loader 2s linear infinite;
+  -o-animation: loader 2s linear infinite;
+}
+
+@-webkit-keyframes loaders {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}	
 	
 }	
 

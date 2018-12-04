@@ -6,6 +6,8 @@
 
 $(document).ready(function(e){
 
+	$(".loading-wrapper").delay(3000).fadeOut(1000);
+
 /* -------------------- Menu - Painel -------------------- */
 		
 	$(".icon-menu").click(function(e) {
