@@ -137,7 +137,7 @@ $(document).ready(function(e){
 			}
 			
 			else if($(this).attr("href") == "#3"){
-					$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top - 10}, 1000);			
+					$("html, body").animate({scrollTop: $($(this).attr('href')).offset().top - 130}, 1000);			
 			}
 	});
 	
@@ -171,6 +171,14 @@ $(document).ready(function(e){
 	
 	$(".redir-login").click(function(){
 		window.location.href = "/users/sign_in";	
+	});
+	
+	$(".logo-header-home").click(function(){
+		window.location.href = "/";
+	});
+	
+	$(".logo-header-painel").click(function(){
+		window.location.href = "/";
 	});
 
 	/*  ------------------------------ Contato  ------------------------------ */	

@@ -7,6 +7,7 @@ class ContatosController < ApplicationController
   def index
     @contatos = Contato.all
     @user = current_user
+    @image = @user.image_url ? @user.image_url : false
     @authenticate = user_signed_in?
   end
 
@@ -36,7 +37,7 @@ class ContatosController < ApplicationController
       @contato = Contato.find(params[:id])
       name = @contato.nome
         if @contato.destroy
-          redirect_to root_path, notice: "Contato #{name} excluído com sucesso"
+          redirect_to contatos_path, notice: "Contato #{name} excluído com sucesso"
         end
     
   end

@@ -141,8 +141,6 @@ nav a:hover{background-color:hsla(0,0%,100%,0.90); color: #1E2F7A !important;}
 
 .home-companhia .home-custos-line{height: 200px; width: 120%; background-color: #eeeded; position: absolute; transform: rotate(-20deg); z-index: -999; margin-left: -10%; margin-top: -100px;}
 
-.home-companhia img{height:450px; position:absolute; left:0; z-index:20;}
-
 .home-companhia-line{height: 300px; width: 120%; background-color: #eeeded; position: absolute; transform: rotate(-20deg); margin-left: -10%; margin-top: -240px; z-index:0;}
 
 .home-companhia-box{width:400px; position:absolute; right:0; z-index:20; padding-top:40px;}
@@ -150,6 +148,10 @@ nav a:hover{background-color:hsla(0,0%,100%,0.90); color: #1E2F7A !important;}
 .home-companhia h1{font-size: 22px; font-weight: bold; text-align:left; line-height: 30px; padding-bottom: 30px; padding-top: 30px;}
 
 .home-companhia h3{font-size: 18px; font-weight: normal; text-align: left; line-height:25px;}
+
+.img-lucas{background: image-url("Home/lucas.jpg"); height:250px; width:250px; position:absolute; left:0; z-index:20; border-radius:100%; background-size:cover; background-position:top center; margin-left:350px; margin-top:-100px; border:4px solid #FFF;}
+.img-matheus{background: image-url("Home/matheus.jpg"); height:250px; width:250px; position:absolute; left:0; z-index:20; border-radius:100%; background-size:cover; background-position:top center; margin-top:-100px; border:4px solid #FFF;}
+.img-will{background: image-url("Home/will.jpg"); height:250px; width:250px; position:absolute; left:0; z-index:20; border-radius:100%; background-size:cover; background-position:top center; margin-left:175px; margin-top:150px; border:4px solid #FFF;}
 
 /* ---------------------------------------------- Cadastro ---------------------------------------------- */
 
@@ -436,7 +438,7 @@ li {list-style: none;}
 .painel-contato table td:nth-child(3){width:30%; padding:30px 15px; line-height:25px;}
 .painel-contato tbody td:hover{background-color:hsla(153,80%,47%,0.50);}
 
-.painel-contato h1{font-weight:normal; font-size:50px; padding:200px 0px 30px 0px; color:#FFF; font-weight: 500; border-bottom: 2px solid #18d67f; margin-bottom: 60px;}
+.painel-contato h1{font-weight:normal; font-size:50px; padding:190px 0px 30px 0px; color:#FFF; font-weight: 500; border-bottom: 2px solid #18d67f; margin-bottom: 60px;}
 
 .painel-contato .btn-contato-exibir{}
 
@@ -447,10 +449,6 @@ li {list-style: none;}
 .painel-contato .btn-contato-editar{height:30px; width:100px; background-color:#06c5d5; color:#FFF; border:2px solid #06c5d5; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:14px; text-decoration:none; padding:4px 6px;}
 
 .painel-contato .btn-contato-exibir{height:30px; width:100px; background-color:#f0f0f0; color:#180d5b; border:2px solid #f0f0f0; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:14px; text-decoration:none; padding:4px 6px;}
-
-.btn-home-experimentar:hover{background-color: #18d67f; border:2px solid #18d67f;}	
-		
-.btn-home-login:hover{background-color: #06c5d5; border:2px solid #06c5d5;}	
 
 .loading-content {display: block; position: relative; left: 50%; top: 50%; width: 400px; height: 400px; margin: -200px 0 0 -200px; border: 4px solid #F00;}
 	
@@ -656,13 +654,15 @@ nav{display:none;}
 
 .home-companhia{width:100%; background-color:#FFF; clear:both; padding-top:70px; padding-bottom:70px;}
 
-.home-companhia img{width:80%; position:relative; margin-left:10%;}
-
 .home-companhia-box{width:90%; position:relative; padding-top:30px; margin-left:5%;}
 
-.home-companhia h1{font-size: 24px; font-weight: bold; text-align:left; line-height: 30px; padding-bottom: 30px;}
+.home-companhia h1{font-size: 24px; font-weight: bold; text-align:left; line-height: 30px; padding-bottom: 30px; margin-top:30px;}
 
 .home-companhia h3{font-size: 16px; font-weight: normal; text-align: left; line-height:25px;}	
+
+.img-lucas{background: image-url("Home/lucas.jpg"); height:200px; width:200px; position:relative; z-index:20; border-radius:100%; background-size:cover; background-position:top center; left:50% ; margin-left:-100px; border:4px solid #FFF; margin-top:20px;}
+.img-matheus{background: image-url("Home/matheus.jpg"); height:200px; width:200px; position:relative; z-index:20; border-radius:100%; background-size:cover; background-position:top center; border:4px solid #FFF; left:50%; margin-left:-100px; margin-top:20px;}
+.img-will{background: image-url("Home/will.jpg"); height:200px; width:200px; position:relative; z-index:20; border-radius:100%; background-size:cover; background-position:top center; border:4px solid #FFF; left:50%; margin-left:-100px; margin-top:20px;}
 	
 /* ---------------------------------------------- Contato ---------------------------------------------- */	
 	
@@ -723,7 +723,6 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 .footer-line{height:1px; width:100%; position:relative; background-color:#FFF; margin-top:10px; display:none;}
 
 .lkd-icon-footer{height:30px; position:absolute; margin-top:8px;}
-
 
 /* ---------------------------------------------- Cadastro ---------------------------------------------- */
 
@@ -799,16 +798,16 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 
 .active{background-color:#F1F1F1; color: #000 !important;}
 	
-.img-user-menu{height: 130px; width: 130px; background-color:#FFF; background-size: cover; background-position: center; margin-bottom: 30px; position: relative; left: 50%; margin-left: -65px; border-radius: 100%;}
+.img-user-menu{height: 120px; width: 120px; background-color:#FFF; background-size: cover; background-position: center; margin-bottom: 20px; position: relative; left: 50%; margin-left: -60px; border-radius: 100%;}
 	
-.menu-animate h3{padding-left: 10%; font-size: 12px; padding-bottom: 40px; font-weight: normal; line-height: 30px; color: #FFF;}	
+.menu-animate h3{padding-left: 10%; font-size: 12px; padding-bottom: 20px; font-weight: normal; line-height: 20px; color: #FFF;}	
 .menu-animate h3 strong{font-size:16px;}	
 	
 .menu-box-user{width: 100%; position: relative; background-color: #313131; background: image-url("Painel/img-menu-user.png"); background-size: cover; background-position: center;}	
 	
-.menu-box-user-mask{width: 100%; background-color:hsla(0,0%,0%,0.20); padding-top: 50px;}	
+.menu-box-user-mask{width: 100%; background-color:hsla(0,0%,0%,0.20); padding-top: 30px;}	
 	
-.nav .icons-nav{position: absolute; height:  20px; margin-top: 17px; margin-left: 20px;}	
+.nav .icons-nav{position: absolute; height:  16px; margin-top: 19px; margin-left: 20px;}	
 
 .painel-invest{min-height:100vh; width:100%; padding-bottom:50px; background-color:#180d5b; background-size: cover; background-repeat: no-repeat; background-position: center; overflow-x:auto;}
 
@@ -908,6 +907,39 @@ li {list-style: none;}
 .painel-perfil h2{font-size: 20px; font-weight: normal; padding-top: 60px;}
 
 .painel-perfil h4{font-size: 16px; font-weight: normal; padding-top:15px; padding-bottom:5px; text-align:left; margin-left:15%;}	
+
+/* ---------------------------------------------- Painel - Contato ---------------------------------------------- */
+
+.painel-contato::-webkit-scrollbar-track{background-color:#dedede;}
+.painel-contato::-webkit-scrollbar{width:0px; height:3px;}
+.painel-contato::-webkit-scrollbar-thumb{background:#646464; border-radius:5px;}
+
+.painel-contato{min-height:100vh; width:100%; padding-bottom:100px; background-color:#180d5b; color:#FFF; overflow-x:auto;}
+
+.painel-contato table{font-weight:normal !important; border:0px !important; border-collapse: collapse; margin-bottom:50px;}
+.painel-contato table th{color:#18d67f; font-size:16px; border-bottom:3px solid #18d67f; background-color:hsla(0,0%,0%,0.00) !important; font-weight: 500;}
+.painel-contato thead tr{height:60px; background-color:#180d5b;}	
+.painel-contato tbody{border-collapse: collapse;} 
+.painel-contato tbody tr{height:80px; font-weight:normal; font-size:14px; transition:.3s; border-bottom:1px solid #FFF;}
+.painel-contato tbody tr:nth-child(2n+2){background-color:#251589;}
+.painel-contato tbody tr:nth-child(2n+1){background-color:#180d5b;}
+.painel-contato tbody tr:hover{background-color:hsla(0,0%,100%,0.30) !important;}
+.painel-contato table td{color:#FFF; text-align:center; transition:.3s; }
+.painel-contato table td:nth-child(3){width:30%; padding:30px 15px; line-height:25px;}
+.painel-contato tbody td:hover{background-color:hsla(153,80%,47%,0.50);}
+
+.painel-contato h1{font-weight:normal; font-size:30px; padding:100px 0px 30px 0px; color:#FFF; font-weight: 500; border-bottom: 2px solid #18d67f; margin-bottom: 60px;}
+
+.painel-contato .btn-contato-exibir{}
+
+.painel-contato .btn-contato-excluir{height:30px; width:100px; background-color:#ec0042; color:#FFF; border:2px solid #ec0042; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:14px; text-decoration:none; padding:4px 6px;}
+
+.painel-contato .btn-contato-excluir:hover{background-color: #B10031; border:2px solid #B10031; color:#FFF;}
+
+.painel-contato .btn-contato-editar{height:30px; width:100px; background-color:#06c5d5; color:#FFF; border:2px solid #06c5d5; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:14px; text-decoration:none; padding:4px 6px;}
+
+.painel-contato .btn-contato-exibir{height:30px; width:100px; background-color:#f0f0f0; color:#180d5b; border:2px solid #f0f0f0; cursor:pointer; transition:.3s; font-weight:bold; border-radius:4px; font-size:14px; text-decoration:none; padding:4px 6px;}
+
 
 .loading-content {display: block; position: relative; left: 50%; top: 50%; width: 300px; height: 300px; margin: -150px 0 0 -150px; border: 4px solid #F00;}
 	

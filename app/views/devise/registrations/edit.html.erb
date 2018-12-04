@@ -5,7 +5,7 @@
 
 <header class="header-painel">
 	
-	<%= link_to (image_tag('Home/logo.png', class: 'logo-header')), root_path %>
+	<%= image_tag('Home/logo.png', class: 'logo-header logo-header-painel') %>
 	<div class="icon-menu">
 		<div class="line-icon"></div>
 		<div class="line-icon"></div>
@@ -18,7 +18,11 @@
 <div class="menu-animate">
 	<div class="menu-box-user">
 		<div class="menu-box-user-mask">
+			<% if @image %>
 			<%= image_tag(@user.image_url(:thumb).to_s, class: "img-user-menu") %>
+			<% else %>
+			<%= image_tag('Perfil/perfil-new.png', class: "img-user-menu") %>
+			<% end %>
 			<h3>
 				<strong><%= @user.nome %></strong><br>
 				<%= @user.email %>

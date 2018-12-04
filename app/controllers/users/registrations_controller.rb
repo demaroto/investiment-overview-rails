@@ -39,6 +39,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def edit
     
     @authenticate = user_signed_in?
+    @user = current_user
+    @image = @user.image_url ? @user.image_url : false
   end
 
   def password_is
