@@ -7,8 +7,8 @@ Rails.application.config.assets.version = '1.0'
 # Add Yarn node_modules folder to the asset load path.
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
-Rails.application.config.assets.precompile += %w(jQuery.js)
-Rails.application.config.assets.precompile += %w(application.js)
+# Rails.application.config.assets.precompile += %w(jQuery.js)
+# Rails.application.config.assets.precompile += %w(application.js)
 # Rails.application.config.assets.precompile += %w(particles.js)
 # Rails.application.config.assets.precompile += %w(app.js)
 
