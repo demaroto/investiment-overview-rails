@@ -54,7 +54,7 @@ class Api::V1Controller < ApplicationController
     if @authenticate
       @user = current_user
     else
-      render json: {data: 'Você precisa estar autenticado para realizar esta ação'}, status: 401
+      render json: {data: 'Você precisa estar autenticado para realizar esta ação'}, status: 204
     end
   end
 end
