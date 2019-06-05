@@ -686,7 +686,10 @@ footer .btn-home-login2{border:2px solid #FFF; background-color: hsla(0,0%,0%,0.
 .login .erro-mensagem h2{font-size: 15px; margin-top: 30px;}
 
 .login .erro-mensagem ul{margin:0; padding: 0;}	
-
+span.error{
+  border: 1px solid red !important;
+  
+}
 /* ---------------------------------------------- Painel ---------------------------------------------- */
 
 .header-painel{background-color:#180d5b;}
@@ -947,3 +950,23 @@ li {list-style: none;}
   }
 }
 
+div.flash.notice, div.flash.alert{
+  text-align:center;
+  height:50px;
+  width:400px;
+  margin-top:20px;
+  position:absolute;
+  left:50%;
+  margin-left:-200px;
+  margin-top:-50px;
+  line-height:50px;
+}
+
+div.flash.notice{
+    background-color: #fc3535;
+    color: #FFF;
+}
+div.flash.alert{
+  background-color: #fc3535;
+  color: #FFF;
+}

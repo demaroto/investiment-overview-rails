@@ -8,9 +8,12 @@ class Users::SessionsController < Devise::SessionsController
   #   super
   # end
 
-  # POST /resource/sign_in
+  #POST /resource/sign_in
   # def create
-  #   super
+  
+  # warden.set_user(@user, scope: :user)
+  # redirect_to user_session_path
+  
   # end
 
   # DELETE /resource/sign_out
@@ -24,4 +27,9 @@ class Users::SessionsController < Devise::SessionsController
   # def configure_sign_in_params
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
+  
+  def messase msg
+    @messages << msg
+    flash[:notice] = @messages
+  end
 end

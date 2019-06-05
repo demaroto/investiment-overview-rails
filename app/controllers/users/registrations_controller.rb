@@ -5,12 +5,25 @@ class Users::RegistrationsController < Devise::RegistrationsController
   include BCrypt
 
   def create
-    @user = User.new(user_params)
-    if @user.save
-       warden.set_user(@user, scope: :user)
-      redirect_to user_session_path
+    if params[:user][:nome].present? && params[:user][:email].present? && params[:user][:password].present?
+      if params[:user][:password].length >= 6
+        @user = User.new(user_params)
+        if @user.save
+           warden.set_user(@user, scope: :user)
+           redirect_to user_session_path
+        end
+      else
+      @old_nome = params[:user][:nome]
+      @old_email = params[:user][:email]
+      flash[:notice] = "A senha deve ser maior que 6 caracteres."
+      redirect_to new_user_registration_path(old_nome: @old_nome, old_email: @old_email)
+      end
+    else
+      @old_nome = params[:user][:nome]
+      @old_email = params[:user][:email]
+      flash[:notice] = "Preencha todos os campos"
+      redirect_to new_user_registration_path(old_nome: @old_nome, old_email: @old_email)
     end
-    
   end
   
     def update
@@ -37,7 +50,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
 
   def edit
-    
     @authenticate = user_signed_in?
     @user = current_user
     @image = @user.image_url ? @user.image_url : false

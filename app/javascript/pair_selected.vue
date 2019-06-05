@@ -8,10 +8,10 @@
             Paridade
           </th>
           <th>
-            Comprando por
+            Valor de compra
           </th>
           <th>
-            Vendendo por
+            Valor de venda
           </th>
         </tr>
       </thead>
