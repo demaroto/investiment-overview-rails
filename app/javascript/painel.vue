@@ -1,9 +1,11 @@
 <template>
 
   <div id="app">
+  
+        <div  @click="toggleMessage()" v-if="showMessage == true" class="obs">*Algumas criptomoedas não funcionam nos finais de semana!</div>
+        
         <h1>Painel Investment Overview</h1>
         <!-- Implementação do novo SELECT -->
-        
         <div class="btn-group">
             <li @click="toggleMenu()" class="dropdown-toggle" v-if="channel.name !== undefined">
               {{ channel.name }}
@@ -85,6 +87,7 @@ export default {
       poloniex_info: '',
       poloniex_erro: false,
       showMenu: false,
+      showMessage:true,
       placeholderText: 'Selecione uma Criptomoeda'
       }
   },
@@ -132,10 +135,14 @@ export default {
       };
      
         this.showMenu = false;
+        this.showMessage = true;
         this.$emit('updateOption', this.channel);
       },
       toggleMenu:function() {
           this.showMenu = !this.showMenu;
+      },
+      toggleMessage:function() {
+          this.showMessage = false;
       },
      ObjectSorted:function(object) {
         let result = {};
